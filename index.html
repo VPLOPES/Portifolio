@@ -266,7 +266,28 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTU4NCIgaGVpZ2h0PSIzOTYiPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9InBhdHRlcm4iIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIKICAgICAgICAgICAgIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiCiAgICAgICAgICAgICBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNDUpIj4KICAgICAgPHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIiAvPgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+Cjwvc3ZnPgo=
+            background: url('data:<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080"'>
+  <!-- Fundo azul escuro -->
+  <rect width="100%" height="100%" fill="#0a1a3f" />
+
+  <!-- Linhas diagonais sutis (rede neural estilizada) -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="40" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <!-- Retângulo translúcido central para título -->
+  <rect x="460" y="440" width="1000" height="200" rx="20" ry="20"
+        fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" />
+
+  <!-- Texto central -->
+  <text x="960" y="560" text-anchor="middle" fill="white"
+        font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="bold">
+    PORTFÓLIO
+  </text>
+</svg>
 ');
         }
 
@@ -2104,4 +2125,5 @@
     </script>
 </body>
 </html>
+
 
