@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinícius Lopes - Economista y Consultor Financiero</title>
+    <meta name="description" content="Portafolio profesional de Vinícius Lopes, economista y consultor financiero especializado en gestión de riesgos, trading y análisis financiero corporativo">
+    <meta name="keywords" content="economista, consultor financiero, gestión de riesgos, trading, análisis financiero, portafolio, valoración, consultoría">
+    <meta name="author" content="Vinícius Lopes">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos CSS mantidos (igual ao original) */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #64748b;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --accent: #0ea5e9;
+            --success: #10b981;
+            --card-bg: #ffffff;
+            --section-bg: #f1f5f9;
+            --border: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --radius: 12px;
+        }
+
+        .dark-mode {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #94a3b8;
+            --light: #0f172a;
+            --dark: #f8fafc;
+            --accent: #38bdf8;
+            --success: #34d399;
+            --card-bg: #1e293b;
+            --section-bg: #0f172a;
+            --border: #334155;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--section-bg);
+            transition: var(--transition);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+            scroll-margin-top: 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .dark-mode header {
+            background-color: rgba(30, 41, 59, 0.9);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo i {
+            font-size: 1.4rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-btns {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: var(--dark);
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            color: var(--primary);
+            background: var(--section-bg);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            font-size: 1.6rem;
+            color: var(--dark);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--section-bg);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease;
+            font-weight: 800;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero .description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease 0.4s both;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        /* Main Content */
+        main {
+            background: var(--section-bg);
+            position: relative;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--card-bg);
+            color: var(--dark);
+            border-radius: var(--radius);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .profile-image {
+    width: 70%;
+    height: 600px;
+    background-image: url('foto_principal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+}
+
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .education-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            height: 100%;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .education-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .education-title {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .education-school {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .education-period {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .education-description {
+            margin-top: 1rem;
+            color: var(--secondary);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            height: 100%;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-card h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .skill-card h3 i {
+            font-size: 1.2rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.8rem 0;
+            position: relative;
+            padding-left: 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-list li:before {
+            content: "▹";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .skill-level {
+            font-size: 0.85rem;
+            background: var(--primary);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            margin-left: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .experience-item:hover {
+            transform: translateX(5px);
+        }
+
+        .experience-item:before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 2rem;
+            width: 16px;
+            height: 16px;
+            background: var(--card-bg);
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+        }
+
+        .experience-header {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .experience-title {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .experience-company {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .experience-period {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            background: var(--section-bg);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+
+        .experience-description {
+            margin-top: 1rem;
+            color: var(--secondary);
+        }
+
+        .experience-description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-description li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .experience-description li:before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        /* Projects Section */
+        .projects-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            background: var(--card-bg);
+            color: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            height: 220px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.1);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-image:after {
+            opacity: 1;
+        }
+
+        .project-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: var(--section-bg);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .project-link {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .project-link.outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .project-link.outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Testimonials Section */
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            position: relative;
+            margin-bottom: 3rem;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.1;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            color: var(--dark);
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .author-role {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+            min-width: 50px;
+            height: 50px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-text h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .contact-text p, .contact-text a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-text a:hover {
+            color: var(--primary);
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--section-bg);
+            color: var(--dark);
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card-bg);
+            color: var(--secondary);
+            padding: 3rem 0 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--section-bg);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .toast.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-links {
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - 80px);
+            background: var(--card-bg);
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 0;
+            gap: 2rem;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        .hero {
+            padding: 160px 0 80px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+        }
+
+        .stats {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .hero h1 {
+            font-size: 2.3rem;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .experience-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .project-links {
+            flex-direction: column;
+        }
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#home" class="logo">
+                <i class="fas fa-chart-line"></i>
+                <span>Vinícius Lopes</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#education">Formación</a></li>
+                <li><a href="#skills">Competencias</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="nav-btns">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo oscuro">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Vinícius Lopes</h1>
+                <p class="subtitle">Economista y Consultor Financiero</p>
+                <p class="description">
+                    Economista con experiencia en análisis financiero corporativo y gestión de riesgos operativos. 
+                    Formación internacional y experiencia en desarrollo de protocolos, modelado financiero e 
+                    inteligencia de mercado. Enfoque en optimización de procesos mediante análisis de datos.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary btn-icon">
+                        <i class="fas fa-project-diagram"></i> Ver Proyectos
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-icon">
+                        <i class="fas fa-paper-plane"></i> Contactar
+                    </a>
+                    <a href="Curriculo_08_25.pdf" class="btn btn-secondary btn-icon" download="Curriculo_Vinicius_Lopes.pdf">
+                        <i class="fas fa-download"></i> Descargar CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Economista especializado en análisis de datos e inteligencia de mercado, 
+                        con experiencia en finanzas corporativas y gestión de riesgos. 
+                        Sólida formación en modelado financiero, valoración y desarrollo de soluciones analíticas 
+                        para apoyar la toma de decisiones estratégicas. Con experiencia internacional y 
+                        formación complementaria en IA aplicada a los negocios, combino conocimientos económicos sólidos 
+                        con herramientas tecnológicas avanzadas para generar insights que impulsan resultados.
+                    </p>
+                    <p>
+                        Con experiencia internacional en mercados de day trading y experiencia en valoración, inteligencia 
+                        de mercado y optimización de procesos. Capacidad comprobada para intervenir en situaciones 
+                        críticas y gestión disciplinada de operaciones.
+                    </p>
+                    <p>
+                        Actualmente cursando Posgrado en Gestión Financiera en FGV y MBA en Economía del Agronegocio en UFMS.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div>Años de Experiencia</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">7+</div>
+                            <div>Empresas Trabajadas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div>Países de Actuación</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div>Proyectos Concluidos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="projects-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="finance">Finanzas</button>
+                <button class="filter-btn" data-filter="risk">Gestión de Riesgo</button>
+                <button class="filter-btn" data-filter="analytics">Análisis de Datos</button>
+                <button class="filter-btn" data-filter="strategy">Estrategia</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="finance">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Predicción de Precios de Activos Financieros con IA</h3>
+                        <p class="project-description">
+                            Sistema de análisis predictivo que utiliza machine learning para prever movimientos de precios en el mercado financiero. El proyecto demuestra la aplicación práctica de IA en la toma de decisiones de inversión, con pipeline completo desde la recopilación de datos hasta el modelado predictivo.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Análisis de Datos</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://previsaodeativosfinanceiros1.streamlit.app/" class="project-link outline">
+                                <i class="fas fa-eye"></i> Ver Proyecto
+                            </a>
+                            
+                            <a href="https://github.com/VPLOPES/IA_para_previsao_de_precos_de_Ativos_Financeiros/tree/main" class="project-link outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="risk">
+                    <div class="project-image">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Estrategia de Cobertura usando IA</h3>
+                        <p class="project-description">
+                            Notebook en Python para valoración de opciones financieras y construcción de estrategias de cobertura. Incluye simulación de Monte Carlo, cálculo de delta y precio mediante el modelo Black-Scholes-Merton, además de la aplicación de redes neuronales con TensorFlow/Keras para previsión de precios de opciones.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">numpy y pandas</span>
+                            <span class="tech-tag">scipy</span>
+                            <span class="tech-tag">tensorflow y keras</span>
+                            <span class="tech-tag">plotly.express y plotly.graph_objs</span>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/VPLOPES/estrategia_de_hedge_usando_IA" class="project-link outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="project-card" data-category="risk">
+                    <div class="project-image">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Calculadora de Trading</h3>
+                        <p class="project-description">
+                            Herramienta de gestión de riesgo financiero para operaciones de mercado. Sistema que automatiza cálculos de exposición y ayuda en el mantenimiento de la disciplina operativa, aplicable tanto para trading como para gestión de carteras de inversión.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Excel</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Claude AI</span>
+                            <span class="tech-tag">Lovable AI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://smart-trade-system.lovable.app/" class="project-link outline">
+                                <i class="fas fa-eye"></i> Ver Proyecto
+                            </a>
+                            
+                            <a href="https://github.com/VPLOPES/calculadora_trading_NASDAQ100_E-Mini" class="project-link outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="finance">
+                    <div class="project-image">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Proyecto de Viabilidad Económica 1</h3>
+                        <p class="project-description">
+                           Análisis de viabilidad económica de un emprendimiento, considerando tres escenarios: Conservador, Base y Optimista. El estudio incluye proyecciones de ingresos, costos, EBITDA, inversiones (CAPEX), capital de trabajo y flujo de caja a lo largo de 10 años.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Excel</span>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/VPLOPES/projeto1_Viabilidade_Economica" class="project-link outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+
+               <div class="project-card" data-category="analytics">
+                    <div class="project-image">
+                        <i class="fas fa-house"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">GeoPandas_RJ</h3>
+                        <p class="project-description">
+                            Notebook en Python para análisis geoespacial de inmuebles en Río de Janeiro, utilizando GeoPandas, Folium y Matplotlib. El proyecto incluye carga de shapefiles, tratamiento de datos y visualizaciones estáticas e interactivas en mapas, con enfoque en aplicaciones de análisis urbano e inmobiliario.
+
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Jupyter Notebook</span>
+                            <span class="tech-tag">GeoPandas</span>
+                            <span class="tech-tag">Visualización de Datos</span>
+                        </div>
+                        <div class="project-links">
+                            
+                            <a href="https://github.com/VPLOPES/GeoPandas_RJ" class="project-link outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="analytics">
+                    <div class="project-image">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Investigación de Mercado - Bebidas</h3>
+                        <p class="project-description">
+                            Panel interactivo en Power BI sobre la industria de fabricación de bebidas en Minas Gerais y en Brasil. Incluye análisis de establecimientos, empleos, producción industrial, comercio exterior (exportaciones, importaciones y balanza comercial) e investigación de asociados, con datos de RAIS, PIA y COMEXSTAT.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Excel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/VPLOPES/RA_Bebidas" class="project-link outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="analytics">
+                    <div class="project-image">
+                        <i class="fa-solid fa-ice-cream"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Investigación de Mercado - Helados</h3>
+                        <p class="project-description">
+                            Panel interactivo en Power BI con análisis del sector de helados en Brasil. Incluye exportaciones, importaciones, balanza comercial, empleos, establecimientos, costos e ingresos, con indicadores consolidados y visualizaciones interactivas.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Excel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/VPLOPES/RA_Sorvetes" class="project-link outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="analytics">
+                    <div class="project-image">
+                        <i class="fa-solid fa-burger"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Investigación de Mercado - Productos Alimenticios</h3>
+                        <p class="project-description">
+                            Panel interactivo en Power BI con análisis del sector alimenticio en Brasil. Incluye exportaciones, importaciones, saldo comercial, mercado laboral y datos industriales, con indicadores consolidados y mapas interactivos.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Excel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/VPLOPES/RA_Produtos_Alimenticios" class="project-link outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+           <div class="project-card" data-category="analytics">
+                    <div class="project-image">
+                        <i class="fas fa-house"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Investigación de Mercado - Inmuebles en Subasta - MG</h3>
+                        <p class="project-description">
+                            Informe interactivo para análisis del mercado inmobiliario en Brasil, con foco en Minas Gerais. Incluye filtros por tipo de inmueble, mapas interactivos e indicadores consolidados de cantidad, municipios y valor total de los inmuebles.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Excel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/VPLOPES/RA_Imoveis_Leilao" class="project-link outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="analytics">
+                    <div class="project-image">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Datos de Ventas en Empresa</h3>
+                        <p class="project-description">
+                            Panel en Power BI para análisis integrado de ventas, clientes y cashback. Incluye KPIs de facturación, NPS, perfil de clientes, métodos de pago e impacto del programa de cashback, ofreciendo soporte estratégico a la toma de decisiones.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Excel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/VPLOPES/RA_Empresa_Vendas_Geral" class="project-link outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <section id="skills" class="container">
+            <h2 class="section-title">Competencias Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fas fa-chart-line"></i> Gestión de Riesgo y Trading</h3>
+                    <ul class="skill-list">
+                        <li>Gestión de riesgo operativo en day trading <span class="skill-level">Avanzado</span></li>
+                        <li>Desarrollo de protocolos operativos <span class="skill-level">Avanzado</span></li>
+                        <li>Análisis técnico y validación de setups <span class="skill-level">Avanzado</span></li>
+                        <li>Control de exposición y dimensionamiento <span class="skill-level">Avanzado</span></li>
+                        <li>Intervención en situaciones críticas <span class="skill-level">Avanzado</span></li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-calculator"></i> Análisis Financiero</h3>
+                    <ul class="skill-list">
+                        <li>Modelado financiero y valoración <span class="skill-level">Avanzado</span></li>
+                        <li>Análisis de viabilidad económica <span class="skill-level">Avanzado</span></li>
+                        <li>Optimización de costos e inversiones <span class="skill-level">Avanzado</span></li>
+                        <li>Inteligencia de mercado <span class="skill-level">Avanzado</span></li>
+                        <li>Análisis competitivo <span class="skill-level">Avanzado</span></li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-database"></i> Tecnología y Datos</h3>
+                    <ul class="skill-list">
+                        <li>Excel, Power BI, SQL <span class="skill-level">Avanzado</span></li>
+                        <li>Python, R <span class="skill-level">Intermedio</span></li>
+                        <li>Inteligencia artificial en negocios <span class="skill-level">Intermedio</span></li>
+                        <li>Modelado de datos y estadística <span class="skill-level">Avanzado</span></li>
+                        <li>Automatización de procesos <span class="skill-level">Intermedio</span></li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-chess-king"></i> Gestión Estratégica</h3>
+                    <ul class="skill-list">
+                        <li>Gestión de proyectos estratégicos <span class="skill-level">Avanzado</span></li>
+                        <li>Análisis financiero y económico <span class="skill-level">Avanzado</span></li>
+                        <li>Digitalización de procesos <span class="skill-level">Intermedio</span></li>
+                        <li>Liderazgo y gestión de equipos <span class="skill-level">Intermedio</span></li>
+                        <li>Comunicación ejecutiva <span class="skill-level">Avanzado</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="container">
+            <h2 class="section-title">Experiencia Profesional</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Gestor de Riesgo</h3>
+                            <div class="experience-company">
+                                <i class="fas fa-building"></i> Quantum Trading | Boston, EE.UU.
+                            </div>
+                        </div>
+                        <div class="experience-period">03/2025 - 05/2025</div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Gestión de riesgo operativo en operaciones de day trading</li>
+                            <li>Desarrollo de herramientas de control y tablas de dimensionamiento</li>
+                            <li>Monitoreo de protocolos disciplinarios</li>
+                            <li>Intervención en situaciones críticas con traders</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Analista de Finanzas Corporativas</h3>
+                            <div class="experience-company">
+                                <i class="fas fa-building"></i> Agromercantil
+                            </div>
+                        </div>
+                        <div class="experience-period">11/2024 - 02/2025</div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Estructuración de modelos financieros y valoración</li>
+                            <li>Desarrollo de estrategias de inteligencia de mercado</li>
+                            <li>Implementación de tecnologías para digitalización</li>
+                            <li>Optimización de costos y análisis de inversiones</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Asesor de Datos y Estrategia</h3>
+                            <div class="experience-company">
+                                <i class="fas fa-building"></i> SEDE-MG (Secretaría de Desarrollo Económico de MG)
+                            </div>
+                        </div>
+                        <div class="experience-period">04/2024 - 11/2024</div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Desarrollo de soluciones analíticas para gestión estratégica</li>
+                            <li>Implementación de metodologías avanzadas de análisis de datos</li>
+                            <li>Elaboración de informes ejecutivos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Consultor de Inteligencia de Mercado</h3>
+                            <div class="experience-company">
+                                <i class="fas fa-building"></i> BDMG (Banco de Desarrollo de MG)
+                            </div>
+                        </div>
+                        <div class="experience-period">04/2022 - 08/2023</div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Liderazgo en la formación de estrategias para productos del Agronegocio</li>
+                            <li>Desarrollo del producto BEI, premiado con el ALIDE-Verde en 2024</li>
+                            <li>Análisis de tendencias e informes estratégicos para dirección</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <section id="education" class="container">
+            <h2 class="section-title">Formación Académica</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="education-title">MBA en Economía del Agronegocio</h3>
+                            <div class="education-school">UFMS - Universidad Federal de Mato Grosso do Sul</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2024 - Actual</div>
+                        </div>
+                    </div>
+                    <p class="education-description">
+                        Especialización en análisis económico aplicado al agronegocio, con enfoque en mercado internacional, 
+                        políticas agrícolas y gestión de riesgos en el sector.
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="education-title">Posgrado en Gestión Financiera</h3>
+                            <div class="education-school">FGV - Fundación Getúlio Vargas</div>
+                            <div class="experience-period"><i class="far fa-calendar-alt"></i> 2025 - Actual</div>
+                        </div>
+                    </div>
+                    <p class="education-description">
+                        Especialización en gestión financiera corporativa, valoración, análisis de inversiones y 
+                        estrategias de financiamiento para empresas de diversos tamaños.
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="education-title">AI for Business</h3>
+                            <div class="education-school">University of Pennsylvania</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2024</div>
+                        </div>
+                    </div>
+                    <p class="education-description">
+                        Especialización en inteligencia artificial aplicada a negocios, 
+                        con enfoque en algoritmos de IA, blockchain en RRHH, Big Data, 
+                        Machine Learning y analytics para transformación digital y ventaja competitiva.
+                    </p>
+                </div>
+
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="education-title">Licenciatura en Economía</h3>
+                            <div class="education-school">UFMG - Universidad Federal de Minas Gerais</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2018 - 2024</div>
+                        </div>
+                    </div>
+                    <p class="education-description">
+                        Formación en teoría económica, econometría, finanzas y políticas públicas. 
+                        Desarrollo de investigaciones en mercado financiero y análisis de riesgo.
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="education-title">Intercambio en Argentina en Gestión Estratégica</h3>
+                            <div class="education-school">UNL - Universidad Nacional del Litoral</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> 08-2023 - 12-2023</div>
+                        </div>
+                    </div>
+                    <p class="education-description">
+                        Becario del programa Minas-Mundi, realizó 
+                        intercambio estudiantil con el objetivo de desarrollar
+                        conocimiento teórico, lingüístico y cultural.
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="education-title">Derecho (incompleto)</h3>
+                            <div class="education-school">ESAMC</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> 08-2012 - 06-2015</div>
+                        </div>
+                    </div>
+                    <p class="education-description">
+                        Formación parcial en Derecho (seis períodos), 
+                        experiencia que contribuyó a mejorar la oratoria, 
+                        la argumentación y el vocabulario jurídico.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="complementary-education" class="container">
+    <h2 class="section-title">Formación Complementaria</h2>
+    <div class="education-grid">
+
+        <div class="education-card">
+            <div class="education-header">
+                <div class="education-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div>
+                    <h3 class="education-title">Ingeniería Financiera con Inteligencia Artificial</h3>
+                    <div class="education-school">Data Science Academy</div>
+                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2025</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <div class="education-header">
+                <div class="education-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div>
+                    <h3 class="education-title">Administración Financiera</h3>
+                    <div class="education-school">Insper</div>
+                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2025</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <div class="education-header">
+                <div class="education-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div>
+                    <h3 class="education-title">Successful Negotiation: Essential Strategies and Skills</h3>
+                    <div class="education-school">University of Michigan</div>
+                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2024</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <div class="education-header">
+                <div class="education-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div>
+                    <h3 class="education-title">Leadership Skills</h3>
+                    <div class="education-school">Indian Institute of Management Ahmedabad</div>
+                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2023</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <div class="education-header">
+                <div class="education-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div>
+                    <h3 class="education-title">Entrenamiento en Valoración</h3>
+                    <div class="education-school">FIPE</div>
+                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2022</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+        
+
+
+
+        <section id="testimonials" class="container">
+            <h2 class="section-title">Recomendaciones</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        Vinícius demostró una excelente capacidad analítica en la implementación de nuestro sistema de gestión de riesgos. 
+                        Sus conocimientos en finanzas combinados con habilidades técnicas aportaron resultados significativos 
+                        para nuestra operación de trading.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div class="author-info">
+                            <h4>Jaqueline Souza</h4>
+                            <div class="author-role">Directora de Operaciones, Quantum Trading</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        Trabajar con Vinícius fue una experiencia extremadamente positiva. 
+                        Es un profesional comprometido e incansablemente dedicado a la búsqueda de conocimiento, 
+                        siempre actualizándose con las últimas herramientas y metodologías para mejorar el desempeño del equipo. 
+                        Su capacidad para actuar de forma autónoma, combinada con un deseo genuino de aprender y crecer, 
+                        hace que sea una pieza clave en cualquier equipo. Además, 
+                        Vinícius posee una atención a los detalles admirable – algo que utiliza a su favor como una cualidad, 
+                        garantizando que todo se haga con excelencia y perfección. Sin duda, es un profesional comprometido e indispensable.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SD</div>
+                        <div class="author-info">
+                            <h4>Stefan W. D'amato</h4>
+                            <div class="author-role">Miembro del Consejo de Política Económica, FIEMG</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        Vinicius Lopes posee sólidos conocimientos en finanzas y una destacada habilidad 
+                        en gestión y liderazgo. Su compromiso es notable, siempre entregando resultados de alta calidad. 
+                        Además, su excelente comunicación le permite transmitir información con claridad y precisión. 
+                        Profesionalismo y ética impregnan todas sus interacciones, promoviendo un ambiente colaborativo y productivo. 
+                        Tengo plena confianza en que será una adición estratégica y valiosa para cualquier equipo o proyecto.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DM</div>
+                        <div class="author-info">
+                            <h4>Diego Mota</h4>
+                            <div class="author-role">Economista, BDMG</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Ubicación</h3>
+                            <p>Uberlândia, MG<br>Brasil</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Teléfono</h3>
+                            <p>+55 (34) 9 9246-0756</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <a href="mailto:viniciuslopesp12@gmail.com">viniciuslopesp12@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/viniciusplopes" target="_blank">linkedin.com/in/viniciusplopes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Vinícius Lopes</h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--secondary);">
+                        Economista y Consultor Financiero especializado en gestión de riesgos, trading y 
+                        análisis financiero corporativo.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/viniciusplopes" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/VPLOPES" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Sobre mí</a></li>
+                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Competencias</a></li>
+                        <li><a href="#experience"><i class="fas fa-chevron-right"></i> Experiencia</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Proyectos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Servicios</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Consultoría Financiera</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Gestión de Riesgo</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Modelado Financiero</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Análisis de Inversiones</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Capacitaciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Vinícius Lopes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">¡Mensaje enviado con éxito!</span>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.setAttribute('aria-label', navLinks.classList.contains('active') ? 
+                'Cerrar menú' : 'Abrir menú');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                mobileMenuBtn.setAttribute('aria-label', 'Abrir menú');
+            });
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check for saved theme or prefer color scheme
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            themeToggle.setAttribute('aria-label', 'Alternar a modo claro');
+        } else {
+            themeToggle.setAttribute('aria-label', 'Alternar a modo oscuro');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('theme', 'dark');
+                themeToggle.setAttribute('aria-label', 'Alternar a modo claro');
+            } else {
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', 'light');
+                themeToggle.setAttribute('aria-label', 'Alternar a modo oscuro');
+            }
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Active Navigation on Scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Project Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simulate form submission
+            showToast('¡Mensaje enviado con éxito! Me pondré en contacto pronto.');
+            contactForm.reset();
+        });
+
+        // CV Download
+        const downloadCV = document.getElementById('downloadCV');
+        downloadCV.addEventListener('click', (e) => {
+            e.preventDefault();
+            showToast('¡Descarga del currículo iniciada!');
+            // In a real scenario, this would trigger a file download
+        });
+
+        // Toast Notification
+        function showToast(message) {
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.skill-card, .experience-item, .project-card, .stat-item, .education-card, .testimonial-card, .contact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add subtle animation to hero elements
+        const heroElements = document.querySelectorAll('.hero h1, .hero .subtitle, .hero .description, .cta-buttons');
+        heroElements.forEach((el, index) => {
+            el.style.animation = `fadeInUp 0.8s ease ${index * 0.2}s both`;
+        });
+    </script>
+</body>
+</html>
