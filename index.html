@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinícius Lopes - Economista e Consultor Financeiro</title>
     <meta name="description" content="Portfólio profissional de Vinícius Lopes, economista e consultor financeiro especializado em gestão de risco, trading e análise financeira corporativa">
-    <meta name="keywords" content="economista, consultor financeiro, gestão de risco, trading, análise financeira, portfólio, valuation, consultoria">
-    <meta name="author" content="Vinícius Lopes">
+    <meta name="keywords" content="economista, consultor financeiro, gestão de risco, trading, análise financeira, portfólio">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #2563eb;
@@ -25,7 +21,6 @@
             --border: #e2e8f0;
             --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
-            --radius: 12px;
         }
 
         .dark-mode {
@@ -49,12 +44,11 @@
         }
 
         body {
-            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background-color: var(--section-bg);
             transition: var(--transition);
-            overflow-x: hidden;
         }
 
         .container {
@@ -65,22 +59,20 @@
 
         section {
             padding: 100px 0;
-            scroll-margin-top: 80px;
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin: 20px 0; /* Alterado para 20px superior e inferior */
+            margin-bottom: 3rem;
             color: var(--primary);
             position: relative;
-            font-weight: 700;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px; /* Ajustado para manter a distância da linha decorativa */
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
             width: 80px;
@@ -139,19 +131,13 @@
             z-index: 1000;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-
-        .dark-mode header {
-            background-color: rgba(30, 41, 59, 0.9);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 0;
+            padding: 1.5rem 0;
         }
 
         .logo {
@@ -161,7 +147,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            text-decoration: none;
         }
 
         .logo i {
@@ -217,17 +202,11 @@
             font-size: 1.4rem;
             cursor: pointer;
             transition: var(--transition);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .theme-toggle:hover {
             color: var(--primary);
-            background: var(--section-bg);
+            transform: rotate(20deg);
         }
 
         .mobile-menu-btn {
@@ -237,21 +216,11 @@
             font-size: 1.6rem;
             color: var(--dark);
             cursor: pointer;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mobile-menu-btn:hover {
-            background: var(--section-bg);
         }
 
         /* Hero Section */
         .hero {
-            padding: 180px 0 100px;
+            padding: 160px 0 100px;
             text-align: center;
             color: white;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -266,29 +235,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080"'>
-  <!-- Fundo azul escuro -->
-  <rect width="100%" height="100%" fill="#0a1a3f" />
-
-  <!-- Linhas diagonais sutis (rede neural estilizada) -->
-  <defs>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="40" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="100%" height="100%" fill="url(#grid)" />
-
-  <!-- Retângulo translúcido central para título -->
-  <rect x="460" y="440" width="1000" height="200" rx="20" ry="20"
-        fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" />
-
-  <!-- Texto central -->
-  <text x="960" y="560" text-anchor="middle" fill="white"
-        font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="bold">
-    PORTFÓLIO
-  </text>
-</svg>
-');
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
         }
 
         .hero-content {
@@ -302,7 +249,6 @@
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             animation: fadeInUp 0.8s ease;
-            font-weight: 800;
         }
 
         .hero .subtitle {
@@ -320,7 +266,6 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.7;
         }
 
         .cta-buttons {
@@ -367,7 +312,7 @@
             padding: 2rem 1.5rem;
             background: var(--card-bg);
             color: var(--dark);
-            border-radius: var(--radius);
+            border-radius: 15px;
             transition: var(--transition);
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
@@ -385,60 +330,6 @@
             color: var(--primary);
         }
 
-        .about-image {
-            position: relative;
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .profile-image i {
-            font-size: 6rem;
-            opacity: 0.3;
-        }
-
-        .floating-element {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background: var(--card-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            box-shadow: var(--shadow);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-element:nth-child(1) {
-            top: 20px;
-            right: 30px;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            bottom: 40px;
-            left: 20px;
-            animation-delay: 2s;
-        }
-
-        .floating-element:nth-child(3) {
-            top: 50%;
-            right: -20px;
-            animation-delay: 4s;
-        }
-
         /* Education Section */
         .education-grid {
             display: grid;
@@ -449,11 +340,10 @@
         .education-card {
             background: var(--card-bg);
             padding: 2rem;
-            border-radius: var(--radius);
+            border-radius: 15px;
             transition: var(--transition);
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
-            height: 100%;
         }
 
         .education-card:hover {
@@ -477,7 +367,6 @@
             font-size: 1.3rem;
             color: var(--dark);
             margin-bottom: 0.3rem;
-            font-weight: 600;
         }
 
         .education-school {
@@ -488,9 +377,6 @@
         .education-period {
             color: var(--secondary);
             font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
         }
 
         .education-description {
@@ -508,11 +394,10 @@
         .skill-card {
             background: var(--card-bg);
             padding: 2rem;
-            border-radius: var(--radius);
+            border-radius: 15px;
             transition: var(--transition);
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
-            height: 100%;
         }
 
         .skill-card:hover {
@@ -527,7 +412,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-weight: 600;
         }
 
         .skill-card h3 i {
@@ -591,15 +475,10 @@
             margin-bottom: 3rem;
             padding: 2rem;
             background: var(--card-bg);
-            border-radius: var(--radius);
+            border-radius: 15px;
             margin-left: 2rem;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-
-        .experience-item:hover {
-            transform: translateX(5px);
         }
 
         .experience-item:before {
@@ -626,7 +505,6 @@
             font-size: 1.4rem;
             color: var(--dark);
             margin-bottom: 0.5rem;
-            font-weight: 600;
         }
 
         .experience-company {
@@ -707,7 +585,7 @@
 
         .project-card {
             background: var(--card-bg);
-            border-radius: var(--radius);
+            border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -730,24 +608,6 @@
             justify-content: center;
             color: white;
             font-size: 3.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-image:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.1);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .project-card:hover .project-image:after {
-            opacity: 1;
         }
 
         .project-content {
@@ -761,7 +621,6 @@
             font-size: 1.4rem;
             margin-bottom: 1rem;
             color: var(--dark);
-            font-weight: 600;
         }
 
         .project-description {
@@ -804,7 +663,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-weight: 500;
         }
 
         .project-link:hover {
@@ -832,16 +690,11 @@
         .testimonial-card {
             background: var(--card-bg);
             padding: 2.5rem;
-            border-radius: var(--radius);
+            border-radius: 15px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
             position: relative;
             margin-bottom: 3rem;
-            transition: var(--transition);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
         }
 
         .testimonial-card:before {
@@ -882,13 +735,11 @@
             color: white;
             font-size: 1.5rem;
             font-weight: bold;
-            flex-shrink: 0;
         }
 
         .author-info h4 {
             color: var(--dark);
             margin-bottom: 0.3rem;
-            font-weight: 600;
         }
 
         .author-role {
@@ -914,7 +765,7 @@
         .contact-item {
             padding: 1.5rem;
             background: var(--card-bg);
-            border-radius: var(--radius);
+            border-radius: 15px;
             transition: var(--transition);
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
@@ -938,14 +789,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
         }
 
         .contact-text h3 {
             color: var(--dark);
             margin-bottom: 0.5rem;
             font-size: 1.2rem;
-            font-weight: 600;
         }
 
         .contact-text p, .contact-text a {
@@ -961,7 +810,7 @@
         .contact-form {
             background: var(--card-bg);
             padding: 2.5rem;
-            border-radius: var(--radius);
+            border-radius: 15px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
         }
@@ -986,7 +835,6 @@
             color: var(--dark);
             font-size: 1rem;
             transition: var(--transition);
-            font-family: 'Inter', sans-serif;
         }
 
         .form-control:focus {
@@ -1021,7 +869,6 @@
             font-size: 1.3rem;
             position: relative;
             padding-bottom: 10px;
-            font-weight: 600;
         }
 
         .footer-col h3::after {
@@ -1131,43 +978,6 @@
             }
         }
 
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        /* Toast Notification */
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--success);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            box-shadow: var(--shadow);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-        }
-
-        .toast.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
         /* Responsive */
         @media (max-width: 992px) {
             .about-grid {
@@ -1183,7 +993,7 @@
 
         @media (max-width: 768px) {
             .mobile-menu-btn {
-                display: flex;
+                display: block;
             }
 
             .nav-links {
@@ -1205,10 +1015,6 @@
                 left: 0;
             }
 
-            .hero {
-                padding: 160px 0 80px;
-            }
-
             .hero h1 {
                 font-size: 2.8rem;
             }
@@ -1227,6 +1033,10 @@
         }
 
         @media (max-width: 576px) {
+            .hero {
+                padding: 140px 0 80px;
+            }
+
             .hero h1 {
                 font-size: 2.3rem;
             }
@@ -1244,15 +1054,6 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
-
-            .experience-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .project-links {
-                flex-direction: column;
-            }
         }
 
         /* Smooth scrolling */
@@ -1264,10 +1065,10 @@
 <body>
     <header>
         <nav class="container">
-            <a href="#home" class="logo">
+            <div class="logo">
                 <i class="fas fa-chart-line"></i>
                 <span>Vinícius Lopes</span>
-            </a>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">Sobre</a></li>
@@ -1278,10 +1079,10 @@
                 <li><a href="#contact">Contato</a></li>
             </ul>
             <div class="nav-btns">
-                <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro">
+                <button class="theme-toggle" id="themeToggle">
                     <i class="fas fa-moon"></i>
                 </button>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -1304,9 +1105,6 @@
                     <a href="#contact" class="btn btn-secondary btn-icon">
                         <i class="fas fa-paper-plane"></i> Entre em Contato
                     </a>
-                    <a href="#" class="btn btn-secondary btn-icon" id="downloadCV">
-                        <i class="fas fa-download"></i> Baixar CV
-                    </a>
                 </div>
             </div>
         </div>
@@ -1323,7 +1121,7 @@
                         análise técnica para operações financeiras.
                     </p>
                     <p>
-                        Com experiência internacional in mercados de day trade e expertise em valuation, inteligência 
+                        Com experiência internacional em mercados de day trade e expertise em valuation, inteligência 
                         de mercado e otimização de processos. Comprovada capacidade de intervenção em situações 
                         críticas e gestão disciplinar de operações.
                     </p>
@@ -1350,23 +1148,14 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="profile-image">
-                        <i class="fas fa-user-tie"></i>
-                        <div class="floating-element">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="floating-element">
-                            <i class="fas fa-analytics"></i>
-                        </div>
-                        <div class="floating-element">
-                            <i class="fas fa-coins"></i>
-                        </div>
+                    <div style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); height: 100%; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; padding: 2rem;">
+                        <i class="fas fa-user-tie" style="font-size: 6rem; opacity: 0.3;"></i>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="container">
+            <section id="projects" class="container">
             <h2 class="section-title">Projetos</h2>
             <div class="projects-filters">
                 <button class="filter-btn active" data-filter="all">Todos</button>
@@ -1387,8 +1176,6 @@
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">Análise de Dados</span>
                         </div>
                         <div class="project-links">
                             <a href="https://previsaodeativosfinanceiros1.streamlit.app/" class="project-link outline">
@@ -1410,13 +1197,11 @@
                     <div class="project-content">
                         <h3 class="project-title">GeoPandas_RJ</h3>
                         <p class="project-description">
-                            Notebook em Python para análise geoespacial de imóveis no Rio de Janeiro, utilizando GeoPandas, Folium and Matplotlib. O projeto inclui carregamento de shapefiles, tratamento de dados e visualizações estáticas e interativas em mapas, com foco em aplicações de análise urbana e imobiliária.
+                            Notebook em Python para análise geoespacial de imóveis no Rio de Janeiro, utilizando GeoPandas, Folium e Matplotlib. O projeto inclui carregamento de shapefiles, tratamento de dados e visualizações estáticas e interativas em mapas, com foco em aplicações de análise urbana e imobiliária.
 
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Jupyter Notebook</span>
-                            <span class="tech-tag">GeoPandas</span>
-                            <span class="tech-tag">Visualização de Dados</span>
                         </div>
                         <div class="project-links">
                             
@@ -1426,30 +1211,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card" data-category="finance">
-                    <div class="project-image">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Análise de Investimentos</h3>
-                        <p class="project-description">
-                            Sistema de análise de investimentos e carteiras recomendadas para clientes de alta renda. Desenvolvimento de metodologia própria de avaliação e relatórios personalizados.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Excel</span>
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">VBA</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link outline">
-                                <i class="fas fa-eye"></i> Detalhes
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+   </section>
 
         <section id="skills" class="container">
             <h2 class="section-title">Competências Técnicas</h2>
@@ -1593,12 +1355,12 @@
                         <div>
                             <h3 class="education-title">MBA em Economia do Agronegócio</h3>
                             <div class="education-school">UFMS - Universidade Federal de Mato Grosso do Sul</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2024 - Atual</div>
+                            <div class="education-period">2024 - Atual</div>
                         </div>
                     </div>
                     <p class="education-description">
                         Especialização em análise econômica aplicada ao agronegócio, com foco em mercado internacional, 
-                        políticas agrícolas and gestão de riscos no setor.
+                        políticas agrícolas e gestão de riscos no setor.
                     </p>
                 </div>
 
@@ -1610,7 +1372,7 @@
                         <div>
                             <h3 class="education-title">Pós-Graduação em Gestão Financeira</h3>
                             <div class="education-school">FGV - Fundação Getúlio Vargas</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2025 - Atual</div>
+                            <div class="education-period">2025 - Atual</div>
                         </div>
                     </div>
                     <p class="education-description">
@@ -1627,7 +1389,7 @@
                         <div>
                             <h3 class="education-title">AI for Business</h3>
                             <div class="education-school">University of Pennsylvania</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2024</div>
+                            <div class="education-period">2024</div>
                         </div>
                     </div>
                     <p class="education-description">
@@ -1646,7 +1408,7 @@
                         <div>
                             <h3 class="education-title">Bacharelado em Economia</h3>
                             <div class="education-school">UFMG - Universidade Federal de Minas Gerais</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2018 - 2024</div>
+                            <div class="education-period">2018 - 2024</div>
                         </div>
                     </div>
                     <p class="education-description">
@@ -1663,7 +1425,7 @@
                         <div>
                             <h3 class="education-title">Intercâmbio na Argentina em Gestão Estratégica</h3>
                             <div class="education-school">UNL - Universidad Nacional del Litoral</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 08-2023 - 12-2023</div>
+                            <div class="education-period">08-2023 - 12-2023</div>
                         </div>
                     </div>
                     <p class="education-description">
@@ -1681,7 +1443,7 @@
                         <div>
                             <h3 class="education-title">Direito (incompleto)</h3>
                             <div class="education-school">ESAMC</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 08-2012 - 06-2015</div>
+                            <div class="education-period">08-2012 - 06-2015</div>
                         </div>
                     </div>
                     <p class="education-description">
@@ -1701,12 +1463,12 @@
         <div class="education-card">
             <div class="education-header">
                 <div class="education-icon">
-                    <i class="fas fa-certificate"></i>
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
                     <h3 class="education-title">Engenharia Financeira com Inteligência Artificial</h3>
                     <div class="education-school">Data Science Academy</div>
-                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2025</div>
+                    <div class="education-period">2025</div>
                 </div>
             </div>
         </div>
@@ -1714,12 +1476,12 @@
         <div class="education-card">
             <div class="education-header">
                 <div class="education-icon">
-                    <i class="fas fa-certificate"></i>
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
                     <h3 class="education-title">Administração Financeira</h3>
                     <div class="education-school">Insper</div>
-                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2025</div>
+                    <div class="education-period">2025</div>
                 </div>
             </div>
         </div>
@@ -1727,12 +1489,12 @@
         <div class="education-card">
             <div class="education-header">
                 <div class="education-icon">
-                    <i class="fas fa-certificate"></i>
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
                     <h3 class="education-title">Successful Negotiation: Essential Strategies and Skills</h3>
                     <div class="education-school">University of Michigan</div>
-                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2024</div>
+                    <div class="education-period">2024</div>
                 </div>
             </div>
         </div>
@@ -1740,12 +1502,12 @@
         <div class="education-card">
             <div class="education-header">
                 <div class="education-icon">
-                    <i class="fas fa-certificate"></i>
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
                     <h3 class="education-title">Leadership Skills</h3>
                     <div class="education-school">Indian Institute of Management Ahmedabad</div>
-                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2023</div>
+                    <div class="education-period">2023</div>
                 </div>
             </div>
         </div>
@@ -1753,12 +1515,12 @@
         <div class="education-card">
             <div class="education-header">
                 <div class="education-icon">
-                    <i class="fas fa-certificate"></i>
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
                     <h3 class="education-title">Treinamento em Precificação</h3>
                     <div class="education-school">FIPE</div>
-                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2022</div>
+                    <div class="education-period">2022</div>
                 </div>
             </div>
         </div>
@@ -1793,11 +1555,11 @@
                     <div class="testimonial-content">
                         Trabalhar com o Vinícius foi uma experiência extremamente positiva. 
                         Ele é um profissional engajado e incansavelmente dedicado à busca de conhecimento, 
-                        sempre se atualizando com as últimas ferramentas and metodologias para melhorar a performance da equipe. 
+                        sempre se atualizando com as últimas ferramentas e metodologias para melhorar a performance da equipe. 
                         Sua capacidade de agir de forma autônoma, combinada com um desejo genuíno de aprender e crescer, 
                         faz com que ele seja uma peça chave em qualquer time. Além disso, 
                         Vinícius possui uma atenção aos detalhes admirável – algo que ele usa a seu favor como uma qualidade, 
-                        garantindo que tudo seja feito com excelência and perfeição. Sem dúvida, ele é um profissional comprometido and indispensável.
+                        garantindo que tudo seja feito com excelência e perfeição. Sem dúvida, ele é um profissional comprometido e indispensável.
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">SD</div>
@@ -1905,10 +1667,10 @@
                         análise financeira corporativa.
                     </p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/viniciusplopes" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/VPLOPES" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -1942,11 +1704,6 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <div class="toast" id="toast">
-        <i class="fas fa-check-circle"></i>
-        <span id="toastMessage">Mensagem enviada com sucesso!</span>
-    </div>
-
     <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1955,9 +1712,7 @@
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars'></i>';
-            mobileMenuBtn.setAttribute('aria-label', navLinks.classList.contains('active') ? 
-                'Fechar menu' : 'Abrir menu');
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         });
 
         // Close mobile menu when clicking a link
@@ -1965,7 +1720,6 @@
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                mobileMenuBtn.setAttribute('aria-label', 'Abrir menu');
             });
         });
 
@@ -1980,9 +1734,6 @@
         if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
             body.classList.add('dark-mode');
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            themeToggle.setAttribute('aria-label', 'Alternar para modo claro');
-        } else {
-            themeToggle.setAttribute('aria-label', 'Alternar para modo escuro');
         }
         
         themeToggle.addEventListener('click', () => {
@@ -1991,11 +1742,9 @@
             if (body.classList.contains('dark-mode')) {
                 themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
                 localStorage.setItem('theme', 'dark');
-                themeToggle.setAttribute('aria-label', 'Alternar para modo claro');
             } else {
                 themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
                 localStorage.setItem('theme', 'light');
-                themeToggle.setAttribute('aria-label', 'Alternar para modo escuro');
             }
         });
 
@@ -2065,34 +1814,15 @@
 
         // Form Submission
         const contactForm = document.getElementById('contactForm');
-        const toast = document.getElementById('toast');
-        const toastMessage = document.getElementById('toastMessage');
         
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Simulate form submission
-            showToast('Mensagem enviada com sucesso! Entrarei em contato em breve.');
+            // In a real scenario, you would send the form data to a server
+            // Here we'll just show a success message
+            alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
             contactForm.reset();
         });
-
-        // CV Download
-        const downloadCV = document.getElementById('downloadCV');
-        downloadCV.addEventListener('click', (e) => {
-            e.preventDefault();
-            showToast('Download do currículo iniciado!');
-            // In a real scenario, this would trigger a file download
-        });
-
-        // Toast Notification
-        function showToast(message) {
-            toastMessage.textContent = message;
-            toast.classList.add('show');
-            
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
-        }
 
         // Animate elements on scroll
         const observerOptions = {
@@ -2110,20 +1840,13 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.skill-card, .experience-item, .project-card, .stat-item, .education-card, .testimonial-card, .contact-item').forEach(el => {
+        document.querySelectorAll('.skill-card, .experience-item, .project-card, .stat-item, .education-card, .testimonial-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
-
-        // Add subtle animation to hero elements
-        const heroElements = document.querySelectorAll('.hero h1, .hero .subtitle, .hero .description, .cta-buttons');
-        heroElements.forEach((el, index) => {
-            el.style.animation = `fadeInUp 0.8s ease ${index * 0.2}s both`;
-        });
     </script>
 </body>
+
 </html>
-
-
