@@ -71,7 +71,7 @@
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            margin: 20px 0; /* Alterado para 20px superior e inferior */
             color: var(--primary);
             position: relative;
             font-weight: 700;
@@ -80,7 +80,7 @@
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -15px; /* Ajustado para manter a distância da linha decorativa */
             left: 50%;
             transform: translateX(-50%);
             width: 80px;
@@ -1301,7 +1301,7 @@
                         análise técnica para operações financeiras.
                     </p>
                     <p>
-                        Com experiência internacional em mercados de day trade e expertise em valuation, inteligência 
+                        Com experiência internacional in mercados de day trade e expertise em valuation, inteligência 
                         de mercado e otimização de processos. Comprovada capacidade de intervenção em situações 
                         críticas e gestão disciplinar de operações.
                     </p>
@@ -1388,7 +1388,7 @@
                     <div class="project-content">
                         <h3 class="project-title">GeoPandas_RJ</h3>
                         <p class="project-description">
-                            Notebook em Python para análise geoespacial de imóveis no Rio de Janeiro, utilizando GeoPandas, Folium e Matplotlib. O projeto inclui carregamento de shapefiles, tratamento de dados e visualizações estáticas e interativas em mapas, com foco em aplicações de análise urbana e imobiliária.
+                            Notebook em Python para análise geoespacial de imóveis no Rio de Janeiro, utilizando GeoPandas, Folium and Matplotlib. O projeto inclui carregamento de shapefiles, tratamento de dados e visualizações estáticas e interativas em mapas, com foco em aplicações de análise urbana e imobiliária.
 
                         </p>
                         <div class="project-tech">
@@ -1576,7 +1576,7 @@
                     </div>
                     <p class="education-description">
                         Especialização em análise econômica aplicada ao agronegócio, com foco em mercado internacional, 
-                        políticas agrícolas e gestão de riscos no setor.
+                        políticas agrícolas and gestão de riscos no setor.
                     </p>
                 </div>
 
@@ -1771,11 +1771,11 @@
                     <div class="testimonial-content">
                         Trabalhar com o Vinícius foi uma experiência extremamente positiva. 
                         Ele é um profissional engajado e incansavelmente dedicado à busca de conhecimento, 
-                        sempre se atualizando com as últimas ferramentas e metodologias para melhorar a performance da equipe. 
+                        sempre se atualizando com as últimas ferramentas and metodologias para melhorar a performance da equipe. 
                         Sua capacidade de agir de forma autônoma, combinada com um desejo genuíno de aprender e crescer, 
                         faz com que ele seja uma peça chave em qualquer time. Além disso, 
                         Vinícius possui uma atenção aos detalhes admirável – algo que ele usa a seu favor como uma qualidade, 
-                        garantindo que tudo seja feito com excelência e perfeição. Sem dúvida, ele é um profissional comprometido e indispensável.
+                        garantindo que tudo seja feito com excelência and perfeição. Sem dúvida, ele é um profissional comprometido and indispensável.
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">SD</div>
@@ -1933,7 +1933,7 @@
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars'></i>';
             mobileMenuBtn.setAttribute('aria-label', navLinks.classList.contains('active') ? 
                 'Fechar menu' : 'Abrir menu');
         });
