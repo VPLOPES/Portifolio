@@ -1,52 +1,69 @@
-# Portfólio — Vinícius Lopes
+# Portfólio Profissional - Vinícius Lopes
 
-Site estático desenvolvido em HTML/CSS/JS (uma única página).
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-## Como visualizar localmente
-```bash
-# opção 1: abrir direto no navegador
-# dê duplo clique em index.html
+> Economista e Consultor Financeiro especializado em gestão de risco, trading e análise financeira corporativa.
 
-# opção 2: servir localmente (recomendado)
-python -m http.server 8080
-# depois acesse http://localhost:8080
-```
+Este repositório contém o código-fonte do meu portfólio profissional pessoal. O projeto foi desenvolvido para apresentar minha trajetória, formação acadêmica, competências técnicas e os principais projetos desenvolvidos nas áreas de Economia, Finanças e Ciência de Dados.
 
-## Publicação (duas opções simples)
+Deploy: **[Acesse o Portfólio Online](https://vplopes.github.io/Portifolio/)**
 
-### 1) GitHub Pages (grátis)
-1. Crie um repositório chamado `portfolio` (ou o nome que preferir) no GitHub.
-2. Faça o *push* destes arquivos (`index.html`, `robots.txt`, `sitemap.xml`, `manifest.json`, etc.).
-3. No GitHub, vá em **Settings » Pages** e selecione **Source: Deploy from a branch** e **Branch: main / root**.
-4. O site ficará disponível em `https://seu-usuario.github.io/<nome-do-repo>/`.
-5. (Opcional) Aponte um domínio próprio criando o arquivo `CNAME` com `www.seudominio.com.br` e configurando o DNS.
+## 💻 Sobre o Projeto
 
-### 2) Netlify / Vercel (grátis)
-- Crie uma conta, conecte seu GitHub e importe o repositório.
-- *Build command*: **(vazio)** (site estático puro).
-- *Publish directory*: **/**.
-- O deploy sai automático a cada *commit*.
+O site foi construído utilizando tecnologias web fundamentais, sem o uso de frameworks pesados, garantindo alta performance e carregamento rápido. O design é focado na experiência do usuário (UX), com uma interface limpa e profissional.
 
-## Estrutura
-```
-.
-├─ index.html
-├─ robots.txt
-├─ sitemap.xml
-├─ manifest.json
-├─ .gitignore
-├─ LICENSE
-└─ CNAME            # opcional: preencha com seu domínio
-```
+### Funcionalidades Técnicas Implementadas:
 
-## SEO e PWA (básico)
-- `sitemap.xml` e `robots.txt` ajudam na indexação.
-- `manifest.json` prepara para instalar como *app* (PWA).
-- Inclua um `favicon.ico`/`favicon.png` na raiz para ícone no navegador.
+* **Design Responsivo:** Layout adaptável para desktops, tablets e dispositivos móveis (Mobile First).
+* **Dark/Light Mode:** Sistema de alternância de tema com persistência de dados via `localStorage` e variáveis CSS (`:root`).
+* **Filtragem de Projetos:** Sistema em JavaScript para filtrar os cards de projetos por categorias (Finanças, Risco, Analytics, Estratégia).
+* **Animações ao Rolar (Scroll):** Uso da API `IntersectionObserver` para animar a entrada de elementos na tela.
+* **Menu Mobile:** Navegação otimizada para telas pequenas.
+* **Botão "Voltar ao Topo":** Funcionalidade de scroll suave.
 
-## Melhorias sugeridas
-- Adicionar `favicon` e imagens otimizadas (WebP/AVIF).
-- Incluir metatags Open Graph/Twitter para *preview*.
-- Substituir ícones do CDN por *assets* locais ou versão *pinned*.
-- Adicionar formulário de contato via serviço (Formspree, Getform, etc.).
-- Automatizar deploy com GitHub Actions.
+## 🛠 Tecnologias Utilizadas
+
+* **HTML5:** Estrutura semântica e acessível.
+* **CSS3:** Estilização avançada com Flexbox, CSS Grid e CSS Variables.
+* **JavaScript (ES6+):** Manipulação do DOM e lógica de interatividade.
+* **Font Awesome:** Ícones vetoriais.
+* **Google Fonts:** Tipografia (Fonte Inter).
+
+## 📂 Seções do Portfólio
+
+O conteúdo do site está dividido nas seguintes seções estratégicas:
+
+1.  **Home:** Apresentação inicial e call-to-action.
+2.  **Sobre:** Resumo profissional e estatísticas de carreira.
+3.  **Formação:** Detalhes do MBA, Pós-graduação e cursos internacionais (UPenn, IIM Ahmedabad).
+4.  **Competências:** Hard skills em Gestão de Risco, Análise Financeira, Tecnologia (Python, SQL, Power BI) e Gestão Estratégica.
+5.  **Experiência:** Linha do tempo da trajetória profissional (Quantum Trading, Agromercantil, SEDE-MG, BDMG).
+6.  **Projetos:** Showcase de projetos práticos, incluindo:
+    * Previsão de Ativos com IA.
+    * Estratégias de Hedge (Black-Scholes e Redes Neurais).
+    * Dashboards de Pesquisa de Mercado (Power BI).
+7.  **Recomendações:** Depoimentos de colegas e gestores.
+8.  **Contato:** Formulário e links para redes sociais.
+
+## 🚀 Como executar localmente
+
+Para visualizar este projeto em sua máquina local:
+
+1.  Clone o repositório:
+    ```bash
+    git clone [https://github.com/vplopes/Portifolio.git](https://github.com/vplopes/Portifolio.git)
+    ```
+2.  Navegue até a pasta do projeto.
+3.  Abra o arquivo `index.html` em seu navegador de preferência.
+
+## 📫 Contato
+
+Sinta-se à vontade para entrar em contato para oportunidades de consultoria ou colaboração.
+
+* **LinkedIn:** [Vinícius Lopes](https://www.linkedin.com/in/viniciusplopes)
+* **E-mail:** viniciuslopesp12@gmail.com
+
+---
+&copy; 2025 Vinícius Lopes. Desenvolvido com ❤️ e código.
