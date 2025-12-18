@@ -1213,6 +1213,25 @@
         html {
             scroll-behavior: smooth;
         }
+        .badge-new {
+            background-color: var(--success); /* Usa sua cor verde já definida */
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            vertical-align: middle;
+            margin-left: 8px;
+            text-transform: uppercase;
+            font-weight: 700;
+            box-shadow: 0 2px 5px rgba(16, 185, 129, 0.4);
+            animation: pulse 2s infinite;
+}
+
+        @keyframes pulse {
+         0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+}
     </style>
 </head>
 <body>
@@ -1330,7 +1349,10 @@
                         <i class="fas fa-percentage"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">IPCA e Boletim Focus em tempo real</h3>
+                        <h3 class="project-title">
+                            IPCA e Boletim Focus em tempo real
+                            <span class="badge-new">Novo</span>
+                        </h3>
                         <p class="project-description">
                             Calculadora de correção de índices financeiros, com dados do Boletim Focus e análise cambial automatizada.
                         </p>
@@ -2242,6 +2264,7 @@
     </script>
 </body>
 </html>
+
 
 
 
