@@ -3,668 +3,430 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FP&A Corporativo | Planejamento Financeiro e Análise Estratégica — Vinícius Lopes - FP&A Corporativo e Consultor Financeiro</title>
-    <meta name="description" content="FP&A corporativo com foco em planejamento financeiro, orçamento, forecast e apoio à decisão executiva. Portfólio profissional de Vinícius Lopes, economista e consultor financeiro especializado em gestão de risco, trading e análise financeira corporativa">
-    <meta name="keywords" content="economista, consultor financeiro, gestão de risco, trading, análise financeira, portfólio, valuation, consultoria">
+    <title>Vinícius Lopes | FP&A Corporativo — Planejamento Financeiro e Análise Estratégica</title>
+    <meta name="description" content="Economista com histórico comprovado de impacto: R$ 95M em ativos públicos arrecadados, Prêmio ALIDE Verde 2024, redução de 20% em tarifas reguladas. FP&A Corporativo, planejamento orçamentário, modelagem financeira e suporte à decisão estratégica.">
+    <meta name="keywords" content="FP&A, planejamento financeiro, orçamento, forecast, modelagem financeira, valuation, Power BI, Python, SQL, economista, Belo Horizonte, Minas Gerais">
     <meta name="author" content="Vinícius Lopes">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vplopes.github.io/Portifolio/">
-    <meta property="og:title" content="Vinícius Lopes | FP&A Corporativo e Data Scientist">
-    <meta property="og:description" content="Portfólio de projetos em Finanças, Gestão de Planejamento Financeiro e Machine Learning. Veja meus cases em Python, Power BI e Estratégia.">
+    <meta property="og:title" content="Vinícius Lopes | FP&A Corporativo e Planejamento Financeiro">
+    <meta property="og:description" content="Economista com impacto mensurável: R$ 95M arrecadados, Prêmio ALIDE Verde 2024, redução de 20% em tarifas públicas. Portfólio de projetos em FP&A, modelagem financeira e análise de dados.">
     <meta property="og:image" content="https://vplopes.github.io/Portifolio/foto_principal.png">
-
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://vplopes.github.io/Portifolio/">
-    <meta property="twitter:title" content="Vinícius Lopes | FP&A Corporativo e Data Scientist">
-    <meta property="twitter:description" content="Portfólio de projetos em Finanças, Gestão de Planejamento Financeiro e Machine Learning.">
+    <meta property="twitter:title" content="Vinícius Lopes | FP&A Corporativo">
+    <meta property="twitter:description" content="Economista com impacto mensurável: R$ 95M arrecadados, Prêmio ALIDE Verde 2024, redução de 20% em tarifas públicas.">
     <meta property="twitter:image" content="https://vplopes.github.io/Portifolio/foto_principal.png">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #64748b;
-            --light: #f8fafc;
-            --dark: #0f172a;
-            --accent: #0ea5e9;
-            --success: #10b981;
+            --primary: #1a3a5c;
+            --primary-light: #2558a0;
+            --accent: #c8602a;
+            --accent-light: #f5ebe3;
+            --success: #0f6e56;
+            --success-light: #e1f5ee;
+            --ink: #0f0e0c;
+            --ink-2: #3a3830;
+            --ink-3: #7a776e;
+            --paper: #f7f5f0;
+            --paper-2: #edeae2;
+            --paper-3: #dedad0;
             --card-bg: #ffffff;
-            --section-bg: #f1f5f9;
-            --border: #e2e8f0;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --border: #e2dfd6;
+            --shadow: 0 2px 16px rgba(15,14,12,0.07);
             --transition: all 0.3s ease;
-            --radius: 12px;
+            --radius: 10px;
+            --mono: 'DM Mono', monospace;
+            --serif: 'Fraunces', Georgia, serif;
+            --sans: 'DM Sans', system-ui, sans-serif;
         }
 
         .dark-mode {
-            --primary: #3b82f6;
-            --primary-dark: #2563eb;
-            --secondary: #94a3b8;
-            --light: #0f172a;
-            --dark: #f8fafc;
-            --accent: #38bdf8;
-            --success: #34d399;
-            --card-bg: #1e293b;
-            --section-bg: #0f172a;
-            --border: #334155;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            --primary: #5b8fc9;
+            --primary-light: #7aaee0;
+            --accent: #e07a45;
+            --accent-light: #3a2418;
+            --success: #1d9e75;
+            --success-light: #0a2e22;
+            --ink: #f0ede8;
+            --ink-2: #c8c4bc;
+            --ink-3: #888580;
+            --paper: #141210;
+            --paper-2: #1e1c18;
+            --paper-3: #2a2820;
+            --card-bg: #1e1c18;
+            --border: #302e28;
+            --shadow: 0 2px 16px rgba(0,0,0,0.3);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: var(--sans);
             line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--section-bg);
-            transition: var(--transition);
+            color: var(--ink);
+            background-color: var(--paper);
+            transition: background-color 0.3s, color 0.3s;
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
 
-        section {
-            padding: 100px 0;
-            scroll-margin-top: 80px;
-        }
+        section { padding: 96px 0; scroll-margin-top: 80px; }
 
+        /* ── TYPOGRAPHY ── */
         .section-title {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: 2.4rem;
             text-align: center;
-            font-size: 2.5rem;
-            margin-top: 3rem;
-            margin-bottom: 3rem;
-            color: var(--primary);
+            margin-bottom: 3.5rem;
+            color: var(--ink);
             position: relative;
-            font-weight: 700;
         }
-
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -14px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
+            width: 48px;
+            height: 3px;
+            background: var(--accent);
             border-radius: 2px;
         }
 
+        .label-mono {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ink-3);
+        }
+
+        /* ── BUTTONS ── */
         .btn {
-            padding: 12px 30px;
+            padding: 12px 28px;
             border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
+            border-radius: 6px;
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            font-weight: 500;
             cursor: pointer;
             transition: var(--transition);
             text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-icon {
             display: inline-flex;
             align-items: center;
             gap: 8px;
         }
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #a84e20;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(200,96,42,0.25);
+        }
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1.5px solid rgba(255,255,255,0.6);
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.12);
+            border-color: white;
+        }
 
-        /* Header */
+        /* ── HEADER ── */
         header {
-            background: var(--card-bg);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: var(--shadow);
             transition: var(--transition);
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            background-color: rgba(247,245,240,0.92);
+            border-bottom: 1px solid var(--border);
         }
-
         .dark-mode header {
-            background-color: rgba(30, 41, 59, 0.9);
+            background-color: rgba(20,18,16,0.92);
         }
-
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 0;
+            padding: 1.1rem 0;
         }
-
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--ink);
+            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 10px;
-            text-decoration: none;
         }
-
-        .logo i {
-            font-size: 1.4rem;
-        }
-
+        .logo i { color: var(--accent); font-size: 1.1rem; }
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
-
         .nav-links a {
             text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
+            color: var(--ink-2);
+            font-weight: 400;
+            font-size: 0.9rem;
             transition: var(--transition);
             position: relative;
-            padding: 5px 0;
+            padding: 4px 0;
         }
-
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: var(--accent);
             transition: var(--transition);
         }
-
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--primary);
-        }
-
-        .nav-btns {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover, .nav-links a.active { color: var(--ink); }
+        .nav-btns { display: flex; gap: 0.75rem; align-items: center; }
         .theme-toggle {
             background: transparent;
             border: none;
-            color: var(--dark);
-            font-size: 1.4rem;
+            color: var(--ink-3);
+            font-size: 1.1rem;
             cursor: pointer;
             transition: var(--transition);
-            width: 40px;
-            height: 40px;
+            width: 36px; height: 36px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
         }
-
-        .theme-toggle:hover {
-            color: var(--primary);
-            background: var(--section-bg);
-        }
-
+        .theme-toggle:hover { color: var(--accent); background: var(--paper-2); }
         .mobile-menu-btn {
             display: none;
-            background: transparent;
-            border: none;
-            font-size: 1.6rem;
-            color: var(--dark);
+            background: transparent; border: none;
+            font-size: 1.4rem; color: var(--ink);
             cursor: pointer;
-            width: 40px;
-            height: 40px;
+            width: 36px; height: 36px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: center; justify-content: center;
         }
+        .mobile-menu-btn:hover { background: var(--paper-2); }
 
-        .mobile-menu-btn:hover {
-            background: var(--section-bg);
-        }
-
-        /* Hero Section */
+        /* ── HERO ── */
         .hero {
-            padding: 180px 0 100px;
-            text-align: center;
-            color: white;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 160px 0 100px;
+            background: var(--primary);
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            position: absolute; inset: 0;
+            background-image: radial-gradient(circle at 70% 50%, rgba(200,96,42,0.18) 0%, transparent 60%),
+                              radial-gradient(circle at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 50%);
         }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 3rem;
+            align-items: center;
             position: relative;
             z-index: 2;
         }
-
+        .hero-eyebrow {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 1.2rem;
+            animation: fadeInUp 0.7s ease both;
+        }
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            animation: fadeInUp 0.8s ease;
-            font-weight: 800;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-family: var(--serif);
+            font-size: 3.6rem;
             font-weight: 300;
-            animation: fadeInUp 0.8s ease 0.2s both;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 1.2rem;
+            animation: fadeInUp 0.7s ease 0.1s both;
         }
-
-        .hero .description {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            animation: fadeInUp 0.8s ease 0.4s both;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        .hero h1 em { font-style: italic; color: rgba(255,255,255,0.75); }
+        .hero-tagline {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 1.8rem;
+            font-weight: 300;
+            max-width: 540px;
             line-height: 1.7;
+            animation: fadeInUp 0.7s ease 0.2s both;
         }
-
-        .cta-buttons {
+        .hero-impacts {
             display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.6s both;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.7s ease 0.3s both;
         }
-
-        /* Main Content */
-        main {
-            background: var(--section-bg);
-            position: relative;
-        }
-
-        /* About Section */
-        .about-grid {
-    		display: grid;
-    		grid-template-columns: 1fr 1fr;
-    		gap: 4rem;
-    		align-items: center;
-   		max-width: 1200px;
-   		margin: 0 auto;
-	}
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--dark);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            background: var(--card-bg);
-            color: var(--dark);
-            border-radius: var(--radius);
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-        }
-
-        .about-image {
-    		position: relative;
-    		display: flex;
-    		justify-content: center;
-    		align-items: center;
-	}
-
-        .profile-image {
-   		 width: 70%;
-   		 height: 600px;
-   		 background-image: url('foto_principal.png');
-   		 background-size: cover;
-    		 background-position: center;
-   		 background-repeat: no-repeat;
-   		 border-radius: var(--radius);
-    		 position: relative;
-    		 overflow: hidden;
-    		 margin: 0 auto;
-	}
-
-
-        /* Education Section */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .education-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: var(--radius);
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            height: 100%;
-        }
-
-        .education-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .education-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .education-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-        }
-
-        .education-title {
-            font-size: 1.3rem;
-            color: var(--dark);
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-        }
-
-        .education-school {
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .education-period {
-            color: var(--secondary);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .education-description {
-            margin-top: 1rem;
-            color: var(--secondary);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: var(--radius);
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            height: 100%;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .skill-card h3 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-size: 1.4rem;
+        .impact-line {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-weight: 600;
-        }
-
-        .skill-card h3 i {
-            font-size: 1.2rem;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 0.8rem 0;
-            position: relative;
-            padding-left: 2rem;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .skill-list li:last-child {
-            border-bottom: none;
-        }
-
-        .skill-list li:before {
-            content: "▹";
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
-        }
-
-        .skill-level {
-            font-size: 0.85rem;
-            background: var(--primary);
-            color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-        }
-
-        /* Experience Section */
-        .experience-timeline {
-            position: relative;
-            padding-left: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .experience-timeline:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--primary);
-        }
-
-        .experience-item {
-            position: relative;
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            margin-left: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-
-        .experience-item:hover {
-            transform: translateX(5px);
-        }
-
-        .experience-item:before {
-            content: '';
-            position: absolute;
-            left: -3rem;
-            top: 2rem;
-            width: 16px;
-            height: 16px;
-            background: var(--card-bg);
-            border: 4px solid var(--primary);
-            border-radius: 50%;
-        }
-
-        .experience-header {
-            margin-bottom: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .experience-title {
-            font-size: 1.4rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .experience-company {
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .experience-period {
-            color: var(--secondary);
             font-size: 0.9rem;
-            background: var(--section-bg);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-weight: 500;
+            color: rgba(255,255,255,0.8);
         }
-
-
-        .experience-description {
-            margin-top: 1rem;
-            color: var(--secondary);
+        .impact-line i { color: var(--accent); font-size: 0.8rem; width: 14px; }
+        .impact-num {
+            font-family: var(--serif);
+            font-size: 1rem;
+            color: white;
+            font-weight: 400;
         }
-
-        .experience-description ul {
-            list-style: none;
-            padding-left: 0;
+        .cta-buttons {
+            display: flex; gap: 1rem; flex-wrap: wrap;
+            animation: fadeInUp 0.7s ease 0.4s both;
         }
-
-        .experience-description li {
-            padding: 0.5rem 0;
+        .hero-photo-wrapper {
+            animation: fadeInUp 0.7s ease 0.2s both;
+        }
+        .hero-photo {
+            width: 240px; height: 290px;
+            border-radius: 8px;
+            background-image: url('foto_principal.png');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid rgba(255,255,255,0.15);
             position: relative;
-            padding-left: 1.5rem;
         }
+        .hero-photo-placeholder {
+            width: 240px; height: 290px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.08);
+            border: 2px dashed rgba(255,255,255,0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 1rem;
+        }
+        .hero-photo-placeholder i { font-size: 2.5rem; }
 
-        .experience-description li:before {
-            content: "•";
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-            font-size: 1.5rem;
+        /* ── ABOUT ── */
+        #about { background: var(--paper); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+        .about-text { font-size: 1rem; line-height: 1.85; color: var(--ink-2); }
+        .about-text p { margin-bottom: 1.4rem; }
+        .about-text p:last-of-type { margin-bottom: 0; }
+        .about-highlight {
+            background: var(--success-light);
+            border-left: 3px solid var(--success);
+            padding: 1rem 1.2rem;
+            border-radius: 0 6px 6px 0;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            color: var(--success);
+            line-height: 1.65;
+        }
+        .dark-mode .about-highlight { color: #4dcaa5; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 2.5rem;
+        }
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem 1.2rem;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        .stat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+        .stat-number {
+            font-family: var(--serif);
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--accent);
+            margin-bottom: 4px;
             line-height: 1;
         }
+        .stat-label { font-size: 0.82rem; color: var(--ink-3); }
 
-        /* Projects Section */
-        .projects-filters {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 8px 20px;
+        .about-awards { display: flex; flex-direction: column; gap: 14px; }
+        .award-card {
             background: var(--card-bg);
-            color: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.4rem 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+        .award-card:hover { transform: translateX(4px); }
+        .award-icon {
+            width: 42px; height: 42px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; flex-shrink: 0;
+        }
+        .award-icon.gold { background: #faeeda; color: #854f0b; }
+        .award-icon.green { background: var(--success-light); color: var(--success); }
+        .award-icon.blue { background: #e6f1fb; color: #185fa5; }
+        .award-text h4 { font-size: 0.95rem; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+        .award-text p { font-size: 0.82rem; color: var(--ink-3); line-height: 1.5; }
+        .award-text a { color: var(--primary-light); font-size: 0.78rem; text-decoration: none; }
+        .award-text a:hover { text-decoration: underline; }
+
+        /* ── PROJECTS ── */
+        #projects { background: var(--paper-2); }
+        .projects-filters {
+            display: flex; justify-content: center;
+            gap: 0.6rem; margin-bottom: 3rem; flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 7px 18px;
+            background: var(--card-bg);
+            color: var(--ink-2);
             border: 1px solid var(--border);
             border-radius: 30px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
+            cursor: pointer; transition: var(--transition);
+            font-family: var(--sans);
+            font-size: 0.85rem; font-weight: 400;
         }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary); color: white; border-color: var(--primary);
         }
-
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
         }
-
         .project-card {
             background: var(--card-bg);
             border-radius: var(--radius);
@@ -672,588 +434,362 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             border: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
+            display: flex; flex-direction: column;
         }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
+        .project-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(0,0,0,0.12); }
         .project-image {
-            height: 220px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3.5rem;
+            height: 180px;
+            background: var(--primary);
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,0.7); font-size: 3rem;
             position: relative;
-            overflow: hidden;
         }
-
-        .project-image:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.1);
-            opacity: 0;
-            transition: var(--transition);
+        .project-image.accent-bg { background: linear-gradient(135deg, #1a3a5c, #2558a0); }
+        .project-image.warm-bg { background: linear-gradient(135deg, #7a3010, #c8602a); }
+        .project-image.green-bg { background: linear-gradient(135deg, #0a3828, #0f6e56); }
+        .project-badge {
+            position: absolute; top: 12px; right: 12px;
+            background: var(--accent); color: white;
+            font-family: var(--mono);
+            font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+            padding: 3px 9px; border-radius: 4px;
         }
-
-        .project-card:hover .project-image:after {
-            opacity: 1;
+        .project-impact {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: rgba(15,110,86,0.92);
+            color: white; font-size: 0.8rem;
+            padding: 6px 14px;
+            display: flex; align-items: center; gap: 6px;
         }
-
-        .project-content {
-            padding: 2rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-title {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-            font-weight: 600;
-        }
-
-        .project-description {
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            flex-grow: 1;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
+        .project-content { padding: 1.6rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .project-title { font-size: 1.1rem; font-weight: 500; color: var(--ink); margin-bottom: 0.7rem; line-height: 1.4; }
+        .project-description { color: var(--ink-3); margin-bottom: 1.2rem; font-size: 0.9rem; line-height: 1.65; flex-grow: 1; }
+        .project-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.2rem; }
         .tech-tag {
-            background: var(--section-bg);
-            color: var(--primary);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            background: var(--paper-2); color: var(--primary);
+            padding: 3px 10px; border-radius: 4px;
+            font-size: 0.78rem; font-weight: 500;
         }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: auto;
-        }
-
+        .project-links { display: flex; gap: 0.75rem; margin-top: auto; }
         .project-link {
-            padding: 0.6rem 1.2rem;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 500;
-        }
-
-        .project-link:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .project-link.outline {
-            background: transparent;
-            color: var(--primary);
+            padding: 7px 14px;
+            background: transparent; color: var(--primary);
             border: 1px solid var(--primary);
+            text-decoration: none; border-radius: 5px;
+            font-size: 0.85rem; transition: var(--transition);
+            display: flex; align-items: center; gap: 6px; font-weight: 500;
         }
+        .project-link:hover { background: var(--primary); color: white; }
 
-        .project-link.outline:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Testimonials Section */
-        .testimonials-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .testimonial-card {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            position: relative;
-            margin-bottom: 3rem;
-            transition: var(--transition);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .testimonial-card:before {
-            content: '"';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 5rem;
-            color: var(--primary);
-            opacity: 0.1;
-            font-family: serif;
-            line-height: 1;
-        }
-
-        .testimonial-content {
-            font-size: 1.1rem;
-            color: var(--secondary);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        .author-info h4 {
-            color: var(--dark);
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-        }
-
-        .author-role {
-            color: var(--primary);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Contact Section */
-        .contact-content {
+        /* ── SKILLS ── */
+        #skills { background: var(--paper); }
+        .skills-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: flex-start;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
+        .skill-card {
+            background: var(--card-bg); padding: 1.8rem;
+            border-radius: var(--radius); transition: var(--transition);
+            box-shadow: var(--shadow); border: 1px solid var(--border);
+        }
+        .skill-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+        .skill-card h3 {
+            color: var(--ink); margin-bottom: 1.4rem;
+            font-size: 1rem; font-weight: 500;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .skill-card h3 i { color: var(--accent); font-size: 1rem; }
+        .skill-list { list-style: none; }
+        .skill-list li {
+            padding: 0.7rem 0;
+            position: relative; padding-left: 1.4rem;
+            border-bottom: 1px solid var(--border);
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.9rem; color: var(--ink-2);
+        }
+        .skill-list li:last-child { border-bottom: none; }
+        .skill-list li::before {
+            content: "▹"; color: var(--accent);
+            position: absolute; left: 0; font-size: 0.9rem;
+        }
+        .skill-level {
+            font-size: 0.75rem; font-family: var(--mono);
+            background: var(--paper-2); color: var(--ink-3);
+            padding: 2px 8px; border-radius: 3px;
+        }
+        .skill-level.advanced { background: var(--success-light); color: var(--success); }
+        .dark-mode .skill-level.advanced { color: #4dcaa5; }
 
-        .contact-item {
-            padding: 1.5rem;
+        /* ── EXPERIENCE ── */
+        #experience { background: var(--paper-2); }
+        .experience-timeline {
+            position: relative; padding-left: 1.5rem;
+            max-width: 820px; margin: 0 auto;
+        }
+        .experience-timeline::before {
+            content: ''; position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 2px; background: var(--border);
+        }
+        .experience-item {
+            position: relative; margin-bottom: 2rem;
+            padding: 1.8rem 2rem;
+            background: var(--card-bg); border-radius: var(--radius);
+            margin-left: 2rem; box-shadow: var(--shadow);
+            border: 1px solid var(--border); transition: var(--transition);
+        }
+        .experience-item:hover { transform: translateX(4px); }
+        .experience-item::before {
+            content: ''; position: absolute;
+            left: -2.6rem; top: 1.8rem;
+            width: 14px; height: 14px;
             background: var(--card-bg);
-            border-radius: var(--radius);
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+            border: 3px solid var(--accent); border-radius: 50%;
         }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        .experience-header {
+            display: flex; justify-content: space-between;
+            flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.2rem;
         }
+        .experience-title { font-size: 1.1rem; color: var(--ink); font-weight: 500; margin-bottom: 4px; }
+        .experience-company {
+            color: var(--primary-light); font-size: 0.9rem; font-weight: 500;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .dark-mode .experience-company { color: var(--primary); }
+        .experience-period {
+            color: var(--ink-3); font-size: 0.8rem; font-family: var(--mono);
+            background: var(--paper-2); padding: 4px 10px; border-radius: 4px;
+            height: fit-content;
+        }
+        .experience-description { color: var(--ink-3); font-size: 0.9rem; }
+        .experience-description ul { list-style: none; }
+        .experience-description li {
+            padding: 0.45rem 0; position: relative;
+            padding-left: 1.3rem; line-height: 1.6;
+        }
+        .experience-description li::before {
+            content: "•"; color: var(--accent);
+            position: absolute; left: 0; font-size: 1.1rem; line-height: 1.3;
+        }
+        .exp-impact {
+            margin-top: 1rem;
+            background: var(--success-light);
+            border-left: 3px solid var(--success);
+            padding: 8px 12px; border-radius: 0 5px 5px 0;
+            font-size: 0.85rem; color: var(--success);
+            display: flex; align-items: flex-start; gap: 8px;
+        }
+        .dark-mode .exp-impact { color: #4dcaa5; }
+        .exp-impact i { margin-top: 2px; flex-shrink: 0; }
 
-        .contact-icon {
-            font-size: 1.8rem;
-            color: var(--primary);
-            min-width: 50px;
-            height: 50px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* ── EDUCATION ── */
+        #education { background: var(--paper); }
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .education-card {
+            background: var(--card-bg); padding: 1.6rem;
+            border-radius: var(--radius); transition: var(--transition);
+            box-shadow: var(--shadow); border: 1px solid var(--border); height: 100%;
+        }
+        .education-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+        .education-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+        .education-icon { font-size: 1.6rem; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+        .education-title { font-size: 1rem; color: var(--ink); font-weight: 500; margin-bottom: 3px; line-height: 1.4; }
+        .education-school { color: var(--primary-light); font-size: 0.85rem; font-weight: 500; margin-bottom: 4px; }
+        .dark-mode .education-school { color: var(--primary); }
+        .education-period { color: var(--ink-3); font-size: 0.8rem; font-family: var(--mono); }
+        .education-description { font-size: 0.88rem; color: var(--ink-3); line-height: 1.6; }
+
+        /* Complementary - compact */
+        #complementary-education { background: var(--paper-2); }
+        #complementary-education .education-card { padding: 1.2rem 1.4rem; }
+        #complementary-education .education-title { font-size: 0.9rem; }
+
+        /* ── TESTIMONIALS ── */
+        #testimonials { background: var(--paper); }
+        .testimonials-container { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+        .testimonial-card {
+            background: var(--card-bg); padding: 2rem 2.2rem;
+            border-radius: var(--radius); box-shadow: var(--shadow);
+            border: 1px solid var(--border); position: relative; transition: var(--transition);
+        }
+        .testimonial-card:hover { transform: translateY(-4px); }
+        .testimonial-card::before {
+            content: '"'; position: absolute;
+            top: 14px; left: 20px;
+            font-family: var(--serif); font-size: 5rem;
+            color: var(--accent); opacity: 0.1; line-height: 1;
+        }
+        .testimonial-content {
+            font-size: 0.95rem; color: var(--ink-2);
+            line-height: 1.8; margin-bottom: 1.4rem;
+            position: relative; z-index: 2;
+        }
+        .testimonial-author { display: flex; align-items: center; gap: 14px; }
+        .author-avatar {
+            width: 48px; height: 48px; border-radius: 50%;
+            background: var(--primary); color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--serif); font-size: 1rem; font-weight: 400;
             flex-shrink: 0;
         }
+        .author-info h4 { color: var(--ink); font-weight: 500; font-size: 0.95rem; margin-bottom: 3px; }
+        .author-role { color: var(--accent); font-size: 0.82rem; font-weight: 500; }
 
-        .contact-text h3 {
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-            font-weight: 600;
+        /* ── CONTACT ── */
+        #contact { background: var(--paper-2); }
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start; }
+        .contact-info { display: flex; flex-direction: column; gap: 1rem; }
+        .contact-item {
+            padding: 1.3rem 1.4rem;
+            background: var(--card-bg); border-radius: var(--radius);
+            box-shadow: var(--shadow); border: 1px solid var(--border);
+            display: flex; align-items: flex-start; gap: 1rem; transition: var(--transition);
         }
-
-        .contact-text p, .contact-text a {
-            color: var(--secondary);
-            text-decoration: none;
-            transition: var(--transition);
+        .contact-item:hover { transform: translateY(-3px); }
+        .contact-icon {
+            font-size: 1.1rem; color: var(--accent);
+            width: 42px; height: 42px;
+            background: var(--accent-light); border-radius: 8px;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
         }
-
-        .contact-text a:hover {
-            color: var(--primary);
-        }
-
+        .contact-text h3 { color: var(--ink); font-size: 0.9rem; font-weight: 500; margin-bottom: 3px; }
+        .contact-text p, .contact-text a { color: var(--ink-3); text-decoration: none; font-size: 0.9rem; transition: var(--transition); }
+        .contact-text a:hover { color: var(--accent); }
         .contact-form {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
+            background: var(--card-bg); padding: 2.2rem;
+            border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border);
         }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-            font-weight: 500;
-        }
-
+        .form-group { margin-bottom: 1.3rem; }
+        .form-group label { display: block; margin-bottom: 6px; color: var(--ink-2); font-size: 0.88rem; font-weight: 500; }
         .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            background: var(--section-bg);
-            color: var(--dark);
-            font-size: 1rem;
-            transition: var(--transition);
-            font-family: 'Inter', sans-serif;
+            width: 100%; padding: 10px 14px;
+            border: 1px solid var(--border); border-radius: 6px;
+            background: var(--paper); color: var(--ink);
+            font-size: 0.95rem; transition: var(--transition);
+            font-family: var(--sans);
         }
+        .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(200,96,42,0.12); }
+        textarea.form-control { min-height: 140px; resize: vertical; }
 
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        /* Footer */
+        /* ── FOOTER ── */
         footer {
-            background: var(--card-bg);
-            color: var(--secondary);
+            background: var(--ink);
+            color: rgba(255,255,255,0.5);
             padding: 3rem 0 2rem;
-            border-top: 1px solid var(--border);
         }
-
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem; margin-bottom: 2.5rem;
         }
-
-        .footer-col h3 {
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-            position: relative;
-            padding-bottom: 10px;
-            font-weight: 600;
+        .footer-brand h3 {
+            font-family: var(--serif);
+            color: white; font-size: 1.4rem; font-weight: 300;
+            margin-bottom: 0.75rem;
         }
-
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--primary);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: var(--secondary);
-            text-decoration: none;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-            transform: translateX(5px);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
+        .footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 360px; }
+        .social-links { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
         .social-link {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--section-bg);
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-            font-size: 1.2rem;
+            width: 36px; height: 36px; border-radius: 6px;
+            background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6);
+            display: flex; align-items: center; justify-content: center;
+            transition: var(--transition); font-size: 1rem; text-decoration: none;
         }
-
-        .social-link:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-5px);
+        .social-link:hover { background: var(--accent); color: white; transform: translateY(-3px); }
+        .footer-links-col h4 { color: white; font-size: 0.85rem; font-weight: 500; margin-bottom: 1rem; font-family: var(--mono); letter-spacing: 0.06em; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+        .footer-links a {
+            color: rgba(255,255,255,0.45); text-decoration: none;
+            font-size: 0.88rem; transition: var(--transition);
         }
-
+        .footer-links a:hover { color: rgba(255,255,255,0.8); }
         .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
+            text-align: center; padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.82rem;
+        }
+
+        /* ── BACK TO TOP ── */
+        .back-to-top {
+            position: fixed; bottom: 28px; right: 28px;
+            width: 44px; height: 44px; border-radius: 8px;
+            background: var(--accent); color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; cursor: pointer;
+            opacity: 0; visibility: hidden; transition: var(--transition);
+            z-index: 999; box-shadow: 0 4px 12px rgba(200,96,42,0.35);
+            border: none;
+        }
+        .back-to-top.show { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: #a84e20; transform: translateY(-3px); }
+
+        /* ── TOAST ── */
+        .toast {
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background: var(--success); color: white;
+            padding: 10px 22px; border-radius: 6px; box-shadow: var(--shadow);
+            display: flex; align-items: center; gap: 8px;
+            z-index: 1000; opacity: 0; visibility: hidden; transition: var(--transition);
             font-size: 0.9rem;
         }
+        .toast.show { opacity: 1; visibility: visible; }
 
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 999;
-            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
-        }
-
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background: var(--primary-dark);
-            transform: translateY(-5px);
-        }
-
-        /* Animations */
+        /* ── ANIMATIONS ── */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        /* Toast Notification */
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--success);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            box-shadow: var(--shadow);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-        }
-
-        .toast.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Responsive */
+        /* ── RESPONSIVE ── */
         @media (max-width: 992px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
+            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-photo-wrapper { display: none; }
+            .contact-content { grid-template-columns: 1fr; gap: 2.5rem; }
+            .footer-content { grid-template-columns: 1fr; }
         }
-
         @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: flex;
-            }
-
+            .mobile-menu-btn { display: flex; }
             .nav-links {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 80px);
-                background: var(--card-bg);
-                flex-direction: column;
-                align-items: center;
-                padding: 3rem 0;
-                gap: 2rem;
-                transition: var(--transition);
-                z-index: 999;
+                position: fixed; top: 70px; left: -100%;
+                width: 100%; height: calc(100vh - 70px);
+                background: var(--paper); flex-direction: column;
+                align-items: center; padding: 3rem 0; gap: 2rem;
+                transition: var(--transition); z-index: 999;
             }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .hero {
-                padding: 160px 0 80px;
-            }
-
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.3rem;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
+            .nav-links.active { left: 0; }
+            .hero { padding: 140px 0 80px; }
+            .hero h1 { font-size: 2.6rem; }
+            .section-title { font-size: 2rem; }
         }
-
         @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .project-links {
-                flex-direction: column;
-            }
+            .hero h1 { font-size: 2.2rem; }
+            .cta-buttons { flex-direction: column; }
+            .projects-grid { grid-template-columns: 1fr; }
         }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        .badge-new {
-            background-color: var(--success); /* Usa sua cor verde já definida */
-            color: white;
-            font-size: 0.7rem;
-            padding: 2px 8px;
-            border-radius: 12px;
-            vertical-align: middle;
-            margin-left: 8px;
-            text-transform: uppercase;
-            font-weight: 700;
-            box-shadow: 0 2px 5px rgba(16, 185, 129, 0.4);
-            animation: pulse 2s infinite;
-}
-
-        @keyframes pulse {
-         0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-        100% { transform: scale(1); }
-}
     </style>
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
         <nav class="container">
             <a href="#home" class="logo">
                 <i class="fas fa-chart-line"></i>
-                <span>Vinícius Lopes</span>
+                Vinícius Lopes
             </a>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#education">Formação</a></li>
-                <li><a href="#skills">Competências-chave</a></li>
-                <li><a href="#experience">Experiência</a></li>
                 <li><a href="#projects">Projetos</a></li>
+                <li><a href="#skills">Competências</a></li>
+                <li><a href="#experience">Experiência</a></li>
+                <li><a href="#education">Formação</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
             <div class="nav-btns">
@@ -1267,838 +803,883 @@
         </nav>
     </header>
 
+    <!-- HERO -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Vinícius Lopes</h1>
-                <p class="subtitle">FP&A Corporativo e Consultor Financeiro</p>
-                <p class="description">
-                    FP&A Corporativo com experiência em análise financeira corporativa e gestão de risco operacional. 
-                    Background internacional e expertise em desenvolvimento de protocolos, modelagem financeira e 
-                    inteligência de mercado. Foco em otimização de processos através de análise de dados.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary btn-icon">
-                        <i class="fas fa-project-diagram"></i> Ver Projetos
-                    </a>
-                    <a href="#contact" class="btn btn-secondary btn-icon">
-                        <i class="fas fa-paper-plane"></i> Entre em Contato
-                    </a>
-                    <a href="Curriculo_08_25.pdf" class="btn btn-secondary btn-icon" download="Curriculo_Vinicius_Lopes.pdf">
-                        <i class="fas fa-download"></i> Baixar CV
-                    </a>
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <p class="hero-eyebrow">FP&A Corporativo · Economista · Belo Horizonte, MG</p>
+                    <h1>Vinícius Lopes<br><em>Planejamento Financeiro<br>& Análise Estratégica</em></h1>
+                    <p class="hero-tagline">
+                        Economista com histórico comprovado de impacto em FP&A corporativo, modelagem financeira e suporte à tomada de decisão estratégica. Ferramentas: Power BI, Python, SQL e Excel Avançado.
+                    </p>
+                    <div class="hero-impacts">
+                        <div class="impact-line">
+                            <i class="fas fa-trophy"></i>
+                            <span>Prêmio <span class="impact-num">ALIDE Verde 2024</span> — maior reconhecimento internacional em finanças sustentáveis da América Latina</span>
+                        </div>
+                        <div class="impact-line">
+                            <i class="fas fa-coins"></i>
+                            <span>Contribuição para arrecadação de <span class="impact-num">R$ 95 milhões</span> em leilões de ativos públicos (SEDE-MG)</span>
+                        </div>
+                        <div class="impact-line">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Participação em equipe que reduziu <span class="impact-num">20%</span> nas tarifas de água e esgoto em Minas Gerais</span>
+                        </div>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-folder-open"></i> Ver Projetos
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-paper-plane"></i> Entre em Contato
+                        </a>
+                        <a href="Curriculo_08_25.pdf" class="btn btn-outline" download="Curriculo_Vinicius_Lopes.pdf">
+                            <i class="fas fa-download"></i> Baixar CV
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-photo-wrapper">
+                    <div class="hero-photo" id="heroPhoto">
+                        <!-- Foto carregada via CSS background-image -->
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-<section id="experience-tjmg">
-  <h3>Assistente da Direção Superior</h3>
-  <p><strong>TJMG – DEPLAG (Diretoria Executiva de Planejamento Orçamentário e Qualidade na Gestão Institucional)</strong><br>
-  <em>Set/2025 – Atual</em></p>
-  <ul>
-    <li>Apoio à elaboração de cálculos orçamentários e projeções financeiras.</li>
-    <li>Acompanhamento de resultados e análise de realizado versus planejado.</li>
-    <li>Elaboração de relatórios gerenciais para suporte à tomada de decisão.</li>
-    <li>Atualização de modelos e cálculos de previsão de receita e despesa.</li>
-    <li>Interface direta com a gerência e apoio ao diretor da área.</li>
-  </ul>
-</section>
-
 
     <main>
+
+        <!-- SOBRE -->
         <section id="about" class="container">
             <h2 class="section-title">Sobre Mim</h2>
             <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        FP&A Corporativo especializado em análise de dados e inteligência de mercado, 
-                        com experiência em finanças corporativas e gestão de risco. 
-                        Forte background em modelagem financeira, valuation e desenvolvimento de soluções analíticas 
-                        para suporte à tomada de decisão estratégica. Com experiência internacional e 
-                        formação complementar em IA aplicada a negócios, combino conhecimento econômico sólido 
-                        com ferramentas tecnológicas avançadas para gerar insights que impulsionam resultados.
+                <div>
+                    <p class="about-text">
+                        Economista com sólida atuação em FP&A corporativo, planejamento orçamentário e suporte à decisão estratégica. Ao longo da carreira, contribuí para resultados concretos em instituições públicas e privadas.
                     </p>
-                    <p>
-                        Com experiência internacional em mercados de day trade e expertise em valuation, inteligência 
-                        de mercado e otimização de processos. Comprovada capacidade de intervenção em situações 
-                        críticas e gestão disciplinar de operações.
+
+                    <div class="about-highlight">
+                        <strong>Impacto comprovado:</strong> participação em equipe que reduziu 20% as tarifas de água e esgoto em MG · contribuição para R$ 95M arrecadados em leilões públicos · desenvolvimento do BDMG Sustentabilidade, vencedor do Prêmio ALIDE Verde 2024.
+                    </div>
+
+                    <p class="about-text">
+                        Meu diferencial está na combinação entre visão econômica e capacidade técnica: construo modelos financeiros, desenvolvo dashboards em Power BI, automatizo análises com Python e SQL, e entrego relatórios gerenciais que a alta gestão consegue usar para decidir com segurança.
                     </p>
-                    <p>
-                        Pós Graduado em Gestão Financeira na FGV e com MBA em Economia do Agronegócio na UFMS.
+                    <p class="about-text">
+                        Atualmente atuo no TJMG como Assistente da Direção Superior em Planejamento Orçamentário. Meu objetivo de médio prazo é crescer para posições de liderança financeira — Gerente Financeiro, Controller ou CFO — em organizações onde análise rigorosa e disciplina orçamentária sejam diferenciais estratégicos.
                     </p>
-                    <div class="stats">
-                        <div class="stat-item">
+                    <p class="about-text">
+                        Pós-graduando em Gestão Financeira pela FGV e em Economia do Agronegócio pela UFMS. Economista formado pela UFMG com intercâmbio na Argentina (programa Minas-Mundi).
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
                             <div class="stat-number">5+</div>
-                            <div>Anos de Experiência</div>
+                            <div class="stat-label">anos de experiência</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">7+</div>
-                            <div>Empresas Trabalhadas</div>
+                        <div class="stat-card">
+                            <div class="stat-number">R$95M</div>
+                            <div class="stat-label">em ativos arrecadados</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">2</div>
-                            <div>Países de Atuação</div>
+                        <div class="stat-card">
+                            <div class="stat-number">9+</div>
+                            <div class="stat-label">empresas e instituições</div>
                         </div>
-                        <div class="stat-item">
+                        <div class="stat-card">
                             <div class="stat-number">10+</div>
-                            <div>Projetos</div>
+                            <div class="stat-label">projetos no portfólio</div>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="profile-image">
+
+                <div class="about-awards">
+                    <p class="label-mono" style="margin-bottom: 6px;">Conquistas em destaque</p>
+
+                    <div class="award-card">
+                        <div class="award-icon gold"><i class="fas fa-trophy"></i></div>
+                        <div class="award-text">
+                            <h4>Prêmio ALIDE Verde 2024</h4>
+                            <p>Reconhecimento internacional ao BDMG Sustentabilidade — linha de crédito para impacto socioambiental desenvolvida com minha participação no BDMG.</p>
+                            <a href="https://www.bdmg.mg.gov.br/bdmg-vence-premio-internacional-a-partir-da-experiencia-da-linha-de-credito-sustentabilidade/" target="_blank"><i class="fas fa-external-link-alt"></i> Ver notícia oficial</a>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-icon green"><i class="fas fa-building-columns"></i></div>
+                        <div class="award-text">
+                            <h4>R$ 95 milhões em leilões públicos</h4>
+                            <p>Desenvolvimento de painéis analíticos na SEDE-MG que suportaram o processo decisório de leilão de ativos imobiliários do estado, contribuindo para a arrecadação total.</p>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-icon blue"><i class="fas fa-droplet"></i></div>
+                        <div class="award-text">
+                            <h4>Redução de 20% em tarifas públicas</h4>
+                            <p>Participação na equipe da Arsae-MG nas revisões tarifárias da Copasa e Copanor, resultando em redução de 20% nas tarifas de água e esgoto no estado.</p>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-icon gold"><i class="fas fa-shield-halved"></i></div>
+                        <div class="award-text">
+                            <h4>Prevenção de perdas milionárias</h4>
+                            <p>Na Agromercantil, identificação proativa de erros no projeto de viabilidade da filial de Maringá evitou prejuízos potenciais de milhões de reais antes da implementação.</p>
+                        </div>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-icon green"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="award-text">
+                            <h4>Bolsista Minas-Mundi · Argentina</h4>
+                            <p>Intercâmbio na Universidad Nacional del Litoral (Santa Fé) pelo programa estadual de internacionalização acadêmica, 2023.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-<section id="projects" class="container">
-            <h2 class="section-title">Projetos</h2>
-            <div class="projects-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="finance">Finanças</button>
-                <button class="filter-btn" data-filter="risk">Gestão de Planejamento Financeiro</button>
-                <button class="filter-btn" data-filter="analytics">Análise de Dados</button>
-                <button class="filter-btn" data-filter="strategy">Estratégia</button>
+        <!-- PROJETOS -->
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title">Projetos</h2>
+                <div class="projects-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="fpa">FP&A</button>
+                    <button class="filter-btn" data-filter="analytics">Análise de Dados</button>
+                    <button class="filter-btn" data-filter="finance">Finanças & IA</button>
+                    <button class="filter-btn" data-filter="market">Inteligência de Mercado</button>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- 1. Viabilidade Econômica — FP&A destaque -->
+                    <div class="project-card" data-category="fpa">
+                        <div class="project-image warm-bg">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                            <div class="project-badge">FP&A</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Projeto de Viabilidade Econômica</h3>
+                            <p class="project-description">
+                                Modelagem financeira completa para análise de viabilidade de empreendimento, com três cenários (conservador, base e otimista). Inclui projeções de receitas, CAPEX e fluxo de caixa de 10 anos. Desenvolvido no contexto real da Agromercantil, onde a identificação de erros evitou prejuízos potenciais de milhões de reais.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Excel Avançado</span>
+                                <span class="tech-tag">Modelagem Financeira</span>
+                                <span class="tech-tag">Valuation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/VPLOPES/projeto1_Viabilidade_Economica" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Imóveis de Leilão — impacto SEDE -->
+                    <div class="project-card" data-category="fpa">
+                        <div class="project-image accent-bg">
+                            <i class="fas fa-home"></i>
+                            <div class="project-impact"><i class="fas fa-star"></i> Contribuiu para R$ 95M arrecadados</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Imóveis de Leilão — MG</h3>
+                            <p class="project-description">
+                                Painel interativo desenvolvido na SEDE-MG para monitoramento de imóveis públicos candidatos a leilão, em processo e já leiloados. Os dashboards estruturaram a base informacional que suportou o processo decisório da Superintendência de Destinação de Ativos, contribuindo para a arrecadação de R$ 95 milhões.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">Excel</span>
+                                <span class="tech-tag">Análise Geoespacial</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/VPLOPES/RA_Imoveis_Leilao" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. IPCA — demo ao vivo -->
+                    <div class="project-card" data-category="fpa">
+                        <div class="project-image green-bg">
+                            <i class="fas fa-percentage"></i>
+                            <div class="project-badge">Novo</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">IPCA e Boletim Focus em tempo real</h3>
+                            <p class="project-description">
+                                Aplicação web com dados em tempo real do Boletim Focus (Banco Central) e calculadora de correção monetária por índices financeiros. Inclui análise cambial automatizada. Ferramenta prática para análise de inflação e expectativas de mercado.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">API Banco Central</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://painel-ipca.streamlit.app/" class="project-link">
+                                    <i class="fas fa-eye"></i> Demo ao vivo
+                                </a>
+                                <a href="https://github.com/VPLOPES/painel-ipca" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Dados de Vendas -->
+                    <div class="project-card" data-category="analytics">
+                        <div class="project-image accent-bg">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Painel de Vendas Corporativas</h3>
+                            <p class="project-description">
+                                Dashboard executivo com KPIs integrados de vendas, clientes e cashback. Inclui análise de faturamento, NPS e impacto de programas de fidelidade na receita — estruturado para suporte à tomada de decisão comercial pela alta gestão.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">KPIs Executivos</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/VPLOPES/RA_Empresa_Vendas_Geral" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Inteligência de mercado — série FIEMG (agrupada) -->
+                    <div class="project-card" data-category="market">
+                        <div class="project-image warm-bg">
+                            <i class="fas fa-chart-bar"></i>
+                            <div class="project-badge">Série FIEMG</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Inteligência de Mercado — Série Setorial</h3>
+                            <p class="project-description">
+                                Três dashboards interativos em Power BI desenvolvidos durante atuação na FIEMG, entregues a empresas e sindicatos clientes da consultoria: análise do setor de Bebidas, Sorvetes e Alimentos no Brasil. Cada painel inclui balança comercial, produção, empregos, ComexStat e mapas interativos.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Excel</span>
+                                <span class="tech-tag">ComexStat</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/VPLOPES/RA_Bebidas" class="project-link">
+                                    <i class="fab fa-github"></i> Bebidas
+                                </a>
+                                <a href="https://github.com/VPLOPES/RA_Sorvetes" class="project-link">
+                                    <i class="fab fa-github"></i> Sorvetes
+                                </a>
+                                <a href="https://github.com/VPLOPES/RA_Produtos_Alimenticios" class="project-link">
+                                    <i class="fab fa-github"></i> Alimentos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Análise Geoespacial -->
+                    <div class="project-card" data-category="analytics">
+                        <div class="project-image green-bg">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Análise Geoespacial Imobiliária — RJ</h3>
+                            <p class="project-description">
+                                Análise geoespacial de imóveis no Rio de Janeiro com GeoPandas e Folium. Inclui tratamento de shapefiles e mapas interativos para análise urbana — complementar à experiência com dados imobiliários na SEDE-MG.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">GeoPandas</span>
+                                <span class="tech-tag">Folium</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/VPLOPES/GeoPandas_RJ" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Previsão de Preços com IA -->
+                    <div class="project-card" data-category="finance">
+                        <div class="project-image accent-bg">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Previsão de Preços de Ativos com IA</h3>
+                            <p class="project-description">
+                                Sistema de análise preditiva com machine learning para prever movimentos de preços no mercado financeiro. Demonstra aplicação prática de IA em suporte a decisões de investimento.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Streamlit</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://previsaodeativosfinanceiros1.streamlit.app/" class="project-link">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="https://github.com/VPLOPES/IA_para_previsao_de_precos_de_Ativos_Financeiros/tree/main" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Estratégia de Hedge -->
+                    <div class="project-card" data-category="finance">
+                        <div class="project-image green-bg">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Estratégia de Hedge com IA</h3>
+                            <p class="project-description">
+                                Notebook para precificação de opções financeiras e construção de estratégias de hedge. Inclui simulação de Monte Carlo, Black-Scholes-Merton e redes neurais com TensorFlow/Keras.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Monte Carlo</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/VPLOPES/estrategia_de_hedge_usando_IA" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Calculadora de Risco Operacional -->
+                    <div class="project-card" data-category="finance">
+                        <div class="project-image warm-bg">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Calculadora de Risco Operacional</h3>
+                            <p class="project-description">
+                                Ferramenta de gestão de risco financeiro para monitoramento de operações de mercado. Automatiza cálculos de exposição e controle de capital, apoiando a disciplina operacional e o cumprimento de limites predefinidos.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Claude AI</span>
+                                <span class="tech-tag">Lovable AI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://smart-trade-system.lovable.app/" class="project-link">
+                                    <i class="fas fa-eye"></i> Demo
+                                </a>
+                                <a href="https://github.com/VPLOPES/calculadora_trading_NASDAQ100_E-Mini" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            
-            <div class="projects-grid">
-                
-                <div class="project-card" data-category="finance">
-                    <div class="project-image">
-                        <i class="fas fa-percentage"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">
-                            IPCA e Boletim Focus em tempo real
-                            <span class="badge-new">Novo</span>
-                        </h3>
-                        <p class="project-description">
-                            Calculadora de correção de índices financeiros, com dados do Boletim Focus e análise cambial automatizada.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">Análise de Dados</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://painel-ipca.streamlit.app/" class="project-link outline">
-                                <i class="fas fa-eye"></i> Ver Projeto
-                            </a>
-                            <a href="https://github.com/VPLOPES/painel-ipca" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        </section>
 
-                <div class="project-card" data-category="finance">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Previsão de Preços de Ativos Financeiros com IA</h3>
-                        <p class="project-description">
-                            Sistema de análise preditiva que utiliza machine learning para prever movimentos de preços no mercado financeiro. O projeto demonstra a aplicação prática de IA na tomada de decisões de investimento.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">Análise de Dados</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://previsaodeativosfinanceiros1.streamlit.app/" class="project-link outline">
-                                <i class="fas fa-eye"></i> Ver Projeto
-                            </a>
-                            <a href="https://github.com/VPLOPES/IA_para_previsao_de_precos_de_Ativos_Financeiros/tree/main" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="risk">
-                    <div class="project-image">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Estratégia de Hedge usando IA</h3>
-                        <p class="project-description">
-                            Notebook em Python para precificação de opções financeiras e construção de estratégias de hedge. Inclui simulação de Monte Carlo, Black-Scholes-Merton e redes neurais com TensorFlow/Keras.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">Monte Carlo</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VPLOPES/estrategia_de_hedge_usando_IA" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="risk">
-                    <div class="project-image">
-                        <i class="fa-solid fa-calculator"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Calculadora de Análise de Desempenho</h3>
-                        <p class="project-description">
-                            Ferramenta de gestão de risco financeiro para operações de mercado. Automatiza cálculos de exposição e ajuda na manutenção da disciplina operacional.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Claude AI</span>
-                            <span class="tech-tag">Lovable AI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://smart-trade-system.lovable.app/" class="project-link outline">
-                                <i class="fas fa-eye"></i> Ver Projeto
-                            </a>
-                            <a href="https://github.com/VPLOPES/calculadora_trading_NASDAQ100_E-Mini" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="finance">
-                    <div class="project-image">
-                        <i class="fa-solid fa-money-bill-trend-up"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Projeto de Viabilidade Econômica</h3>
-                        <p class="project-description">
-                           Análise de viabilidade econômica de um empreendimento, considerando cenários: Conservador, Base e Otimista. Inclui projeções de receitas, CAPEX, e fluxo de caixa de 10 anos.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Excel</span>
-                            <span class="tech-tag">Modelagem Financeira</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VPLOPES/projeto1_Viabilidade_Economica" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="analytics">
-                    <div class="project-image">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Análise Geoespacial Imobiliária</h3>
-                        <p class="project-description">
-                            Notebook para análise geoespacial de imóveis no Rio de Janeiro, utilizando GeoPandas e Folium. Inclui tratamento de shapefiles e mapas interativos para análise urbana.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">GeoPandas</span>
-                            <span class="tech-tag">Folium</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VPLOPES/GeoPandas_RJ" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="analytics">
-                    <div class="project-image">
-                        <i class="fa-solid fa-champagne-glasses"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Pesquisa de Mercado - Bebidas</h3>
-                        <p class="project-description">
-                            Dashboard interativo em Power BI sobre a indústria de fabricação de bebidas em MG e no Brasil. Análises de produção, empregos e comércio exterior (ComexStat).
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Excel</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VPLOPES/RA_Bebidas" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="analytics">
-                    <div class="project-image">
-                        <i class="fa-solid fa-ice-cream"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Pesquisa de Mercado - Sorvetes</h3>
-                        <p class="project-description">
-                            Dashboard interativo em Power BI com análise do setor de sorvetes no Brasil. Inclui balança comercial, custos, receitas e panorama de estabelecimentos.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">SQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VPLOPES/RA_Sorvetes" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="analytics">
-                    <div class="project-image">
-                        <i class="fa-solid fa-burger"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Pesquisa de Mercado - Alimentos</h3>
-                        <p class="project-description">
-                            Análise do setor alimentício no Brasil. Inclui exportações, importações, saldo comercial, mercado de trabalho e dados industriais com mapas interativos.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">SQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VPLOPES/RA_Produtos_Alimenticios" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="analytics">
-                    <div class="project-image">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Imóveis de Leilão - MG</h3>
-                        <p class="project-description">
-                            Relatório interativo para análise do mercado imobiliário de leilões em Minas Gerais. Filtros por tipologia e indicadores de valor total.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">Excel</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VPLOPES/RA_Imoveis_Leilao" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="analytics">
-                    <div class="project-image">
-                        <i class="fa-solid fa-wallet"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Dados de Vendas Corporativas</h3>
-                        <p class="project-description">
-                            Painel integrado de vendas, clientes e cashback. KPIs de faturamento, NPS e impacto de programas de fidelidade na receita.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">SQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VPLOPES/RA_Empresa_Vendas_Geral" class="project-link outline">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div> </section>
-
+        <!-- COMPETÊNCIAS -->
         <section id="skills" class="container">
             <h2 class="section-title">Competências-chave</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h3><i class="fas fa-chart-line"></i> Gestão de Planejamento Financeiro e Análise de Desempenho</h3>
+                    <h3><i class="fas fa-chart-pie"></i> FP&A e Finanças Corporativas</h3>
                     <ul class="skill-list">
-                        <li>Gestão de risco operacional em day trade <span class="skill-level">Avançado</span></li>
-                        <li>Desenvolvimento de protocolos operacionais <span class="skill-level">Avançado</span></li>
-                        <li>Análise técnica e validação de setups <span class="skill-level">Avançado</span></li>
-                        <li>Controle de exposição e dimensionamento <span class="skill-level">Avançado</span></li>
-                        <li>Intervenção em situações críticas <span class="skill-level">Avançado</span></li>
+                        <li>Planejamento orçamentário e forecast <span class="skill-level advanced">Avançado</span></li>
+                        <li>Análise de variância (realizado vs. planejado) <span class="skill-level advanced">Avançado</span></li>
+                        <li>Modelagem financeira e valuation <span class="skill-level advanced">Avançado</span></li>
+                        <li>Análise de viabilidade econômica <span class="skill-level advanced">Avançado</span></li>
+                        <li>Otimização de custos e investimentos <span class="skill-level advanced">Avançado</span></li>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3><i class="fas fa-calculator"></i> Análise Financeira</h3>
+                    <h3><i class="fas fa-database"></i> Dados e Tecnologia</h3>
                     <ul class="skill-list">
-                        <li>Modelagem financeira e valuation <span class="skill-level">Avançado</span></li>
-                        <li>Análise de viabilidade econômica <span class="skill-level">Avançado</span></li>
-                        <li>Otimização de custos e investimentos <span class="skill-level">Avançado</span></li>
-                        <li>Inteligência de mercado <span class="skill-level">Avançado</span></li>
-                        <li>Análise competitiva <span class="skill-level">Avançado</span></li>
+                        <li>Power BI (dashboards executivos) <span class="skill-level advanced">Avançado</span></li>
+                        <li>Excel Avançado (modelagem, VBA) <span class="skill-level advanced">Avançado</span></li>
+                        <li>SQL (extração e tratamento) <span class="skill-level advanced">Avançado</span></li>
+                        <li>Python (automação e análise) <span class="skill-level">Intermediário</span></li>
+                        <li>Machine Learning e IA aplicada <span class="skill-level">Intermediário</span></li>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3><i class="fas fa-database"></i> Tecnologia e Dados</h3>
+                    <h3><i class="fas fa-magnifying-glass-chart"></i> Análise Econômica e de Mercado</h3>
                     <ul class="skill-list">
-                        <li>Excel, Power BI, SQL <span class="skill-level">Avançado</span></li>
-                        <li>Python, R <span class="skill-level">Intermediário</span></li>
-                        <li>Inteligência artificial em negócios <span class="skill-level">Intermediário</span></li>
-                        <li>Modelagem de dados e estatística <span class="skill-level">Avançado</span></li>
-                        <li>Automatização de processos <span class="skill-level">Intermediário</span></li>
+                        <li>Inteligência de mercado <span class="skill-level advanced">Avançado</span></li>
+                        <li>Análise competitiva e setorial <span class="skill-level advanced">Avançado</span></li>
+                        <li>Regulação tarifária e finanças públicas <span class="skill-level advanced">Avançado</span></li>
+                        <li>Econometria e modelagem estatística <span class="skill-level advanced">Avançado</span></li>
+                        <li>Pesquisa de mercado quantitativa <span class="skill-level advanced">Avançado</span></li>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3><i class="fas fa-chess-king"></i> Gestão Estratégica</h3>
+                    <h3><i class="fas fa-chess-king"></i> Gestão e Liderança</h3>
                     <ul class="skill-list">
-                        <li>Gestão de projetos estratégicos <span class="skill-level">Avançado</span></li>
-                        <li>Análise financeira e econômica <span class="skill-level">Avançado</span></li>
-                        <li>Digitalização de processos <span class="skill-level">Intermediário</span></li>
+                        <li>Relatórios executivos e para diretoria <span class="skill-level advanced">Avançado</span></li>
+                        <li>Gestão de projetos estratégicos <span class="skill-level advanced">Avançado</span></li>
+                        <li>Comunicação executiva <span class="skill-level advanced">Avançado</span></li>
+                        <li>Digitalização de processos financeiros <span class="skill-level">Intermediário</span></li>
                         <li>Liderança e gestão de equipes <span class="skill-level">Intermediário</span></li>
-                        <li>Comunicação executiva <span class="skill-level">Avançado</span></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="container">
-            <h2 class="section-title">Experiência Profissional</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-title">Gestor de Risco</h3>
-                            <div class="experience-company">
-                                <i class="fas fa-building"></i> Quantum Análise de Desempenho | Boston, EUA
-                            </div>
-                        </div>
-                        <div class="experience-period">03/2025 - 05/2025</div>
-                    </div>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Gestão de risco operacional em operações de day trade</li>
-                            <li>Desenvolvimento de ferramentas de controle e tabelas de dimensionamento</li>
-                            <li>Monitoramento de protocolos disciplinares</li>
-                            <li>Intervenção em situações críticas com traders</li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- EXPERIÊNCIA -->
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title">Experiência Profissional</h2>
+                <div class="experience-timeline">
 
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-title">Analista de Finanças Corporativas</h3>
-                            <div class="experience-company">
-                                <i class="fas fa-building"></i> Agromercantil
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-title">Assistente da Direção Superior | Planejamento Orçamentário</h3>
+                                <div class="experience-company"><i class="fas fa-landmark"></i> TJMG — Tribunal de Justiça de Minas Gerais</div>
                             </div>
+                            <div class="experience-period">set/2025 – atual</div>
                         </div>
-                        <div class="experience-period">11/2024 - 02/2025</div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Elaboração de cálculos orçamentários e projeções financeiras na DEPLAG</li>
+                                <li>Acompanhamento de resultados e análise de realizado versus planejado</li>
+                                <li>Produção de relatórios gerenciais para suporte à tomada de decisão da alta gestão</li>
+                                <li>Atualização de modelos de forecast de receita e despesa</li>
+                                <li>Interface direta com a gerência e apoio ao Diretor da área</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Estruturação de modelos financeiros e valuation</li>
-                            <li>Desenvolvimento de estratégias de inteligência de mercado</li>
-                            <li>Implementação de tecnologias para digitalização</li>
-                            <li>Otimização de custos e análise de investimentos</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-title">Assessor de Dados e Estratégia</h3>
-                            <div class="experience-company">
-                                <i class="fas fa-building"></i> SEDE-MG (Secretaria de Desenvolvimento Econômico de MG)
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-title">Consultor de Risco Operacional e Psicológico</h3>
+                                <div class="experience-company"><i class="fas fa-building"></i> Quantum Análise de Desempenho (remoto, Boston EUA)</div>
                             </div>
+                            <div class="experience-period">abr – jul/2025</div>
                         </div>
-                        <div class="experience-period">04/2024 - 11/2024</div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Monitoramento e controle de risco sobre capital operacional de US$ 500.000</li>
+                                <li>Validação de critérios de entrada e saída conforme políticas pré-definidas</li>
+                                <li>Desenvolvimento de modelos de controle de risco e alocação de capital</li>
+                                <li>Suporte à disciplina operacional e ao equilíbrio decisório sob pressão</li>
+                                <li>Comunicação de desvios e apoio à coordenação na tomada de decisão</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Desenvolvimento de soluções analíticas para gestão estratégica</li>
-                            <li>Implementação de metodologias avançadas de análise de dados</li>
-                            <li>Elaboração de relatórios executivos</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <h3 class="experience-title">Consultor de Inteligência de Mercado</h3>
-                            <div class="experience-company">
-                                <i class="fas fa-building"></i> BDMG (Banco de Desenvolvimento de MG)
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-title">Analista de Finanças Corporativas</h3>
+                                <div class="experience-company"><i class="fas fa-seedling"></i> Agromercantil</div>
                             </div>
+                            <div class="experience-period">nov/2024 – fev/2025</div>
                         </div>
-                        <div class="experience-period">04/2022 - 08/2023</div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Planejamento financeiro completo para abertura de filial em Maringá/PR, incluindo modelagem de viabilidade econômica em três cenários</li>
+                                <li>Análise make-or-buy para decisão entre frota própria e terceirização logística</li>
+                                <li>Estruturação de modelos de valuation e estratégias de inteligência de mercado</li>
+                                <li>Implementação de tecnologias para digitalização de processos financeiros</li>
+                            </ul>
+                        </div>
+                        <div class="exp-impact">
+                            <i class="fas fa-shield-halved"></i>
+                            Identificação proativa de erros no projeto da filial evitou prejuízos potenciais de milhões de reais antes da implementação.
+                        </div>
                     </div>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Liderança na formação de estratégias para produtos do Agronegócio</li>
-                            <li>Desenvolvimento do produto BEI, premiado com o ALIDE-Verde em 2024</li>
-                            <li>Análise de tendências e relatórios estratégicos para diretoria</li>
-                        </ul>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-title">Assessor em Dados | Superintendência de Destinação de Ativos</h3>
+                                <div class="experience-company"><i class="fas fa-landmark"></i> SEDE-MG — Secretaria de Desenvolvimento Econômico</div>
+                            </div>
+                            <div class="experience-period">abr – nov/2024</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Desenvolvimento de painéis analíticos para monitoramento de imóveis públicos (candidatos a leilão, em processo e leiloados)</li>
+                                <li>Manipulação, organização e limpeza de dados de ativos imobiliários estaduais</li>
+                                <li>Elaboração de relatórios executivos para suporte à gestão estratégica de ativos</li>
+                            </ul>
+                        </div>
+                        <div class="exp-impact">
+                            <i class="fas fa-coins"></i>
+                            Os painéis estruturaram o processo decisório que resultou na arrecadação de R$ 95 milhões em leilões de ativos imobiliários do estado.
+                        </div>
                     </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-title">Analista de Inteligência de Mercado</h3>
+                                <div class="experience-company"><i class="fas fa-university"></i> BDMG — Banco de Desenvolvimento de Minas Gerais</div>
+                            </div>
+                            <div class="experience-period">abr/2022 – ago/2023</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Participação central no desenvolvimento e operacionalização do BDMG Sustentabilidade — linha de crédito com foco em impacto socioambiental</li>
+                                <li>Análise de informações financeiras e extração de relatórios do Banco Central</li>
+                                <li>Produção de gráficos, relatórios estratégicos e apresentações para diretoria</li>
+                                <li>Publicação de documentos e informações de registro de produtos</li>
+                            </ul>
+                        </div>
+                        <div class="exp-impact">
+                            <i class="fas fa-trophy"></i>
+                            BDMG Sustentabilidade venceu o Prêmio ALIDE Verde 2024 — maior reconhecimento internacional em finanças sustentáveis da América Latina. <a href="https://www.bdmg.mg.gov.br/bdmg-vence-premio-internacional-a-partir-da-experiencia-da-linha-de-credito-sustentabilidade/" target="_blank" style="color: var(--success); text-decoration: underline;">Ver notícia</a>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-title">Analista de Inteligência Competitiva</h3>
+                                <div class="experience-company"><i class="fas fa-industry"></i> FIEMG — Federação das Indústrias de Minas Gerais</div>
+                            </div>
+                            <div class="experience-period">nov/2021 – abr/2022</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Desenvolvimento de painéis de inteligência competitiva entregues a empresas e sindicatos clientes da consultoria</li>
+                                <li>Elaboração de planos de negócios, pesquisas de mercado e estudos de viabilidade</li>
+                                <li>Produção de relatórios socioeconômicos setoriais</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-title">Analista de Informações Estratégicas</h3>
+                                <div class="experience-company"><i class="fas fa-shield-alt"></i> Pottencial Seguradora</div>
+                            </div>
+                            <div class="experience-period">abr – nov/2021</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Elaboração e acompanhamento do orçamento corporativo</li>
+                                <li>Fechamento mensal de resultados gerenciais e cálculo de KPIs</li>
+                                <li>Preparação de apresentações para reuniões de diretoria e conselho</li>
+                            </ul>
+                        </div>
+                        <div class="exp-impact">
+                            <i class="fas fa-chart-line"></i>
+                            Período marcado por recorde histórico de arrecadação com seguros e redução do índice de sinistralidade.
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-title">Analista de Regulação Tarifária</h3>
+                                <div class="experience-company"><i class="fas fa-faucet"></i> Arsae-MG — Agência Reguladora de Abastecimento de Água e Esgotamento Sanitário</div>
+                            </div>
+                            <div class="experience-period">abr/2020 – abr/2021</div>
+                        </div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Participação nas revisões tarifárias da Copasa (3ª revisão) e Copanor (2ª revisão)</li>
+                                <li>Elaboração de planilhas e relatórios técnicos para fundamentação de normativas regulatórias</li>
+                                <li>Análises e cálculos de reajustes e revisões tarifárias via manipulação de dados</li>
+                            </ul>
+                        </div>
+                        <div class="exp-impact">
+                            <i class="fas fa-droplet"></i>
+                            Integrante da equipe cuja atuação resultou em redução de 20% nas tarifas de água e esgotamento sanitário para consumidores de Minas Gerais.
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-
-        
+        <!-- FORMAÇÃO -->
         <section id="education" class="container">
             <h2 class="section-title">Formação Acadêmica</h2>
             <div class="education-grid">
                 <div class="education-card">
                     <div class="education-header">
-                        <div class="education-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div>
-                            <h3 class="education-title">MBA em Economia do Agronegócio</h3>
-                            <div class="education-school">UFMS - Universidade Federal de Mato Grosso do Sul</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2024 - Atual</div>
-                        </div>
-                    </div>
-                    <p class="education-description">
-                        Especialização em análise econômica aplicada ao agronegócio, com foco em mercado internacional, 
-                        políticas agrícolas e gestão de riscos no setor.
-                    </p>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-header">
-                        <div class="education-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
+                        <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
                         <div>
                             <h3 class="education-title">Pós-Graduação em Gestão Financeira</h3>
-                            <div class="education-school">FGV - Fundação Getúlio Vargas</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2025 - Atual</div>
+                            <div class="education-school">FGV — Fundação Getulio Vargas</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> jan/2025 – jan/2026</div>
                         </div>
                     </div>
-                    <p class="education-description">
-                        Especialização em gestão financeira corporativa, valuation, análise de investimentos e 
-                        estratégias de financiamento para empresas de diversos portes.
-                    </p>
+                    <p class="education-description">Gestão financeira corporativa, valuation, análise de investimentos e estratégias de financiamento.</p>
                 </div>
-
                 <div class="education-card">
                     <div class="education-header">
-                        <div class="education-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                        <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h3 class="education-title">MBA em Economia do Agronegócio</h3>
+                            <div class="education-school">UFMS — Universidade Federal de Mato Grosso do Sul</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> out/2024 – jan/2026</div>
                         </div>
+                    </div>
+                    <p class="education-description">Análise econômica aplicada ao agronegócio, mercado internacional, políticas agrícolas e gestão de riscos no setor.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h3 class="education-title">Bacharelado em Economia</h3>
+                            <div class="education-school">UFMG — Universidade Federal de Minas Gerais</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> ago/2018 – jul/2024</div>
+                        </div>
+                    </div>
+                    <p class="education-description">Teoria econômica, econometria, finanças e políticas públicas. Pesquisa em mercado financeiro e análise de risco.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon"><i class="fas fa-plane"></i></div>
+                        <div>
+                            <h3 class="education-title">Intercâmbio — Gestão Estratégica</h3>
+                            <div class="education-school">UNL — Universidad Nacional del Litoral · Argentina</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> ago – dez/2023</div>
+                        </div>
+                    </div>
+                    <p class="education-description">Bolsista do programa Minas-Mundi. Desenvolvimento de conhecimento teórico, linguístico e cultural em Santa Fé, Argentina.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
                         <div>
                             <h3 class="education-title">AI for Business</h3>
-                            <div class="education-school">University of Pennsylvania</div>
+                            <div class="education-school">University of Pennsylvania (Coursera)</div>
                             <div class="education-period"><i class="far fa-calendar-alt"></i> 2024</div>
                         </div>
                     </div>
-                    <p class="education-description">
-                        Especialização em inteligência artificial aplicada a negócios, 
-                        com foco em algoritmos de IA, blockchain em RH, Big Data, 
-                        Machine Learning e analytics para transformação digital e vantagem competitiva.
-                    </p>
+                    <p class="education-description">IA aplicada a negócios: algoritmos, Big Data, Machine Learning e analytics para transformação digital.</p>
                 </div>
-
-                
                 <div class="education-card">
                     <div class="education-header">
-                        <div class="education-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
+                        <div class="education-icon"><i class="fas fa-balance-scale"></i></div>
                         <div>
-                            <h3 class="education-title">Bacharelado em Economia</h3>
-                            <div class="education-school">UFMG - Universidade Federal de Minas Gerais</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2018 - 2024</div>
-                        </div>
-                    </div>
-                    <p class="education-description">
-                        Formação em teoria econômica, econometria, finanças e políticas públicas. 
-                        Desenvolvimento de pesquisas em mercado financeiro e análise de risco.
-                    </p>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-header">
-                        <div class="education-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div>
-                            <h3 class="education-title">Intercâmbio na Argentina em Gestão Estratégica</h3>
-                            <div class="education-school">UNL - Universidad Nacional del Litoral</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 08-2023 - 12-2023</div>
-                        </div>
-                    </div>
-                    <p class="education-description">
-                        Bolsista do programa Minas-Mundi, realizou 
-                        intercâmbio estudantil no intuito de desenvolver
-                        conhecimento teórico, linguístico e cultural.
-                    </p>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-header">
-                        <div class="education-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div>
-                            <h3 class="education-title">Direito (incompleto)</h3>
+                            <h3 class="education-title">Bacharelado em Direito (incompleto)</h3>
                             <div class="education-school">ESAMC</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> 08-2012 - 06-2015</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> 2012 – 2015</div>
                         </div>
                     </div>
-                    <p class="education-description">
-                        Formação parcial em Direito (seis períodos), 
-                        experiência que contribuiu para aprimorar a oratória, 
-                        a argumentação e o vocabulário jurídico.
-                    </p>
+                    <p class="education-description">Seis períodos concluídos. Formação que aprimorou oratória, argumentação e vocabulário jurídico — diferencial em negociações e contratos financeiros.</p>
                 </div>
             </div>
         </section>
 
-
-        <section id="complementary-education" class="container">
-    <h2 class="section-title">Formação Complementar</h2>
-    <div class="education-grid">
-
-        <div class="education-card">
-            <div class="education-header">
-                <div class="education-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <div>
-                    <h3 class="education-title">Engenharia Financeira com Inteligência Artificial</h3>
-                    <div class="education-school">Data Science Academy</div>
-                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2025</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="education-card">
-            <div class="education-header">
-                <div class="education-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <div>
-                    <h3 class="education-title">Administração Financeira</h3>
-                    <div class="education-school">Insper</div>
-                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2025</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="education-card">
-            <div class="education-header">
-                <div class="education-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <div>
-                    <h3 class="education-title">Successful Negotiation: Essential Strategies and Skills</h3>
-                    <div class="education-school">University of Michigan</div>
-                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2024</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="education-card">
-            <div class="education-header">
-                <div class="education-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <div>
-                    <h3 class="education-title">Leadership Skills</h3>
-                    <div class="education-school">Indian Institute of Management Ahmedabad</div>
-                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2023</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="education-card">
-            <div class="education-header">
-                <div class="education-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <div>
-                    <h3 class="education-title">Treinamento em Precificação</h3>
-                    <div class="education-school">FIPE</div>
-                    <div class="education-period"><i class="far fa-calendar-alt"></i> 2022</div>
+        <!-- FORMAÇÃO COMPLEMENTAR -->
+        <section id="complementary-education">
+            <div class="container">
+                <h2 class="section-title">Formação Complementar</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-icon"><i class="fas fa-certificate"></i></div>
+                            <div>
+                                <h3 class="education-title">Engenharia Financeira com Inteligência Artificial</h3>
+                                <div class="education-school">Data Science Academy</div>
+                                <div class="education-period"><i class="far fa-calendar-alt"></i> 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-icon"><i class="fas fa-certificate"></i></div>
+                            <div>
+                                <h3 class="education-title">Administração Financeira</h3>
+                                <div class="education-school">Insper</div>
+                                <div class="education-period"><i class="far fa-calendar-alt"></i> 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-icon"><i class="fas fa-certificate"></i></div>
+                            <div>
+                                <h3 class="education-title">Successful Negotiation: Essential Strategies and Skills</h3>
+                                <div class="education-school">University of Michigan</div>
+                                <div class="education-period"><i class="far fa-calendar-alt"></i> 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-icon"><i class="fas fa-certificate"></i></div>
+                            <div>
+                                <h3 class="education-title">Leadership Skills</h3>
+                                <div class="education-school">Indian Institute of Management Ahmedabad</div>
+                                <div class="education-period"><i class="far fa-calendar-alt"></i> 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-icon"><i class="fas fa-certificate"></i></div>
+                            <div>
+                                <h3 class="education-title">Treinamento em Precificação</h3>
+                                <div class="education-school">FIPE</div>
+                                <div class="education-period"><i class="far fa-calendar-alt"></i> 2022</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-    </div>
-</section>
-
-
-        
-
-
-
+        <!-- RECOMENDAÇÕES -->
         <section id="testimonials" class="container">
             <h2 class="section-title">Recomendações</h2>
             <div class="testimonials-container">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        Vinícius demonstrou excelente capacidade analítica na implementação de nosso sistema de gestão de risco. 
-                        Seu conhecimento em finanças combinado com habilidades técnicas trouxe resultados significativos 
-                        para nossa operação de trading.
+                        Vinícius demonstrou excelente capacidade analítica na implementação de nosso sistema de gestão de risco. Seu conhecimento em finanças combinado com habilidades técnicas trouxe resultados significativos para nossa operação.
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">JS</div>
                         <div class="author-info">
                             <h4>Jaqueline Souza</h4>
-                            <div class="author-role">Diretor de Operações, Quantum Análise de Desempenho</div>
+                            <div class="author-role">Diretora de Operações · Quantum Análise de Desempenho</div>
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        Trabalhar com o Vinícius foi uma experiência extremamente positiva. 
-                        Ele é um profissional engajado e incansavelmente dedicado à busca de conhecimento, 
-                        sempre se atualizando com as últimas ferramentas e metodologias para melhorar a performance da equipe. 
-                        Sua capacidade de agir de forma autônoma, combinada com um desejo genuíno de aprender e crescer, 
-                        faz com que ele seja uma peça chave em qualquer time. Além disso, 
-                        Vinícius possui uma atenção aos detalhes admirável – algo que ele usa a seu favor como uma qualidade, 
-                        garantindo que tudo seja feito com excelência e perfeição. Sem dúvida, ele é um profissional comprometido e indispensável.
+                        Trabalhar com o Vinícius foi uma experiência extremamente positiva. Ele é um profissional engajado e incansavelmente dedicado à busca de conhecimento, sempre se atualizando com as últimas ferramentas e metodologias. Sua capacidade de agir de forma autônoma, combinada com um desejo genuíno de aprender e crescer, faz com que ele seja uma peça chave em qualquer time. Vinícius possui uma atenção aos detalhes admirável — garantindo que tudo seja feito com excelência. Sem dúvida, um profissional comprometido e indispensável.
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">SD</div>
                         <div class="author-info">
                             <h4>Stefan W. D'amato</h4>
-                            <div class="author-role">Membro do Conselho de Política Econômica, FIEMG</div>
+                            <div class="author-role">Membro do Conselho de Política Econômica · FIEMG</div>
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        Vinicius Lopes possui sólidos conhecimentos em finanças e uma destacada habilidade 
-                        em gestão e liderança. Seu comprometimento é notável, sempre entregando resultados de alta qualidade. 
-                        Além disso, sua excelente comunicação permite transmitir informações com clareza e precisão. 
-                        Profissionalismo e ética permeiam todas as suas interações, promovendo um ambiente colaborativo e produtivo. 
-                        Tenho plena confiança de que ele será uma adição estratégica e valiosa para qualquer equipe ou projeto.
+                        Vinicius Lopes possui sólidos conhecimentos em finanças e uma destacada habilidade em gestão e liderança. Seu comprometimento é notável, sempre entregando resultados de alta qualidade. Sua excelente comunicação permite transmitir informações com clareza e precisão. Tenho plena confiança de que ele será uma adição estratégica e valiosa para qualquer equipe ou projeto.
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">DM</div>
                         <div class="author-info">
                             <h4>Diego Mota</h4>
-                            <div class="author-role">FP&A Corporativo, BDMG</div>
+                            <div class="author-role">FP&A Corporativo · BDMG</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+        <!-- CONTATO -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-text">
+                                <h3>Localização</h3>
+                                <p>Uberlândia, MG · Brasil</p>
+                            </div>
                         </div>
-                        <div class="contact-text">
-                            <h3>Localização</h3>
-                            <p>Uberlândia, MG<br>Brasil</p>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-text">
+                                <h3>Telefone</h3>
+                                <p>+55 (34) 9 9246-0756</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <a href="mailto:viniciuslopesp12@gmail.com">viniciuslopesp12@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="contact-text">
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/viniciusplopes" target="_blank">linkedin.com/in/viniciusplopes</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div class="contact-text">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/VPLOPES" target="_blank">github.com/VPLOPES</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Telefone</h3>
-                            <p>+55 (34) 9 9246-0756</p>
-                        </div>
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/mgowwgvv" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" name="name" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea name="message" id="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                            </button>
+                        </form>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <a href="mailto:viniciuslopesp12@gmail.com">viniciuslopesp12@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>LinkedIn</h3>
-                            <a href="https://www.linkedin.com/in/viniciusplopes" target="_blank">linkedin.com/in/viniciusplopes</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    
-                    <form action="https://formspree.io/f/mgowwgvv" method="POST" class="contact-form">
-                        <div class="form-group">
-                          <label for="name">Nome</label>
-                          <input type="text" name="name" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="email">Email</label>
-                          <input type="email" name="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="message">Mensagem</label>
-                          <textarea name="message" id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
-                          <i class="fas fa-paper-plane"></i> Enviar Mensagem
-                        </button>
-                </form>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
+                <div class="footer-brand">
                     <h3>Vinícius Lopes</h3>
-                    <p style="margin-bottom: 1.5rem; color: var(--secondary);">
-                        FP&A Corporativo e Consultor Financeiro especializado em gestão de risco, trading e 
-                        análise financeira corporativa.
-                    </p>
+                    <p>FP&A Corporativo especializado em planejamento financeiro, modelagem e suporte estratégico à alta gestão. Buscando posições de liderança financeira — Controller, Gerente Financeiro ou CFO.</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/viniciusplopes" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/VPLOPES" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/viniciusplopes" class="social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/VPLOPES" class="social-link" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:viniciuslopesp12@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Links Rápidos</h3>
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
                     <ul class="footer-links">
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Sobre</a></li>
-                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Competências-chave</a></li>
-                        <li><a href="#experience"><i class="fas fa-chevron-right"></i> Experiência</a></li>
-                        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projetos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Serviços</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Consultoria Financeira</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Gestão de Planejamento Financeiro</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Modelagem Financeira</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Análise de Investimentos</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Treinamentos</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#skills">Competências</a></li>
+                        <li><a href="#experience">Experiência</a></li>
+                        <li><a href="#education">Formação</a></li>
+                        <li><a href="#contact">Contato</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Vinícius Lopes. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Vinícius Lopes · Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <div class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
         <i class="fas fa-arrow-up"></i>
-    </div>
+    </button>
 
     <div class="toast" id="toast">
         <i class="fas fa-check-circle"></i>
@@ -2106,158 +1687,83 @@
     </div>
 
     <script>
-        // Mobile Menu Toggle
+        // Mobile Menu
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.querySelector('.nav-links');
-        
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ?
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-            mobileMenuBtn.setAttribute('aria-label', navLinks.classList.contains('active') ? 
-                'Fechar menu' : 'Abrir menu');
         });
-
-        // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                mobileMenuBtn.setAttribute('aria-label', 'Abrir menu');
             });
         });
 
         // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        
-        // Check for saved theme or prefer color scheme
         const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
         if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-            body.classList.add('dark-mode');
+            document.body.classList.add('dark-mode');
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            themeToggle.setAttribute('aria-label', 'Alternar para modo claro');
-        } else {
-            themeToggle.setAttribute('aria-label', 'Alternar para modo escuro');
         }
-        
         themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            
-            if (body.classList.contains('dark-mode')) {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                localStorage.setItem('theme', 'dark');
-                themeToggle.setAttribute('aria-label', 'Alternar para modo claro');
-            } else {
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                localStorage.setItem('theme', 'light');
-                themeToggle.setAttribute('aria-label', 'Alternar para modo escuro');
-            }
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
 
-        // Back to Top Button
+        // Back to Top
         const backToTop = document.getElementById('backToTop');
-        
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
+            backToTop.classList.toggle('show', window.pageYOffset > 300);
         });
-        
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        // Active Navigation on Scroll
+        // Active Nav on Scroll
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
+            const sections = document.querySelectorAll('section[id]');
+            const links = document.querySelectorAll('.nav-links a');
             let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
+            sections.forEach(s => {
+                if (scrollY >= s.offsetTop - 200) current = s.getAttribute('id');
             });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
+            links.forEach(l => {
+                l.classList.remove('active');
+                if (l.getAttribute('href') === '#' + current) l.classList.add('active');
             });
         });
 
         // Project Filtering
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
-        
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active class from all buttons
                 filterBtns.forEach(b => b.classList.remove('active'));
-                
-                // Add active class to clicked button
                 btn.classList.add('active');
-                
                 const filter = btn.getAttribute('data-filter');
-                
                 projectCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
+                    card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter) ? 'flex' : 'none';
                 });
             });
         });
 
-        // Form Submission
-        const contactForm = document.getElementById('contactForm');
-        const toast = document.getElementById('toast');
-        const toastMessage = document.getElementById('toastMessage');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Simulate form submission
-            showToast('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-            contactForm.reset();
-        });
-
-        // CV Download
-        const downloadCV = document.getElementById('downloadCV');
-        downloadCV.addEventListener('click', (e) => {
-            e.preventDefault();
-            showToast('Download do currículo iniciado!');
-            // In a real scenario, this would trigger a file download
-        });
-
-        // Toast Notification
-        function showToast(message) {
-            toastMessage.textContent = message;
-            toast.classList.add('show');
-            
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
+        // Hero photo fallback
+        const heroPhoto = document.getElementById('heroPhoto');
+        if (heroPhoto) {
+            const img = new Image();
+            img.onload = () => { heroPhoto.style.backgroundImage = "url('foto_principal.png')"; };
+            img.onerror = () => {
+                heroPhoto.outerHTML = `<div class="hero-photo-placeholder"><i class="fas fa-user"></i><span>Adicione sua foto como<br>foto_principal.png</span></div>`;
+            };
+            img.src = 'foto_principal.png';
         }
 
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        // Scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -2265,38 +1771,14 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-        // Observe elements for animation
-        document.querySelectorAll('.skill-card, .experience-item, .project-card, .stat-item, .education-card, .testimonial-card, .contact-item').forEach(el => {
+        document.querySelectorAll('.skill-card, .experience-item, .project-card, .stat-card, .education-card, .testimonial-card, .contact-item, .award-card').forEach(el => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            el.style.transform = 'translateY(18px)';
+            el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
             observer.observe(el);
-        });
-
-        // Add subtle animation to hero elements
-        const heroElements = document.querySelectorAll('.hero h1, .hero .subtitle, .hero .description, .cta-buttons');
-        heroElements.forEach((el, index) => {
-            el.style.animation = `fadeInUp 0.8s ease ${index * 0.2}s both`;
         });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
