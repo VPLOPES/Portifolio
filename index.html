@@ -474,14 +474,23 @@
         .project-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(0,0,0,0.12); }
         .project-image {
             height: 180px;
-            background: var(--primary);
             display: flex; align-items: center; justify-content: center;
-            color: rgba(255,255,255,0.7); font-size: 3rem;
+            font-size: 3rem;
             position: relative;
+            border-bottom: 1px solid var(--border);
         }
-        .project-image.accent-bg { background: linear-gradient(135deg, #1a3a5c, #2558a0); }
-        .project-image.warm-bg { background: linear-gradient(135deg, #7a3010, #c8602a); }
-        .project-image.green-bg { background: linear-gradient(135deg, #0a3828, #0f6e56); }
+        .project-image.accent-bg { 
+            background: rgba(26, 58, 92, 0.06); 
+            color: var(--primary); 
+        }
+        .project-image.warm-bg { 
+            background: rgba(200, 96, 42, 0.06); 
+            color: var(--accent); 
+        }
+        .project-image.green-bg { 
+            background: rgba(15, 110, 86, 0.06); 
+            color: var(--success); 
+        }
         .project-badge {
             position: absolute; top: 12px; right: 12px;
             background: var(--accent); color: white;
