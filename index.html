@@ -2590,16 +2590,28 @@
             });
         });
 
+
         // Project Filtering
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
+        
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
+                // Remove a classe active de todos os botões
                 filterBtns.forEach(b => b.classList.remove('active'));
+                // Adiciona a classe active no botão clicado
                 btn.classList.add('active');
+                
+                // Pega a categoria do botão clicado
                 const filter = btn.getAttribute('data-filter');
+                
+                // Mostra ou esconde os projetos com base na categoria
                 projectCards.forEach(card => {
-                    card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter) ? 'flex' : 'none';
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
                 });
             });
         });
