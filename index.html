@@ -995,11 +995,11 @@
             <div class="container">
                 <h2 class="section-title" data-i18n="section.projects">Projetos</h2>
                 <div class="projects-filters">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="fpa">FP&A</button>
-                    <button class="filter-btn" data-filter="analytics">Análise de Dados</button>
-                    <button class="filter-btn" data-filter="finance">Finanças & IA</button>
-                    <button class="filter-btn" data-filter="market">Inteligência de Mercado</button>
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter.all">Todos</button>
+                    <button class="filter-btn" data-filter="fpa" data-i18n="filter.fpa">FP&A</button>
+                    <button class="filter-btn" data-filter="analytics" data-i18n="filter.analytics">Análise de Dados</button>
+                    <button class="filter-btn" data-filter="finance" data-i18n="filter.finance">Finanças & IA</button>
+                    <button class="filter-btn" data-filter="market" data-i18n="filter.market">Inteligência de Mercado</button>
                 </div>
 
                 <div class="projects-grid">
@@ -1916,6 +1916,11 @@
     "footer.desc": `FP&A Corporativo especializado em planejamento financeiro, modelagem e suporte estratégico à alta gestão. Buscando posições de liderança financeira — Controller, Gerente Financeiro ou CFO.`,
     "footer.nav": `Navegação`,
     "footer.rights": `Todos os direitos reservados.`,
+    "filter.all": `Todos`,
+    "filter.fpa": `FP&A`,
+    "filter.analytics": `Análise de Dados`,
+    "filter.finance": `Finanças & IA`,
+    "filter.market": `Inteligência de Mercado`,
   },
   en: {
     "hero.eyebrow": `Corporate FP&A · Economist · Belo Horizonte, Brazil`,
@@ -2094,6 +2099,11 @@
     "footer.desc": `Corporate FP&A specialist in financial planning, modeling, and strategic support to senior management. Seeking financial leadership roles — Controller, Finance Director, or CFO.`,
     "footer.nav": `Navigation`,
     "footer.rights": `All rights reserved.`,
+    "filter.all": `All`,
+    "filter.fpa": `FP&A`,
+    "filter.analytics": `Data Analytics`,
+    "filter.finance": `Finance & AI`,
+    "filter.market": `Market Intelligence`,
   },
   es: {
     "hero.eyebrow": `FP&A Corporativo · Economista · Belo Horizonte, Brasil`,
@@ -2272,6 +2282,11 @@
     "footer.desc": `FP&A Corporativo especializado en planificación financiera, modelado y soporte estratégico a la alta dirección. Buscando posiciones de liderazgo financiero — Controller, Director Financiero o CFO.`,
     "footer.nav": `Navegación`,
     "footer.rights": `Todos los derechos reservados.`,
+    "filter.all": `Todos`,
+    "filter.fpa": `FP&A`,
+    "filter.analytics": `Análisis de Datos`,
+    "filter.finance": `Finanzas e IA`,
+    "filter.market": `Inteligencia de Mercado`,
   },
 };
 
@@ -2327,12 +2342,6 @@
             if (!ctaKeys[i]) return;
             const icon = btn.querySelector('i');
             btn.innerHTML = (icon ? icon.outerHTML + ' ' : '') + t(ctaKeys[i]);
-        });
-
-        // ── Filter buttons ──
-        const filterKeys = ['filter.all','filter.fpa','filter.analytics','filter.finance','filter.market'];
-        document.querySelectorAll('.filter-btn').forEach((btn, i) => {
-            if (filterKeys[i]) btn.textContent = t(filterKeys[i]);
         });
 
         // ── Project titles ──
