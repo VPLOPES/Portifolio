@@ -2517,6 +2517,17 @@
         // ── About highlight ──
         const highlight = document.querySelector('.about-highlight');
         if (highlight) highlight.innerHTML = t('about.highlight');
+        // ── CV download dinâmico por idioma ──
+        const cvMap = {
+            pt: 'Curriculo_Vinicius_Lopes.docx',
+            en: 'Curriculo_Vinicius_Lopes_EN.docx',
+            es: 'Curriculo_Vinicius_Lopes_ES.docx'
+        };
+        const cvBtn = document.querySelector('.cta-buttons a[download]');
+        if (cvBtn) {
+            cvBtn.href = cvMap[lang];
+            cvBtn.setAttribute('download', cvMap[lang]);
+        }
     }
 
     // Initialize
