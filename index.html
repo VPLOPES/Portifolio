@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinícius Lopes | FP&A Corporativo — Planejamento Financeiro e Análise Estratégica</title>
-    <meta name="description" content="Economista com histórico comprovado de impacto: R$ 95M em ativos públicos arrecadados, Prêmio ALIDE Verde 2024, redução de 15% em tarifas reguladas. FP&A Corporativo, planejamento orçamentário, modelagem financeira e suporte à decisão estratégica.">
+    <meta name="description" content="Economista com histórico comprovado de impacto: R$ 95M em ativos públicos arrecadados, Prêmio ALIDE Verde 2024, redução de 20% em tarifas reguladas. FP&A Corporativo, planejamento orçamentário, modelagem financeira e suporte à decisão estratégica.">
     <meta name="keywords" content="FP&A, planejamento financeiro, orçamento, forecast, modelagem financeira, valuation, Power BI, Python, SQL, economista, Belo Horizonte, Minas Gerais">
     <meta name="author" content="Vinícius Lopes">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vplopes.github.io/Portifolio/">
     <meta property="og:title" content="Vinícius Lopes | FP&A Corporativo e Planejamento Financeiro">
-    <meta property="og:description" content="Economista com impacto mensurável: R$ 95M arrecadados, Prêmio ALIDE Verde 2024, redução de 15% em tarifas públicas. Portfólio de projetos em FP&A, modelagem financeira e análise de dados.">
+    <meta property="og:description" content="Economista com impacto mensurável: R$ 95M arrecadados, Prêmio ALIDE Verde 2024, redução de 20% em tarifas públicas. Portfólio de projetos em FP&A, modelagem financeira e análise de dados.">
     <meta property="og:image" content="https://vplopes.github.io/Portifolio/foto_principal.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://vplopes.github.io/Portifolio/">
     <meta property="twitter:title" content="Vinícius Lopes | FP&A Corporativo">
-    <meta property="twitter:description" content="Economista com impacto mensurável: R$ 95M arrecadados, Prêmio ALIDE Verde 2024, redução de 15% em tarifas públicas.">
+    <meta property="twitter:description" content="Economista com impacto mensurável: R$ 95M arrecadados, Prêmio ALIDE Verde 2024, redução de 20% em tarifas públicas.">
     <meta property="twitter:image" content="https://vplopes.github.io/Portifolio/foto_principal.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -68,6 +68,14 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         html { scroll-behavior: smooth; }
+
+        /* FIX: prevent text-cursor (I-beam) on headings and section titles */
+        h1, h2, h3, h4, h5, h6, .section-title, .hero-eyebrow, .logo {
+            cursor: default;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+        }
 
         body {
             font-family: var(--sans);
@@ -202,6 +210,33 @@
         .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
         .nav-links a:hover, .nav-links a.active { color: var(--ink); }
         .nav-btns { display: flex; gap: 0.75rem; align-items: center; }
+        /* ── LANGUAGE SWITCHER ── */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            background: var(--paper-2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 3px;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            font-family: var(--mono);
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: var(--ink-3);
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: var(--transition);
+            line-height: 1;
+        }
+        .lang-btn.active { background: var(--accent); color: white; }
+        .lang-btn:hover:not(.active) { background: var(--paper-3); color: var(--ink); }
+
         .theme-toggle {
             background: transparent;
             border: none;
@@ -303,7 +338,7 @@
             animation: fadeInUp 0.7s ease 0.2s both;
         }
         .hero-photo {
-            width: 250px; height: 340px;
+            width: 240px; height: 290px;
             border-radius: 8px;
             background-image: url('foto_principal.png');
             background-size: cover;
@@ -755,6 +790,7 @@
         }
         @media (max-width: 768px) {
             .mobile-menu-btn { display: flex; }
+            .lang-switcher { display: none; }
             .nav-links {
                 position: fixed; top: 70px; left: -100%;
                 width: 100%; height: calc(100vh - 70px);
@@ -793,6 +829,11 @@
                 <li><a href="#contact">Contato</a></li>
             </ul>
             <div class="nav-btns">
+                <div class="lang-switcher" role="group" aria-label="Idioma / Language">
+                    <button class="lang-btn active" data-lang="pt" onclick="setLang('pt')">PT</button>
+                    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+                    <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+                </div>
                 <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -808,9 +849,9 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-text">
-                    <p class="hero-eyebrow">FP&A Corporativo · Economista · Belo Horizonte, MG</p>
+                    <p class="hero-eyebrow" data-i18n="hero.eyebrow">FP&A Corporativo · Economista · Belo Horizonte, MG</p>
                     <h1>Vinícius Lopes<br><em>Planejamento Financeiro<br>& Análise Estratégica</em></h1>
-                    <p class="hero-tagline">
+                    <p class="hero-tagline" data-i18n="hero.tagline">
                         Economista com histórico comprovado de impacto em FP&A corporativo, modelagem financeira e suporte à tomada de decisão estratégica. Ferramentas: Power BI, Python, SQL e Excel Avançado.
                     </p>
                     <div class="hero-impacts">
@@ -824,7 +865,7 @@
                         </div>
                         <div class="impact-line">
                             <i class="fas fa-chart-line"></i>
-                            <span>Participação em equipe que reduziu <span class="impact-num">15%</span> nas tarifas de água e esgoto em Minas Gerais</span>
+                            <span>Participação em equipe que reduziu <span class="impact-num">20%</span> nas tarifas de água e esgoto em Minas Gerais</span>
                         </div>
                     </div>
                     <div class="cta-buttons">
@@ -834,7 +875,7 @@
                         <a href="#contact" class="btn btn-outline">
                             <i class="fas fa-paper-plane"></i> Entre em Contato
                         </a>
-                        <a href="Curriculo_Vinicius_Lopes.pdf" class="btn btn-outline" download="Curriculo_Vinicius_Lopes.pdf">
+                        <a href="Curriculo_08_25.pdf" class="btn btn-outline" download="Curriculo_Vinicius_Lopes.pdf">
                             <i class="fas fa-download"></i> Baixar CV
                         </a>
                     </div>
@@ -851,16 +892,16 @@
     <main>
 
         <!-- SOBRE -->
-        <section id="about"class="container">
-            <h2 class="section-title">Sobre Mim</h2>
+        <section id="about" class="container">
+            <h2 class="section-title" data-i18n="section.about">Sobre Mim</h2>
             <div class="about-grid">
                 <div>
                     <p class="about-text">
                         Economista com sólida atuação em FP&A corporativo, planejamento orçamentário e suporte à decisão estratégica. Ao longo da carreira, contribuí para resultados concretos em instituições públicas e privadas.
                     </p>
 
-                    <div class="about-highlight">
-                        <strong>Impacto comprovado:</strong> participação em equipe que reduziu 15% as tarifas de água e esgoto em MG · contribuição para R$ 95M arrecadados em leilões públicos · desenvolvimento do BDMG Sustentabilidade, vencedor do Prêmio ALIDE Verde 2024.
+                    <div class="about-highlight" data-i18n="about.highlight">
+                        <strong>Impacto comprovado:</strong> participação em equipe que reduziu 20% as tarifas de água e esgoto em MG · contribuição para R$ 95M arrecadados em leilões públicos · desenvolvimento do BDMG Sustentabilidade, vencedor do Prêmio ALIDE Verde 2024.
                     </div>
 
                     <p class="about-text">
@@ -870,25 +911,25 @@
                         Atualmente atuo no TJMG como Assistente da Direção Superior em Planejamento Orçamentário. Meu objetivo de médio prazo é crescer para posições de liderança financeira — Gerente Financeiro, Controller ou CFO — em organizações onde análise rigorosa e disciplina orçamentária sejam diferenciais estratégicos.
                     </p>
                     <p class="about-text">
-                        Sou graduado em Ciências Econômicas pela UFMG, com intercâmbio acadêmico na Argentina (programa Minas-Mundi), consolidei minha formação analítica com uma dupla pós-graduação: Gestão Financeira pela FGV e Economia do Agronegócio pela UFMS.
+                        Pós-graduando em Gestão Financeira pela FGV e em Economia do Agronegócio pela UFMS. Economista formado pela UFMG com intercâmbio na Argentina (programa Minas-Mundi).
                     </p>
 
                     <div class="stats-grid">
                         <div class="stat-card">
                             <div class="stat-number">5+</div>
-                            <div class="stat-label">anos de experiência</div>
+                            <div class="stat-label" data-i18n="stats.exp">anos de experiência</div>
                         </div>
                         <div class="stat-card">
                             <div class="stat-number">R$95M</div>
-                            <div class="stat-label">em ativos arrecadados</div>
+                            <div class="stat-label" data-i18n="stats.assets">em ativos arrecadados</div>
                         </div>
                         <div class="stat-card">
                             <div class="stat-number">9+</div>
-                            <div class="stat-label">empresas e instituições</div>
+                            <div class="stat-label" data-i18n="stats.companies">empresas e instituições</div>
                         </div>
                         <div class="stat-card">
                             <div class="stat-number">10+</div>
-                            <div class="stat-label">projetos no portfólio</div>
+                            <div class="stat-label" data-i18n="stats.projects">projetos no portfólio</div>
                         </div>
                     </div>
                 </div>
@@ -899,7 +940,7 @@
                     <div class="award-card">
                         <div class="award-icon gold"><i class="fas fa-trophy"></i></div>
                         <div class="award-text">
-                            <h4>Prêmio ALIDE Verde 2024</h4>
+                            <h4 data-i18n="award1.title">Prêmio ALIDE Verde 2024</h4>
                             <p>Reconhecimento internacional ao BDMG Sustentabilidade — linha de crédito para impacto socioambiental desenvolvida com minha participação no BDMG.</p>
                             <a href="https://www.bdmg.mg.gov.br/bdmg-vence-premio-internacional-a-partir-da-experiencia-da-linha-de-credito-sustentabilidade/" target="_blank"><i class="fas fa-external-link-alt"></i> Ver notícia oficial</a>
                         </div>
@@ -908,25 +949,23 @@
                     <div class="award-card">
                         <div class="award-icon green"><i class="fas fa-building-columns"></i></div>
                         <div class="award-text">
-                            <h4>R$ 95 milhões em leilões públicos</h4>
+                            <h4 data-i18n="award2.title">R$ 95 milhões em leilões públicos</h4>
                             <p>Desenvolvimento de painéis analíticos na SEDE-MG que suportaram o processo decisório de leilão de ativos imobiliários do estado, contribuindo para a arrecadação total.</p>
-                            <a href="https://www.infomoney.com.br/mercados/governo-de-minas-gerais-arrecada-r-95-milhoes-com-gestao-eficiente-de-ativos/" target="_blank"><i class="fas fa-external-link-alt"></i> Ver notícia oficial</a>
                         </div>
                     </div>
 
                     <div class="award-card">
                         <div class="award-icon blue"><i class="fas fa-droplet"></i></div>
                         <div class="award-text">
-                            <h4>Redução de 15% em tarifas públicas</h4>
-                            <p>Participação na equipe da Arsae-MG nas revisões tarifárias da Copasa e Copanor, resultando em redução de 15% nas tarifas de água e esgoto no estado.</p>
-                            <a href="https://www.arsae.mg.gov.br/2021/07/02/arsae-mg-publica-resolucao-que-autoriza-reducao-historica-nas-tarifas-da-copasa/" target="_blank"><i class="fas fa-external-link-alt"></i> Ver notícia oficial</a>
+                            <h4>Redução de 20% em tarifas públicas</h4>
+                            <p>Participação na equipe da Arsae-MG nas revisões tarifárias da Copasa e Copanor, resultando em redução de 20% nas tarifas de água e esgoto no estado.</p>
                         </div>
                     </div>
 
                     <div class="award-card">
                         <div class="award-icon gold"><i class="fas fa-shield-halved"></i></div>
                         <div class="award-text">
-                            <h4>Prevenção de perdas milionárias</h4>
+                            <h4 data-i18n="award4.title">Prevenção de perdas milionárias</h4>
                             <p>Na Agromercantil, identificação proativa de erros no projeto de viabilidade da filial de Maringá evitou prejuízos potenciais de milhões de reais antes da implementação.</p>
                         </div>
                     </div>
@@ -934,7 +973,7 @@
                     <div class="award-card">
                         <div class="award-icon green"><i class="fas fa-graduation-cap"></i></div>
                         <div class="award-text">
-                            <h4>Bolsista Minas-Mundi · Argentina</h4>
+                            <h4 data-i18n="award5.title">Bolsista Minas-Mundi · Argentina</h4>
                             <p>Intercâmbio na Universidad Nacional del Litoral (Santa Fé) pelo programa estadual de internacionalização acadêmica, 2023.</p>
                         </div>
                     </div>
@@ -945,7 +984,7 @@
         <!-- PROJETOS -->
         <section id="projects">
             <div class="container">
-                <h2 class="section-title">Projetos</h2>
+                <h2 class="section-title" data-i18n="section.projects">Projetos</h2>
                 <div class="projects-filters">
                     <button class="filter-btn active" data-filter="all">Todos</button>
                     <button class="filter-btn" data-filter="fpa">FP&A</button>
@@ -1189,7 +1228,7 @@
 
         <!-- COMPETÊNCIAS -->
         <section id="skills" class="container">
-            <h2 class="section-title">Competências-chave</h2>
+            <h2 class="section-title" data-i18n="section.skills">Competências-chave</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3><i class="fas fa-chart-pie"></i> FP&A e Finanças Corporativas</h3>
@@ -1237,7 +1276,7 @@
         <!-- EXPERIÊNCIA -->
         <section id="experience">
             <div class="container">
-                <h2 class="section-title">Experiência Profissional</h2>
+                <h2 class="section-title" data-i18n="section.experience">Experiência Profissional</h2>
                 <div class="experience-timeline">
 
                     <div class="experience-item">
@@ -1317,7 +1356,7 @@
                         </div>
                         <div class="exp-impact">
                             <i class="fas fa-coins"></i>
-                            Os painéis estruturaram o processo decisório que resultou na arrecadação de R$ 95 milhões em leilões de ativos imobiliários do estado. <a href="https://www.infomoney.com.br/mercados/governo-de-minas-gerais-arrecada-r-95-milhoes-com-gestao-eficiente-de-ativos/" target="_blank" style="color: var(--success); text-decoration: underline;">Ver notícia</a>
+                            Os painéis estruturaram o processo decisório que resultou na arrecadação de R$ 95 milhões em leilões de ativos imobiliários do estado.
                         </div>
                     </div>
 
@@ -1377,7 +1416,7 @@
                         </div>
                         <div class="exp-impact">
                             <i class="fas fa-chart-line"></i>
-                            Período marcado por recorde histórico de arrecadação com seguros e redução do índice de sinistralidade. <a href="https://www.sindsegsp.org.br/site/noticia-texto.aspx?id=34874" target="_blank" style="color: var(--success); text-decoration: underline;">Ver notícia</a>
+                            Período marcado por recorde histórico de arrecadação com seguros e redução do índice de sinistralidade.
                         </div>
                     </div>
 
@@ -1398,7 +1437,7 @@
                         </div>
                         <div class="exp-impact">
                             <i class="fas fa-droplet"></i>
-                            Integrante da equipe cuja atuação resultou em redução de 15% nas tarifas de água e esgotamento sanitário para consumidores de Minas Gerais. <a href="https://www.arsae.mg.gov.br/2021/07/02/arsae-mg-publica-resolucao-que-autoriza-reducao-historica-nas-tarifas-da-copasa/" target="_blank" style="color: var(--success); text-decoration: underline;">Ver notícia</a>
+                            Integrante da equipe cuja atuação resultou em redução de 20% nas tarifas de água e esgotamento sanitário para consumidores de Minas Gerais.
                         </div>
                     </div>
 
@@ -1408,7 +1447,7 @@
 
         <!-- FORMAÇÃO -->
         <section id="education" class="container">
-            <h2 class="section-title">Formação Acadêmica</h2>
+            <h2 class="section-title" data-i18n="section.education">Formação Acadêmica</h2>
             <div class="education-grid">
                 <div class="education-card">
                     <div class="education-header">
@@ -1427,7 +1466,7 @@
                         <div>
                             <h3 class="education-title">MBA em Economia do Agronegócio</h3>
                             <div class="education-school">UFMS — Universidade Federal de Mato Grosso do Sul</div>
-                            <div class="education-period"><i class="far fa-calendar-alt"></i> out/2024 – mai/2026</div>
+                            <div class="education-period"><i class="far fa-calendar-alt"></i> out/2024 – jan/2026</div>
                         </div>
                     </div>
                     <p class="education-description">Análise econômica aplicada ao agronegócio, mercado internacional, políticas agrícolas e gestão de riscos no setor.</p>
@@ -1482,18 +1521,8 @@
         <!-- FORMAÇÃO COMPLEMENTAR -->
         <section id="complementary-education">
             <div class="container">
-                <h2 class="section-title">Formação Complementar</h2>
+                <h2 class="section-title" data-i18n="section.comp">Formação Complementar</h2>
                 <div class="education-grid">
-                    <div class="education-card">
-                        <div class="education-header">
-                            <div class="education-icon"><i class="fas fa-certificate"></i></div>
-                            <div>
-                                <h3 class="education-title">Excel Analytics com Inteligência Artificial</h3>
-                                <div class="education-school">Data Science Academy</div>
-                                <div class="education-period"><i class="far fa-calendar-alt"></i> 2026</div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="education-card">
                         <div class="education-header">
                             <div class="education-icon"><i class="fas fa-certificate"></i></div>
@@ -1550,7 +1579,7 @@
 
         <!-- RECOMENDAÇÕES -->
         <section id="testimonials" class="container">
-            <h2 class="section-title">Recomendações</h2>
+            <h2 class="section-title" data-i18n="section.testimonials">Recomendações</h2>
             <div class="testimonials-container">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
@@ -1594,14 +1623,14 @@
         <!-- CONTATO -->
         <section id="contact">
             <div class="container">
-                <h2 class="section-title">Entre em Contato</h2>
+                <h2 class="section-title" data-i18n="section.contact">Entre em Contato</h2>
                 <div class="contact-content">
                     <div class="contact-info">
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="contact-text">
                                 <h3>Localização</h3>
-                                <p>Belo Horizonte, MG · Brasil</p>
+                                <p>Uberlândia, MG · Brasil</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1615,7 +1644,7 @@
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                             <div class="contact-text">
                                 <h3>Email</h3>
-                                <a href="mailto:viniciuslopesp12@gmail.com">viniciuslopesp12@gmail.com</a>
+                                <a href="/cdn-cgi/l/email-protection#2e584740474d475b5d42415e4b5d5e1f1c6e49434f4742004d4143"><span class="__cf_email__" data-cfemail="6a1c03040309031f1906051a0f191a5b582a0d070b030644090507">[email&#160;protected]</span></a>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1668,7 +1697,7 @@
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/viniciusplopes" class="social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://github.com/VPLOPES" class="social-link" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:viniciuslopesp12@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="/cdn-cgi/l/email-protection#45332c2b2c262c3036292a352036357477052228242c296b262a28" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="footer-links-col">
@@ -1699,6 +1728,799 @@
     </div>
 
     <script>
+    // ── COMPLETE i18n SYSTEM ──────────────────────────────────────────────────
+    const T = {
+  pt: {
+    "hero.eyebrow": `FP&A Corporativo · Economista · Belo Horizonte, MG`,
+    "hero.tagline": `Economista com histórico comprovado de impacto em FP&A corporativo, modelagem financeira e suporte à tomada de decisão estratégica. Ferramentas: Power BI, Python, SQL e Excel Avançado.`,
+    "hero.impact1": `Prêmio <span class='impact-num'>ALIDE Verde 2024</span> — maior reconhecimento internacional em finanças sustentáveis da América Latina`,
+    "hero.impact2": `Contribuição para arrecadação de <span class='impact-num'>R$ 95 milhões</span> em leilões de ativos públicos (SEDE-MG)`,
+    "hero.impact3": `Participação em equipe que reduziu <span class='impact-num'>15%</span> nas tarifas de água e esgoto em Minas Gerais`,
+    "hero.cta1": `Ver Projetos`,
+    "hero.cta2": `Entre em Contato`,
+    "hero.cta3": `Baixar CV`,
+    "nav.home": `Home`,
+    "nav.about": `Sobre`,
+    "nav.projects": `Projetos`,
+    "nav.skills": `Competências`,
+    "nav.experience": `Experiência`,
+    "nav.education": `Formação`,
+    "nav.contact": `Contato`,
+    "section.about": `Sobre Mim`,
+    "section.projects": `Projetos`,
+    "section.skills": `Competências-chave`,
+    "section.experience": `Experiência Profissional`,
+    "section.education": `Formação Acadêmica`,
+    "section.comp": `Formação Complementar`,
+    "section.testimonials": `Recomendações`,
+    "section.contact": `Entre em Contato`,
+    "about.awards_label": `Conquistas em destaque`,
+    "about.p1": `Economista com sólida atuação em FP&A corporativo, planejamento orçamentário e suporte à decisão estratégica. Ao longo da carreira, contribuí para resultados concretos em instituições públicas e privadas.`,
+    "about.highlight": `<strong>Impacto comprovado:</strong> participação em equipe que reduziu 15% as tarifas de água e esgoto em MG · contribuição para R$ 95M arrecadados em leilões públicos · desenvolvimento do BDMG Sustentabilidade, vencedor do Prêmio ALIDE Verde 2024.`,
+    "about.p2": `Meu diferencial está na combinação entre visão econômica e capacidade técnica: construo modelos financeiros, desenvolvo dashboards em Power BI, automatizo análises com Python e SQL, e entrego relatórios gerenciais que a alta gestão consegue usar para decidir com segurança.`,
+    "about.p3": `Atualmente atuo no TJMG como Assistente da Direção Superior em Planejamento Orçamentário. Meu objetivo de médio prazo é crescer para posições de liderança financeira — Gerente Financeiro, Controller ou CFO.`,
+    "about.p4": `Graduado em Ciências Econômicas pela UFMG, com intercâmbio na Argentina (programa Minas-Mundi), consolidei minha formação com dupla pós-graduação: Gestão Financeira pela FGV e Economia do Agronegócio pela UFMS.`,
+    "stats.exp": `anos de experiência`,
+    "stats.assets": `em ativos arrecadados`,
+    "stats.companies": `empresas e instituições`,
+    "stats.projects": `projetos no portfólio`,
+    "award1.title": `Prêmio ALIDE Verde 2024`,
+    "award1.desc": `Reconhecimento internacional ao BDMG Sustentabilidade — linha de crédito para impacto socioambiental desenvolvida com minha participação no BDMG.`,
+    "award2.title": `R$ 95 milhões em leilões públicos`,
+    "award2.desc": `Desenvolvimento de painéis analíticos na SEDE-MG que suportaram o processo decisório de leilão de ativos imobiliários do estado.`,
+    "award3.title": `Redução de 15% em tarifas públicas`,
+    "award3.desc": `Participação na equipe da Arsae-MG nas revisões tarifárias da Copasa e Copanor, resultando em redução histórica nas tarifas de água e esgoto em MG.`,
+    "award4.title": `Prevenção de perdas milionárias`,
+    "award4.desc": `Na Agromercantil, identificação proativa de erros no projeto de viabilidade da filial de Maringá evitou prejuízos potenciais de milhões de reais.`,
+    "award5.title": `Bolsista Minas-Mundi · Argentina`,
+    "award5.desc": `Intercâmbio na Universidad Nacional del Litoral (Santa Fé) pelo programa estadual de internacionalização acadêmica, 2023.`,
+    "award.link": `Ver notícia oficial`,
+    "filter.all": `Todos`,
+    "badge.new": `Novo`,
+    "badge.fiemg": `Série FIEMG`,
+    "proj1.title": `Projeto de Viabilidade Econômica`,
+    "proj1.desc": `Modelagem financeira completa para análise de viabilidade de empreendimento, com três cenários (conservador, base e otimista). Inclui projeções de receitas, CAPEX e fluxo de caixa de 10 anos. Desenvolvido no contexto real da Agromercantil — identificação de erros evitou prejuízos de milhões de reais.`,
+    "proj2.title": `Imóveis de Leilão — MG`,
+    "proj2.impact": `Contribuiu para R$ 95M arrecadados`,
+    "proj2.desc": `Painel interativo desenvolvido na SEDE-MG para monitoramento de imóveis públicos candidatos a leilão, em processo e já leiloados. Os dashboards estruturaram a base informacional que suportou o processo decisório — contribuindo para R$ 95 milhões arrecadados.`,
+    "proj3.title": `IPCA e Boletim Focus em tempo real`,
+    "proj3.desc": `Aplicação web com dados em tempo real do Boletim Focus (Banco Central) e calculadora de correção monetária por índices financeiros. Inclui análise cambial automatizada — ferramenta prática para análise de inflação e expectativas de mercado.`,
+    "proj4.title": `Painel de Vendas Corporativas`,
+    "proj4.desc": `Dashboard executivo com KPIs integrados de vendas, clientes e cashback. Inclui análise de faturamento, NPS e impacto de programas de fidelidade na receita — estruturado para suporte à decisão comercial da alta gestão.`,
+    "proj5.title": `Inteligência de Mercado — Série Setorial`,
+    "proj5.desc": `Três dashboards em Power BI desenvolvidos na FIEMG, entregues a empresas e sindicatos clientes da consultoria: análise dos setores de Bebidas, Sorvetes e Alimentos no Brasil. Cada painel inclui balança comercial, produção, empregos e mapas interativos.`,
+    "proj6.title": `Análise Geoespacial Imobiliária — RJ`,
+    "proj6.desc": `Análise geoespacial de imóveis no Rio de Janeiro com GeoPandas e Folium. Inclui tratamento de shapefiles e mapas interativos para análise urbana — complementar à experiência com dados imobiliários na SEDE-MG.`,
+    "proj7.title": `Previsão de Preços de Ativos com IA`,
+    "proj7.desc": `Sistema de análise preditiva com machine learning para prever movimentos de preços no mercado financeiro. Demonstra aplicação prática de IA em suporte a decisões de investimento.`,
+    "proj8.title": `Estratégia de Hedge com IA`,
+    "proj8.desc": `Notebook para precificação de opções financeiras e construção de estratégias de hedge. Inclui simulação de Monte Carlo, Black-Scholes-Merton e redes neurais com TensorFlow/Keras.`,
+    "proj9.title": `Calculadora de Risco Operacional`,
+    "proj9.desc": `Ferramenta de gestão de risco financeiro para monitoramento de operações de mercado. Automatiza cálculos de exposição e controle de capital, apoiando a disciplina operacional e o cumprimento de limites predefinidos.`,
+    "skill1.title": `FP&A e Finanças Corporativas`,
+    "skill1.s1": `Planejamento orçamentário e forecast`,
+    "skill1.s2": `Análise de variância (realizado vs. planejado)`,
+    "skill1.s3": `Modelagem financeira e valuation`,
+    "skill1.s4": `Análise de viabilidade econômica`,
+    "skill1.s5": `Otimização de custos e investimentos`,
+    "skill2.title": `Dados e Tecnologia`,
+    "skill2.s1": `Power BI (dashboards executivos)`,
+    "skill2.s2": `Excel Avançado (modelagem, VBA)`,
+    "skill2.s3": `SQL (extração e tratamento)`,
+    "skill2.s4": `Python (automação e análise)`,
+    "skill2.s5": `Machine Learning e IA aplicada`,
+    "skill3.title": `Análise Econômica e de Mercado`,
+    "skill3.s1": `Inteligência de mercado`,
+    "skill3.s2": `Análise competitiva e setorial`,
+    "skill3.s3": `Regulação tarifária e finanças públicas`,
+    "skill3.s4": `Econometria e modelagem estatística`,
+    "skill3.s5": `Pesquisa de mercado quantitativa`,
+    "skill4.title": `Gestão e Liderança`,
+    "skill4.s1": `Relatórios executivos e para diretoria`,
+    "skill4.s2": `Gestão de projetos estratégicos`,
+    "skill4.s3": `Comunicação executiva`,
+    "skill4.s4": `Digitalização de processos financeiros`,
+    "skill4.s5": `Liderança e gestão de equipes`,
+    "level.advanced": `Avançado`,
+    "level.intermediate": `Intermediário`,
+    "exp1.title": `Assistente da Direção Superior | Planejamento Orçamentário`,
+    "exp1.company": `TJMG — Tribunal de Justiça de Minas Gerais`,
+    "exp1.period": `set/2025 – atual`,
+    "exp1.b1": `Elaboração de cálculos orçamentários e projeções financeiras na DEPLAG`,
+    "exp1.b2": `Acompanhamento de resultados e análise de realizado versus planejado`,
+    "exp1.b3": `Produção de relatórios gerenciais para suporte à tomada de decisão da alta gestão`,
+    "exp1.b4": `Atualização de modelos de forecast de receita e despesa`,
+    "exp1.b5": `Interface direta com a gerência e apoio ao Diretor da área`,
+    "exp2.title": `Consultor de Risco Operacional e Psicológico`,
+    "exp2.company": `Quantum Análise de Desempenho (remoto, Boston EUA)`,
+    "exp2.period": `abr – jul/2025`,
+    "exp2.b1": `Monitoramento e controle de risco sobre capital operacional de US$ 500.000`,
+    "exp2.b2": `Validação de critérios de entrada e saída conforme políticas pré-definidas`,
+    "exp2.b3": `Desenvolvimento de modelos de controle de risco e alocação de capital`,
+    "exp2.b4": `Suporte à disciplina operacional e ao equilíbrio decisório sob pressão`,
+    "exp2.b5": `Comunicação de desvios e apoio à coordenação na tomada de decisão`,
+    "exp3.title": `Analista de Finanças Corporativas`,
+    "exp3.company": `Agromercantil`,
+    "exp3.period": `nov/2024 – fev/2025`,
+    "exp3.b1": `Planejamento financeiro completo para abertura de filial em Maringá/PR, incluindo modelagem de viabilidade econômica em três cenários`,
+    "exp3.b2": `Análise make-or-buy para decisão entre frota própria e terceirização logística`,
+    "exp3.b3": `Estruturação de modelos de valuation e estratégias de inteligência de mercado`,
+    "exp3.b4": `Implementação de tecnologias para digitalização de processos financeiros`,
+    "exp3.impact": `Identificação proativa de erros no projeto da filial evitou prejuízos potenciais de milhões de reais antes da implementação.`,
+    "exp4.title": `Assessor em Dados | Superintendência de Destinação de Ativos`,
+    "exp4.company": `SEDE-MG — Secretaria de Desenvolvimento Econômico`,
+    "exp4.period": `abr – nov/2024`,
+    "exp4.b1": `Desenvolvimento de painéis analíticos para monitoramento de imóveis públicos (candidatos a leilão, em processo e leiloados)`,
+    "exp4.b2": `Manipulação, organização e limpeza de dados de ativos imobiliários estaduais`,
+    "exp4.b3": `Elaboração de relatórios executivos para suporte à gestão estratégica de ativos`,
+    "exp4.impact": `Os painéis estruturaram o processo decisório que resultou na arrecadação de R$ 95 milhões em leilões de ativos imobiliários do estado.`,
+    "exp5.title": `Analista de Inteligência de Mercado`,
+    "exp5.company": `BDMG — Banco de Desenvolvimento de Minas Gerais`,
+    "exp5.period": `abr/2022 – ago/2023`,
+    "exp5.b1": `Participação central no desenvolvimento e operacionalização do BDMG Sustentabilidade — linha de crédito com foco em impacto socioambiental`,
+    "exp5.b2": `Análise de informações financeiras e extração de relatórios do Banco Central`,
+    "exp5.b3": `Produção de gráficos, relatórios estratégicos e apresentações para diretoria`,
+    "exp5.b4": `Publicação de documentos e informações de registro de produtos`,
+    "exp5.impact": `BDMG Sustentabilidade venceu o Prêmio ALIDE Verde 2024 — maior reconhecimento internacional em finanças sustentáveis da América Latina.`,
+    "exp6.title": `Analista de Inteligência Competitiva`,
+    "exp6.company": `FIEMG — Federação das Indústrias de Minas Gerais`,
+    "exp6.period": `nov/2021 – abr/2022`,
+    "exp6.b1": `Desenvolvimento de painéis de inteligência competitiva entregues a empresas e sindicatos clientes da consultoria`,
+    "exp6.b2": `Elaboração de planos de negócios, pesquisas de mercado e estudos de viabilidade`,
+    "exp6.b3": `Produção de relatórios socioeconômicos setoriais`,
+    "exp7.title": `Analista de Informações Estratégicas`,
+    "exp7.company": `Pottencial Seguradora`,
+    "exp7.period": `abr – nov/2021`,
+    "exp7.b1": `Elaboração e acompanhamento do orçamento corporativo`,
+    "exp7.b2": `Fechamento mensal de resultados gerenciais e cálculo de KPIs`,
+    "exp7.b3": `Preparação de apresentações para reuniões de diretoria e conselho`,
+    "exp7.impact": `Período marcado por recorde histórico de arrecadação com seguros e redução do índice de sinistralidade.`,
+    "exp8.title": `Analista de Regulação Tarifária`,
+    "exp8.company": `Arsae-MG — Agência Reguladora de Abastecimento de Água e Esgotamento Sanitário`,
+    "exp8.period": `abr/2020 – abr/2021`,
+    "exp8.b1": `Participação nas revisões tarifárias da Copasa (3ª revisão) e Copanor (2ª revisão)`,
+    "exp8.b2": `Elaboração de planilhas e relatórios técnicos para fundamentação de normativas regulatórias`,
+    "exp8.b3": `Análises e cálculos de reajustes e revisões tarifárias via manipulação de dados`,
+    "exp8.impact": `Integrante da equipe cuja atuação resultou em redução de 15% nas tarifas de água e esgotamento sanitário para consumidores de Minas Gerais.`,
+    "edu1.title": `Pós-Graduação em Gestão Financeira`,
+    "edu1.desc": `Gestão financeira corporativa, valuation, análise de investimentos e estratégias de financiamento.`,
+    "edu2.title": `MBA em Economia do Agronegócio`,
+    "edu2.desc": `Análise econômica aplicada ao agronegócio, mercado internacional, políticas agrícolas e gestão de riscos no setor.`,
+    "edu3.title": `Bacharelado em Economia`,
+    "edu3.desc": `Teoria econômica, econometria, finanças e políticas públicas. Pesquisa em mercado financeiro e análise de risco.`,
+    "edu4.title": `Intercâmbio — Gestão Estratégica`,
+    "edu4.desc": `Bolsista do programa Minas-Mundi. Desenvolvimento de conhecimento teórico, linguístico e cultural em Santa Fé, Argentina.`,
+    "edu5.desc": `IA aplicada a negócios: algoritmos, Big Data, Machine Learning e analytics para transformação digital.`,
+    "edu6.title": `Bacharelado em Direito (incompleto)`,
+    "edu6.desc": `Seis períodos concluídos. Formação que aprimorou oratória, argumentação e vocabulário jurídico — diferencial em negociações e contratos financeiros.`,
+    "test1.text": `Vinícius demonstrou excelente capacidade analítica na implementação de nosso sistema de gestão de risco. Seu conhecimento em finanças combinado com habilidades técnicas trouxe resultados significativos para nossa operação.`,
+    "test1.role": `Diretora de Operações · Quantum Análise de Desempenho`,
+    "test2.text": `Trabalhar com o Vinícius foi uma experiência extremamente positiva. Ele é um profissional engajado e incansavelmente dedicado à busca de conhecimento, sempre se atualizando com as últimas ferramentas e metodologias. Sua capacidade de agir de forma autônoma, combinada com um desejo genuíno de aprender e crescer, faz com que ele seja uma peça chave em qualquer time. Vinícius possui uma atenção aos detalhes admirável — garantindo que tudo seja feito com excelência. Sem dúvida, um profissional comprometido e indispensável.`,
+    "test2.role": `Membro do Conselho de Política Econômica · FIEMG`,
+    "test3.text": `Vinicius Lopes possui sólidos conhecimentos em finanças e uma destacada habilidade em gestão e liderança. Seu comprometimento é notável, sempre entregando resultados de alta qualidade. Sua excelente comunicação permite transmitir informações com clareza e precisão. Tenho plena confiança de que ele será uma adição estratégica e valiosa para qualquer equipe ou projeto.`,
+    "test3.role": `FP&A Corporativo · BDMG`,
+    "contact.loc": `Localização`,
+    "contact.phone": `Telefone`,
+    "form.name": `Nome`,
+    "form.message": `Mensagem`,
+    "form.send": `Enviar Mensagem`,
+    "footer.desc": `FP&A Corporativo especializado em planejamento financeiro, modelagem e suporte estratégico à alta gestão. Buscando posições de liderança financeira — Controller, Gerente Financeiro ou CFO.`,
+    "footer.nav": `Navegação`,
+    "footer.rights": `Todos os direitos reservados.`,
+  },
+  en: {
+    "hero.eyebrow": `Corporate FP&A · Economist · Belo Horizonte, Brazil`,
+    "hero.tagline": `Economist with a proven track record in corporate FP&A, financial modeling, and strategic decision support. Tools: Power BI, Python, SQL, and Advanced Excel.`,
+    "hero.impact1": `<span class='impact-num'>ALIDE Green Award 2024</span> — top international recognition in sustainable finance in Latin America`,
+    "hero.impact2": `Contributed to <span class='impact-num'>BRL 95 million</span> raised through public asset auctions (SEDE-MG)`,
+    "hero.impact3": `Part of the team that achieved a <span class='impact-num'>15%</span> reduction in water and sewage tariffs in Minas Gerais`,
+    "hero.cta1": `View Projects`,
+    "hero.cta2": `Get in Touch`,
+    "hero.cta3": `Download CV`,
+    "nav.home": `Home`,
+    "nav.about": `About`,
+    "nav.projects": `Projects`,
+    "nav.skills": `Skills`,
+    "nav.experience": `Experience`,
+    "nav.education": `Education`,
+    "nav.contact": `Contact`,
+    "section.about": `About Me`,
+    "section.projects": `Projects`,
+    "section.skills": `Core Skills`,
+    "section.experience": `Professional Experience`,
+    "section.education": `Academic Background`,
+    "section.comp": `Continuing Education`,
+    "section.testimonials": `Recommendations`,
+    "section.contact": `Get in Touch`,
+    "about.awards_label": `Key Achievements`,
+    "about.p1": `Economist with solid experience in corporate FP&A, budget planning, and strategic decision support. Throughout my career I've contributed to concrete results across public and private institutions.`,
+    "about.highlight": `<strong>Proven impact:</strong> part of the team that cut water tariffs by 15% in MG · contributed to BRL 95M raised in public auctions · developed BDMG Sustentabilidade, winner of the ALIDE Green Award 2024.`,
+    "about.p2": `My edge comes from combining economic thinking with technical skills: I build financial models, develop Power BI dashboards, automate analyses with Python and SQL, and deliver management reports that executives can actually use to make confident decisions.`,
+    "about.p3": `I currently work at TJMG as Senior Director's Assistant in Budget Planning. My mid-term goal is to grow into financial leadership — Finance Manager, Controller, or CFO.`,
+    "about.p4": `Economics graduate from UFMG, exchange student in Argentina (Minas-Mundi program), and currently completing a dual postgraduate in Financial Management (FGV) and Agribusiness Economics (UFMS).`,
+    "stats.exp": `years of experience`,
+    "stats.assets": `in assets raised`,
+    "stats.companies": `companies & institutions`,
+    "stats.projects": `portfolio projects`,
+    "award1.title": `ALIDE Green Award 2024`,
+    "award1.desc": `International recognition for BDMG Sustentabilidade — a sustainable credit line for social and environmental impact that I helped develop at BDMG.`,
+    "award2.title": `BRL 95 million in public auctions`,
+    "award2.desc": `Built analytical dashboards at SEDE-MG that supported the decision-making process for state real estate asset auctions.`,
+    "award3.title": `15% reduction in public tariffs`,
+    "award3.desc": `Part of the Arsae-MG team in tariff reviews for Copasa and Copanor, resulting in a historic reduction in water and sewage tariffs across MG.`,
+    "award4.title": `Prevention of multimillion-dollar losses`,
+    "award4.desc": `At Agromercantil, I proactively spotted errors in the Maringá branch feasibility project and prevented potential losses worth millions before implementation.`,
+    "award5.title": `Minas-Mundi Scholar · Argentina`,
+    "award5.desc": `Exchange student at Universidad Nacional del Litoral (Santa Fe) through the Minas state academic internationalization program, 2023.`,
+    "award.link": `View official news`,
+    "filter.all": `All`,
+    "badge.new": `New`,
+    "badge.fiemg": `FIEMG Series`,
+    "proj1.title": `Economic Feasibility Study`,
+    "proj1.desc": `Full financial model for a business feasibility study across three scenarios (conservative, base, optimistic). Covers revenue projections, CAPEX, and a 10-year cash flow. Built at Agromercantil — catching errors that prevented millions in losses.`,
+    "proj2.title": `Auction Real Estate — MG`,
+    "proj2.impact": `Contributed to BRL 95M raised`,
+    "proj2.desc": `Interactive dashboard built at SEDE-MG to track public properties in the auction pipeline. The dashboards became the information backbone behind the decision process that raised BRL 95 million.`,
+    "proj3.title": `Real-time IPCA & Focus Bulletin`,
+    "proj3.desc": `Web app pulling real-time data from Brazil's Central Bank Focus Bulletin, with a monetary correction calculator and automated FX analysis. A practical tool for tracking inflation and market expectations.`,
+    "proj4.title": `Corporate Sales Dashboard`,
+    "proj4.desc": `Executive dashboard with integrated KPIs covering sales, customers, and cashback. Includes revenue analysis, NPS, and loyalty program impact — built to support commercial decision-making at leadership level.`,
+    "proj5.title": `Market Intelligence — Sector Series`,
+    "proj5.desc": `Three Power BI dashboards developed at FIEMG and delivered to corporate and union clients: deep-dive analysis of the Beverages, Ice Cream, and Food sectors in Brazil. Each panel covers trade balance, production, employment, and interactive maps.`,
+    "proj6.title": `Real Estate Geospatial Analysis — RJ`,
+    "proj6.desc": `Geospatial analysis of real estate in Rio de Janeiro using GeoPandas and Folium. Includes shapefile processing and interactive maps for urban analysis — a complement to the real estate data work done at SEDE-MG.`,
+    "proj7.title": `Asset Price Forecasting with AI`,
+    "proj7.desc": `Predictive analytics system using machine learning to forecast price movements in financial markets. A practical demonstration of AI applied to investment decision support.`,
+    "proj8.title": `Hedge Strategy with AI`,
+    "proj8.desc": `Notebook for financial option pricing and hedge strategy construction. Covers Monte Carlo simulation, Black-Scholes-Merton, and neural networks with TensorFlow/Keras.`,
+    "proj9.title": `Operational Risk Calculator`,
+    "proj9.desc": `Financial risk management tool for monitoring market operations. Automates exposure calculations and capital control, supporting operational discipline and adherence to predefined limits.`,
+    "skill1.title": `FP&A & Corporate Finance`,
+    "skill1.s1": `Budget planning and forecasting`,
+    "skill1.s2": `Variance analysis (actual vs. planned)`,
+    "skill1.s3": `Financial modeling and valuation`,
+    "skill1.s4": `Economic feasibility analysis`,
+    "skill1.s5": `Cost optimization and investment analysis`,
+    "skill2.title": `Data & Technology`,
+    "skill2.s1": `Power BI (executive dashboards)`,
+    "skill2.s2": `Advanced Excel (modeling, VBA)`,
+    "skill2.s3": `SQL (extraction and processing)`,
+    "skill2.s4": `Python (automation and analysis)`,
+    "skill2.s5": `Machine Learning and applied AI`,
+    "skill3.title": `Economic & Market Analysis`,
+    "skill3.s1": `Market intelligence`,
+    "skill3.s2": `Competitive and sector analysis`,
+    "skill3.s3": `Tariff regulation and public finance`,
+    "skill3.s4": `Econometrics and statistical modeling`,
+    "skill3.s5": `Quantitative market research`,
+    "skill4.title": `Management & Leadership`,
+    "skill4.s1": `Executive and board-level reporting`,
+    "skill4.s2": `Strategic project management`,
+    "skill4.s3": `Executive communication`,
+    "skill4.s4": `Financial process digitization`,
+    "skill4.s5": `Leadership and team management`,
+    "level.advanced": `Advanced`,
+    "level.intermediate": `Intermediate`,
+    "exp1.title": `Senior Director's Assistant | Budget Planning`,
+    "exp1.company": `TJMG — Court of Justice of Minas Gerais`,
+    "exp1.period": `Sep/2025 – present`,
+    "exp1.b1": `Budget calculations and financial projections at DEPLAG`,
+    "exp1.b2": `Results tracking and actual vs. planned variance analysis`,
+    "exp1.b3": `Management reports to support executive decision-making`,
+    "exp1.b4": `Revenue and expense forecast model updates`,
+    "exp1.b5": `Direct interface with management and support to the area Director`,
+    "exp2.title": `Operational & Psychological Risk Consultant`,
+    "exp2.company": `Quantum Análise de Desempenho (remote, Boston USA)`,
+    "exp2.period": `Apr – Jul/2025`,
+    "exp2.b1": `Risk monitoring and control over USD 500,000 in operational capital`,
+    "exp2.b2": `Entry/exit criteria validation against predefined risk policies`,
+    "exp2.b3": `Built risk control models and capital allocation frameworks`,
+    "exp2.b4": `Supported operational discipline and decision balance under pressure`,
+    "exp2.b5": `Deviation reporting and coordination support for decision-making`,
+    "exp3.title": `Corporate Finance Analyst`,
+    "exp3.company": `Agromercantil`,
+    "exp3.period": `Nov/2024 – Feb/2025`,
+    "exp3.b1": `Full financial plan for opening a branch in Maringá/PR, including feasibility modeling across three scenarios`,
+    "exp3.b2": `Make-or-buy analysis for the decision between own fleet and logistics outsourcing`,
+    "exp3.b3": `Built valuation models and market intelligence strategies`,
+    "exp3.b4": `Implemented technologies to digitize financial processes`,
+    "exp3.impact": `Proactively caught errors in the branch project and prevented potential losses worth millions before anything was built.`,
+    "exp4.title": `Data Advisor | Asset Disposition Division`,
+    "exp4.company": `SEDE-MG — Secretariat of Economic Development`,
+    "exp4.period": `Apr – Nov/2024`,
+    "exp4.b1": `Built analytical dashboards to track public properties across the auction lifecycle (pre-auction, in-process, and sold)`,
+    "exp4.b2": `Data manipulation, organization, and cleaning for state real estate asset databases`,
+    "exp4.b3": `Executive reports to support strategic asset management`,
+    "exp4.impact": `The dashboards became the backbone of the decision process that raised BRL 95 million through state real estate auctions.`,
+    "exp5.title": `Market Intelligence Analyst`,
+    "exp5.company": `BDMG — Development Bank of Minas Gerais`,
+    "exp5.period": `Apr/2022 – Aug/2023`,
+    "exp5.b1": `Core contributor in developing and launching BDMG Sustentabilidade — a credit line focused on social and environmental impact`,
+    "exp5.b2": `Financial data analysis and Central Bank report extraction`,
+    "exp5.b3": `Charts, strategic reports, and board presentations`,
+    "exp5.b4": `Product registration document publishing and information management`,
+    "exp5.impact": `BDMG Sustentabilidade won the ALIDE Green Award 2024 — the top international recognition in sustainable finance in Latin America.`,
+    "exp6.title": `Competitive Intelligence Analyst`,
+    "exp6.company": `FIEMG — Federation of Industries of Minas Gerais`,
+    "exp6.period": `Nov/2021 – Apr/2022`,
+    "exp6.b1": `Built competitive intelligence dashboards delivered to corporate and union clients of the consultancy`,
+    "exp6.b2": `Business plans, market research, and feasibility studies`,
+    "exp6.b3": `Socioeconomic sector reports`,
+    "exp7.title": `Strategic Information Analyst`,
+    "exp7.company": `Pottencial Seguradora`,
+    "exp7.period": `Apr – Nov/2021`,
+    "exp7.b1": `Corporate budget planning and tracking`,
+    "exp7.b2": `Monthly management results closing and KPI calculation`,
+    "exp7.b3": `Presentations for board and executive meetings`,
+    "exp7.impact": `A year marked by a record-breaking premium collection and a meaningful drop in the loss ratio.`,
+    "exp8.title": `Tariff Regulation Analyst`,
+    "exp8.company": `Arsae-MG — Water and Sanitation Regulatory Agency`,
+    "exp8.period": `Apr/2020 – Apr/2021`,
+    "exp8.b1": `Part of the tariff review teams for Copasa (3rd review) and Copanor (2nd review)`,
+    "exp8.b2": `Spreadsheets and technical reports to support regulatory normative groundwork`,
+    "exp8.b3": `Data-driven calculations for tariff adjustments and reviews`,
+    "exp8.impact": `Part of the team whose work led to a 15% reduction in water and sewage tariffs for consumers across Minas Gerais.`,
+    "edu1.title": `Postgraduate in Financial Management`,
+    "edu1.desc": `Corporate financial management, valuation, investment analysis, and financing strategies.`,
+    "edu2.title": `MBA in Agribusiness Economics`,
+    "edu2.desc": `Economic analysis applied to agribusiness, international markets, agricultural policies, and sector risk management.`,
+    "edu3.title": `Bachelor's in Economics`,
+    "edu3.desc": `Economic theory, econometrics, finance, and public policy. Research in financial markets and risk analysis.`,
+    "edu4.title": `Exchange — Strategic Management`,
+    "edu4.desc": `Minas-Mundi scholarship holder. Academic, linguistic, and cultural development at Santa Fe, Argentina.`,
+    "edu5.desc": `AI applied to business: algorithms, Big Data, Machine Learning, and analytics for digital transformation.`,
+    "edu6.title": `Law Degree (incomplete)`,
+    "edu6.desc": `Six semesters completed. Training that sharpened public speaking, argumentation, and legal vocabulary — a real asset in financial negotiations and contracts.`,
+    "test1.text": `Vinícius showed excellent analytical skills when implementing our risk management system. His financial knowledge combined with technical ability brought significant results to our operation.`,
+    "test1.role": `Operations Director · Quantum Análise de Desempenho`,
+    "test2.text": `Working with Vinícius was an extremely positive experience. He's an engaged professional with an endless drive to learn, always picking up the latest tools and methodologies. His ability to work independently, combined with a genuine desire to grow, makes him a key player on any team. Vinícius has a remarkable attention to detail — he makes sure everything gets done with excellence. A committed and indispensable professional, no question.`,
+    "test2.role": `Economic Policy Council Member · FIEMG`,
+    "test3.text": `Vinicius Lopes has solid financial knowledge and stands out in management and leadership. His commitment is remarkable — he consistently delivers high-quality results. His communication skills let him convey information with clarity and precision. I'm fully confident he'll be a strategic and valuable addition to any team or project.`,
+    "test3.role": `Corporate FP&A · BDMG`,
+    "contact.loc": `Location`,
+    "contact.phone": `Phone`,
+    "form.name": `Name`,
+    "form.message": `Message`,
+    "form.send": `Send Message`,
+    "footer.desc": `Corporate FP&A specialist in financial planning, modeling, and strategic support to senior management. Seeking financial leadership roles — Controller, Finance Director, or CFO.`,
+    "footer.nav": `Navigation`,
+    "footer.rights": `All rights reserved.`,
+  },
+  es: {
+    "hero.eyebrow": `FP&A Corporativo · Economista · Belo Horizonte, Brasil`,
+    "hero.tagline": `Economista con historial comprobado de impacto en FP&A corporativo, modelado financiero y soporte a decisiones estratégicas. Herramientas: Power BI, Python, SQL y Excel Avanzado.`,
+    "hero.impact1": `Premio <span class='impact-num'>ALIDE Verde 2024</span> — mayor reconocimiento internacional en finanzas sostenibles de América Latina`,
+    "hero.impact2": `Contribución a la recaudación de <span class='impact-num'>R$ 95 millones</span> en subastas de activos públicos (SEDE-MG)`,
+    "hero.impact3": `Participación en equipo que redujo un <span class='impact-num'>15%</span> las tarifas de agua y saneamiento en Minas Gerais`,
+    "hero.cta1": `Ver Proyectos`,
+    "hero.cta2": `Contáctame`,
+    "hero.cta3": `Descargar CV`,
+    "nav.home": `Inicio`,
+    "nav.about": `Sobre mí`,
+    "nav.projects": `Proyectos`,
+    "nav.skills": `Habilidades`,
+    "nav.experience": `Experiencia`,
+    "nav.education": `Formación`,
+    "nav.contact": `Contacto`,
+    "section.about": `Sobre Mí`,
+    "section.projects": `Proyectos`,
+    "section.skills": `Habilidades Clave`,
+    "section.experience": `Experiencia Profesional`,
+    "section.education": `Formación Académica`,
+    "section.comp": `Formación Complementaria`,
+    "section.testimonials": `Recomendaciones`,
+    "section.contact": `Contáctame`,
+    "about.awards_label": `Logros destacados`,
+    "about.p1": `Economista con sólida trayectoria en FP&A corporativo, planificación presupuestaria y apoyo a decisiones estratégicas. A lo largo de mi carrera he contribuido a resultados concretos en instituciones públicas y privadas.`,
+    "about.highlight": `<strong>Impacto comprobado:</strong> participación en equipo que redujo un 15% las tarifas de agua en MG · contribución a R$ 95M recaudados en subastas públicas · desarrollo de BDMG Sustentabilidade, ganador del Premio ALIDE Verde 2024.`,
+    "about.p2": `Mi diferencial está en combinar visión económica con capacidad técnica: construyo modelos financieros, desarrollo dashboards en Power BI, automatizo análisis con Python y SQL, y entrego informes gerenciales que la alta dirección puede usar para decidir con seguridad.`,
+    "about.p3": `Actualmente trabajo en el TJMG como Asistente de la Dirección Superior en Planificación Presupuestaria. Mi objetivo a mediano plazo es crecer hacia posiciones de liderazgo financiero — Gerente Financiero, Controller o CFO.`,
+    "about.p4": `Licenciado en Economía por la UFMG, con intercambio en Argentina (programa Minas-Mundi), y actualmente cursando un doble posgrado en Gestión Financiera (FGV) y Economía del Agronegocio (UFMS).`,
+    "stats.exp": `años de experiencia`,
+    "stats.assets": `en activos recaudados`,
+    "stats.companies": `empresas e instituciones`,
+    "stats.projects": `proyectos en portafolio`,
+    "award1.title": `Premio ALIDE Verde 2024`,
+    "award1.desc": `Reconocimiento internacional al BDMG Sustentabilidade — línea de crédito para impacto socioambiental desarrollada con mi participación en BDMG.`,
+    "award2.title": `R$ 95 millones en subastas públicas`,
+    "award2.desc": `Desarrollo de paneles analíticos en SEDE-MG que apoyaron el proceso de decisión para subastas de activos inmobiliarios del estado.`,
+    "award3.title": `Reducción del 15% en tarifas públicas`,
+    "award3.desc": `Participación en el equipo de Arsae-MG en las revisiones tarifarias de Copasa y Copanor, logrando una reducción histórica en las tarifas de agua y saneamiento en MG.`,
+    "award4.title": `Prevención de pérdidas millonarias`,
+    "award4.desc": `En Agromercantil, identifiqué proactivamente errores en el proyecto de viabilidad de la sucursal en Maringá y evité pérdidas potenciales de millones antes de la implementación.`,
+    "award5.title": `Becario Minas-Mundi · Argentina`,
+    "award5.desc": `Intercambio en la Universidad Nacional del Litoral (Santa Fe) a través del programa estatal de internacionalización académica, 2023.`,
+    "award.link": `Ver noticia oficial`,
+    "filter.all": `Todos`,
+    "badge.new": `Nuevo`,
+    "badge.fiemg": `Serie FIEMG`,
+    "proj1.title": `Proyecto de Viabilidad Económica`,
+    "proj1.desc": `Modelado financiero completo para análisis de viabilidad con tres escenarios. Incluye proyecciones de ingresos, CAPEX y flujo de caja de 10 años. Desarrollado en Agromercantil — la detección de errores evitó pérdidas de millones.`,
+    "proj2.title": `Inmuebles en Subasta — MG`,
+    "proj2.impact": `Contribuyó a R$ 95M recaudados`,
+    "proj2.desc": `Panel interactivo desarrollado en SEDE-MG para seguimiento de inmuebles públicos en proceso de subasta. Los dashboards se convirtieron en la base informacional del proceso que recaudó R$ 95 millones.`,
+    "proj3.title": `IPCA y Boletín Focus en tiempo real`,
+    "proj3.desc": `Aplicación web con datos en tiempo real del Boletín Focus del Banco Central de Brasil, calculadora de corrección monetaria y análisis cambiario automatizado. Herramienta práctica para seguimiento de inflación y expectativas de mercado.`,
+    "proj4.title": `Panel de Ventas Corporativas`,
+    "proj4.desc": `Dashboard ejecutivo con KPIs integrados de ventas, clientes y cashback. Incluye análisis de facturación, NPS e impacto de programas de fidelización — estructurado para apoyar decisiones comerciales de la alta dirección.`,
+    "proj5.title": `Inteligencia de Mercado — Serie Sectorial`,
+    "proj5.desc": `Tres dashboards en Power BI desarrollados en FIEMG para empresas y sindicatos clientes: análisis de los sectores de Bebidas, Helados y Alimentos en Brasil. Cada panel incluye balanza comercial, producción, empleo y mapas interactivos.`,
+    "proj6.title": `Análisis Geoespacial Inmobiliario — RJ`,
+    "proj6.desc": `Análisis geoespacial de inmuebles en Río de Janeiro con GeoPandas y Folium. Incluye procesamiento de shapefiles y mapas interactivos para análisis urbano.`,
+    "proj7.title": `Predicción de Precios de Activos con IA`,
+    "proj7.desc": `Sistema de análisis predictivo con machine learning para pronosticar movimientos de precios en mercados financieros. Demostración práctica de IA aplicada al apoyo en decisiones de inversión.`,
+    "proj8.title": `Estrategia de Cobertura con IA`,
+    "proj8.desc": `Notebook para valorización de opciones financieras y construcción de estrategias de cobertura. Incluye simulación de Monte Carlo, Black-Scholes-Merton y redes neuronales con TensorFlow/Keras.`,
+    "proj9.title": `Calculadora de Riesgo Operacional`,
+    "proj9.desc": `Herramienta de gestión de riesgo financiero para monitoreo de operaciones de mercado. Automatiza cálculos de exposición y control de capital, apoyando la disciplina operacional y el cumplimiento de límites predefinidos.`,
+    "skill1.title": `FP&A y Finanzas Corporativas`,
+    "skill1.s1": `Planificación presupuestaria y forecast`,
+    "skill1.s2": `Análisis de varianza (real vs. planificado)`,
+    "skill1.s3": `Modelado financiero y valoración`,
+    "skill1.s4": `Análisis de viabilidad económica`,
+    "skill1.s5": `Optimización de costos e inversiones`,
+    "skill2.title": `Datos y Tecnología`,
+    "skill2.s1": `Power BI (dashboards ejecutivos)`,
+    "skill2.s2": `Excel Avanzado (modelado, VBA)`,
+    "skill2.s3": `SQL (extracción y tratamiento)`,
+    "skill2.s4": `Python (automatización y análisis)`,
+    "skill2.s5": `Machine Learning e IA aplicada`,
+    "skill3.title": `Análisis Económico y de Mercado`,
+    "skill3.s1": `Inteligencia de mercado`,
+    "skill3.s2": `Análisis competitivo y sectorial`,
+    "skill3.s3": `Regulación tarifaria y finanzas públicas`,
+    "skill3.s4": `Econometría y modelado estadístico`,
+    "skill3.s5": `Investigación de mercado cuantitativa`,
+    "skill4.title": `Gestión y Liderazgo`,
+    "skill4.s1": `Informes ejecutivos y para la directiva`,
+    "skill4.s2": `Gestión de proyectos estratégicos`,
+    "skill4.s3": `Comunicación ejecutiva`,
+    "skill4.s4": `Digitalización de procesos financieros`,
+    "skill4.s5": `Liderazgo y gestión de equipos`,
+    "level.advanced": `Avanzado`,
+    "level.intermediate": `Intermedio`,
+    "exp1.title": `Asistente de la Dirección Superior | Planificación Presupuestaria`,
+    "exp1.company": `TJMG — Tribunal de Justicia de Minas Gerais`,
+    "exp1.period": `sep/2025 – actual`,
+    "exp1.b1": `Elaboración de cálculos presupuestarios y proyecciones financieras en DEPLAG`,
+    "exp1.b2": `Seguimiento de resultados y análisis de real vs. planificado`,
+    "exp1.b3": `Elaboración de informes gerenciales para apoyo a la toma de decisiones de la alta dirección`,
+    "exp1.b4": `Actualización de modelos de forecast de ingresos y gastos`,
+    "exp1.b5": `Interfaz directa con la gerencia y apoyo al Director del área`,
+    "exp2.title": `Consultor de Riesgo Operacional y Psicológico`,
+    "exp2.company": `Quantum Análise de Desempenho (remoto, Boston EUA)`,
+    "exp2.period": `abr – jul/2025`,
+    "exp2.b1": `Monitoreo y control de riesgo sobre capital operacional de USD 500.000`,
+    "exp2.b2": `Validación de criterios de entrada y salida según políticas predefinidas`,
+    "exp2.b3": `Desarrollo de modelos de control de riesgo y asignación de capital`,
+    "exp2.b4": `Apoyo a la disciplina operacional y al equilibrio decisorio bajo presión`,
+    "exp2.b5": `Comunicación de desvíos y apoyo a la coordinación en la toma de decisiones`,
+    "exp3.title": `Analista de Finanzas Corporativas`,
+    "exp3.company": `Agromercantil`,
+    "exp3.period": `nov/2024 – feb/2025`,
+    "exp3.b1": `Planificación financiera completa para apertura de sucursal en Maringá/PR, incluyendo modelado de viabilidad en tres escenarios`,
+    "exp3.b2": `Análisis make-or-buy para la decisión entre flota propia y tercerización logística`,
+    "exp3.b3": `Estructuración de modelos de valoración y estrategias de inteligencia de mercado`,
+    "exp3.b4": `Implementación de tecnologías para digitalización de procesos financieros`,
+    "exp3.impact": `La identificación proactiva de errores en el proyecto de sucursal evitó pérdidas potenciales de millones antes de la implementación.`,
+    "exp4.title": `Asesor en Datos | Superintendencia de Disposición de Activos`,
+    "exp4.company": `SEDE-MG — Secretaría de Desarrollo Económico`,
+    "exp4.period": `abr – nov/2024`,
+    "exp4.b1": `Desarrollo de paneles analíticos para monitoreo de inmuebles públicos (candidatos a subasta, en proceso y subastados)`,
+    "exp4.b2": `Manipulación, organización y limpieza de datos de activos inmobiliarios estatales`,
+    "exp4.b3": `Elaboración de informes ejecutivos para apoyo a la gestión estratégica de activos`,
+    "exp4.impact": `Los paneles estructuraron el proceso de decisión que resultó en la recaudación de R$ 95 millones en subastas de activos inmobiliarios del estado.`,
+    "exp5.title": `Analista de Inteligencia de Mercado`,
+    "exp5.company": `BDMG — Banco de Desarrollo de Minas Gerais`,
+    "exp5.period": `abr/2022 – ago/2023`,
+    "exp5.b1": `Participación central en el desarrollo y operacionalización de BDMG Sustentabilidade — línea de crédito con foco en impacto socioambiental`,
+    "exp5.b2": `Análisis de información financiera y extracción de informes del Banco Central`,
+    "exp5.b3": `Elaboración de gráficos, informes estratégicos y presentaciones para la directiva`,
+    "exp5.b4": `Publicación de documentos e información de registro de productos`,
+    "exp5.impact": `BDMG Sustentabilidade ganó el Premio ALIDE Verde 2024 — el mayor reconocimiento internacional en finanzas sostenibles de América Latina.`,
+    "exp6.title": `Analista de Inteligencia Competitiva`,
+    "exp6.company": `FIEMG — Federación de Industrias de Minas Gerais`,
+    "exp6.period": `nov/2021 – abr/2022`,
+    "exp6.b1": `Desarrollo de paneles de inteligencia competitiva entregados a empresas y sindicatos clientes de la consultoría`,
+    "exp6.b2": `Elaboración de planes de negocio, investigaciones de mercado y estudios de viabilidad`,
+    "exp6.b3": `Elaboración de informes socioeconómicos sectoriales`,
+    "exp7.title": `Analista de Información Estratégica`,
+    "exp7.company": `Pottencial Seguradora`,
+    "exp7.period": `abr – nov/2021`,
+    "exp7.b1": `Elaboración y seguimiento del presupuesto corporativo`,
+    "exp7.b2": `Cierre mensual de resultados gerenciales y cálculo de KPIs`,
+    "exp7.b3": `Preparación de presentaciones para reuniones de directiva y consejo`,
+    "exp7.impact": `Período marcado por un récord histórico de recaudación de primas y una reducción del índice de siniestralidad.`,
+    "exp8.title": `Analista de Regulación Tarifaria`,
+    "exp8.company": `Arsae-MG — Agencia Reguladora de Agua y Saneamiento`,
+    "exp8.period": `abr/2020 – abr/2021`,
+    "exp8.b1": `Participación en las revisiones tarifarias de Copasa (3ª revisión) y Copanor (2ª revisión)`,
+    "exp8.b2": `Elaboración de planillas e informes técnicos para fundamentar normativas regulatorias`,
+    "exp8.b3": `Análisis y cálculos de ajustes y revisiones tarifarias mediante manipulación de datos`,
+    "exp8.impact": `Integrante del equipo cuya actuación resultó en una reducción del 15% en las tarifas de agua y saneamiento para los consumidores de Minas Gerais.`,
+    "edu1.title": `Posgrado en Gestión Financiera`,
+    "edu1.desc": `Gestión financiera corporativa, valoración, análisis de inversiones y estrategias de financiamiento.`,
+    "edu2.title": `MBA en Economía del Agronegocio`,
+    "edu2.desc": `Análisis económico aplicado al agronegocio, mercado internacional, políticas agrícolas y gestión de riesgos en el sector.`,
+    "edu3.title": `Licenciatura en Economía`,
+    "edu3.desc": `Teoría económica, econometría, finanzas y políticas públicas. Investigación en mercados financieros y análisis de riesgo.`,
+    "edu4.title": `Intercambio — Gestión Estratégica`,
+    "edu4.desc": `Becario del programa Minas-Mundi. Desarrollo de conocimiento teórico, lingüístico y cultural en Santa Fe, Argentina.`,
+    "edu5.desc": `IA aplicada a negocios: algoritmos, Big Data, Machine Learning y analytics para transformación digital.`,
+    "edu6.title": `Licenciatura en Derecho (incompleta)`,
+    "edu6.desc": `Seis semestres completados. Formación que mejoró la oratoria, argumentación y vocabulario jurídico — diferencial en negociaciones y contratos financieros.`,
+    "test1.text": `Vinícius demostró una excelente capacidad analítica en la implementación de nuestro sistema de gestión de riesgo. Su conocimiento financiero combinado con habilidades técnicas trajo resultados significativos para nuestra operación.`,
+    "test1.role": `Directora de Operaciones · Quantum Análise de Desempenho`,
+    "test2.text": `Trabajar con Vinícius fue una experiencia extremadamente positiva. Es un profesional comprometido e incansablemente dedicado a la búsqueda de conocimiento, siempre actualizándose con las últimas herramientas y metodologías. Su capacidad de actuar de forma autónoma, combinada con un deseo genuino de aprender y crecer, lo convierte en una pieza clave en cualquier equipo. Vinícius tiene una atención al detalle admirable — garantizando que todo se haga con excelencia. Sin duda, un profesional comprometido e indispensable.`,
+    "test2.role": `Miembro del Consejo de Política Económica · FIEMG`,
+    "test3.text": `Vinicius Lopes tiene sólidos conocimientos en finanzas y una destacada habilidad en gestión y liderazgo. Su compromiso es notable, siempre entregando resultados de alta calidad. Su excelente comunicación le permite transmitir información con claridad y precisión. Tengo plena confianza de que será una adición estratégica y valiosa para cualquier equipo o proyecto.`,
+    "test3.role": `FP&A Corporativo · BDMG`,
+    "contact.loc": `Ubicación`,
+    "contact.phone": `Teléfono`,
+    "form.name": `Nombre`,
+    "form.message": `Mensaje`,
+    "form.send": `Enviar Mensaje`,
+    "footer.desc": `FP&A Corporativo especializado en planificación financiera, modelado y soporte estratégico a la alta dirección. Buscando posiciones de liderazgo financiero — Controller, Director Financiero o CFO.`,
+    "footer.nav": `Navegación`,
+    "footer.rights": `Todos los derechos reservados.`,
+  },
+};
+
+    let currentLang = localStorage.getItem('lang') || 'pt';
+
+    function t(key) {
+        return (T[currentLang] && T[currentLang][key] !== undefined)
+            ? T[currentLang][key]
+            : (T['pt'][key] || '');
+    }
+
+    function setLang(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+
+        // Update lang buttons
+        document.querySelectorAll('.lang-btn').forEach(b =>
+            b.classList.toggle('active', b.dataset.lang === lang));
+
+        // Translate all data-i18n elements
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const val = t(key);
+            if (val) el.innerHTML = val;
+        });
+
+        // ── Nav links ──
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const navKeys = ['nav.home','nav.about','nav.projects','nav.skills','nav.experience','nav.education','nav.contact'];
+        navLinks.forEach((a, i) => { if (navKeys[i]) a.textContent = t(navKeys[i]); });
+
+        // ── Footer nav ──
+        const footerLinks = document.querySelectorAll('.footer-nav a');
+        const footerKeys = ['nav.about','nav.projects','nav.skills','nav.experience','nav.education','nav.contact'];
+        footerLinks.forEach((a, i) => { if (footerKeys[i]) a.textContent = t(footerKeys[i]); });
+
+        // ── Footer heading ──
+        const fh4 = document.querySelector('.footer-links-col h4');
+        if (fh4) fh4.textContent = t('footer.nav');
+
+        // ── Footer brand desc ──
+        const fbp = document.querySelector('.footer-brand p');
+        if (fbp) fbp.textContent = t('footer.desc');
+
+        // ── Copyright ──
+        const cp = document.querySelector('.copyright p');
+        if (cp) cp.innerHTML = `&copy; 2026 Vinicius Lopes &middot; ${t('footer.rights')}`;
+
+        // ── CTA buttons ──
+        const ctaKeys = ['hero.cta1','hero.cta2','hero.cta3'];
+        document.querySelectorAll('.cta-buttons .btn').forEach((btn, i) => {
+            if (!ctaKeys[i]) return;
+            const icon = btn.querySelector('i');
+            btn.innerHTML = (icon ? icon.outerHTML + ' ' : '') + t(ctaKeys[i]);
+        });
+
+        // ── Filter buttons ──
+        const filterKeys = ['filter.all','filter.fpa','filter.analytics','filter.finance','filter.market'];
+        document.querySelectorAll('.filter-btn').forEach((btn, i) => {
+            if (filterKeys[i]) btn.textContent = t(filterKeys[i]);
+        });
+
+        // ── Project titles ──
+        const projTitleKeys = ['proj1.title','proj2.title','proj3.title','proj4.title','proj5.title','proj6.title','proj7.title','proj8.title','proj9.title'];
+        document.querySelectorAll('.project-title').forEach((el, i) => {
+            if (projTitleKeys[i]) el.textContent = t(projTitleKeys[i]);
+        });
+
+        // ── Project descriptions ──
+        const projDescKeys = ['proj1.desc','proj2.desc','proj3.desc','proj4.desc','proj5.desc','proj6.desc','proj7.desc','proj8.desc','proj9.desc'];
+        document.querySelectorAll('.project-description').forEach((el, i) => {
+            if (projDescKeys[i]) el.textContent = t(projDescKeys[i]);
+        });
+
+        // ── Project impact bar ──
+        const impactEl = document.querySelector('.project-impact');
+        if (impactEl) {
+            const icon = impactEl.querySelector('i');
+            impactEl.innerHTML = (icon ? icon.outerHTML + ' ' : '') + t('proj2.impact');
+        }
+
+        // ── Skill card titles ──
+        const skillTitleKeys = ['skill1.title','skill2.title','skill3.title','skill4.title'];
+        document.querySelectorAll('.skill-card h3 span').forEach((el, i) => {
+            if (skillTitleKeys[i]) el.textContent = t(skillTitleKeys[i]);
+        });
+
+        // ── Skill list items ──
+        const skillItemKeys = [
+            'skill1.s1','skill1.s2','skill1.s3','skill1.s4','skill1.s5',
+            'skill2.s1','skill2.s2','skill2.s3','skill2.s4','skill2.s5',
+            'skill3.s1','skill3.s2','skill3.s3','skill3.s4','skill3.s5',
+            'skill4.s1','skill4.s2','skill4.s3','skill4.s4','skill4.s5',
+        ];
+        document.querySelectorAll('.skill-list li span:first-child').forEach((el, i) => {
+            if (skillItemKeys[i]) el.textContent = t(skillItemKeys[i]);
+        });
+
+        // ── Skill level badges ──
+        document.querySelectorAll('.skill-level').forEach(badge => {
+            badge.textContent = badge.classList.contains('advanced')
+                ? t('level.advanced') : t('level.intermediate');
+        });
+
+        // ── Experience titles ──
+        const expTitleKeys = ['exp1.title','exp2.title','exp3.title','exp4.title','exp5.title','exp6.title','exp7.title','exp8.title'];
+        document.querySelectorAll('.experience-title').forEach((el, i) => {
+            if (expTitleKeys[i]) el.textContent = t(expTitleKeys[i]);
+        });
+
+        // ── Experience companies ──
+        const expCoKeys = ['exp1.company','exp2.company','exp3.company','exp4.company','exp5.company','exp6.company','exp7.company','exp8.company'];
+        document.querySelectorAll('.experience-company').forEach((el, i) => {
+            if (!expCoKeys[i]) return;
+            const icon = el.querySelector('i');
+            el.innerHTML = (icon ? icon.outerHTML + ' ' : '') + t(expCoKeys[i]);
+        });
+
+        // ── Experience periods ──
+        const expPeriodKeys = ['exp1.period','exp2.period','exp3.period','exp4.period','exp5.period','exp6.period','exp7.period','exp8.period'];
+        document.querySelectorAll('.experience-period').forEach((el, i) => {
+            if (expPeriodKeys[i]) el.textContent = t(expPeriodKeys[i]);
+        });
+
+        // ── Experience bullets ──
+        const expBullets = [
+            ['exp1.b1','exp1.b2','exp1.b3','exp1.b4','exp1.b5'],
+            ['exp2.b1','exp2.b2','exp2.b3','exp2.b4','exp2.b5'],
+            ['exp3.b1','exp3.b2','exp3.b3','exp3.b4'],
+            ['exp4.b1','exp4.b2','exp4.b3'],
+            ['exp5.b1','exp5.b2','exp5.b3','exp5.b4'],
+            ['exp6.b1','exp6.b2','exp6.b3'],
+            ['exp7.b1','exp7.b2','exp7.b3'],
+            ['exp8.b1','exp8.b2','exp8.b3'],
+        ];
+        document.querySelectorAll('.experience-item').forEach((item, i) => {
+            if (!expBullets[i]) return;
+            item.querySelectorAll('.experience-description li').forEach((li, j) => {
+                if (expBullets[i][j]) li.textContent = t(expBullets[i][j]);
+            });
+        });
+
+        // ── Experience impacts ──
+        const expImpactKeys = [null, null, 'exp3.impact', 'exp4.impact', 'exp5.impact', null, 'exp7.impact', 'exp8.impact'];
+        document.querySelectorAll('.experience-item').forEach((item, i) => {
+            if (!expImpactKeys[i]) return;
+            const impact = item.querySelector('.exp-impact');
+            if (!impact) return;
+            const icon = impact.querySelector('i');
+            const link = impact.querySelector('a');
+            const linkHtml = link ? ' ' + link.outerHTML : '';
+            impact.innerHTML = (icon ? icon.outerHTML : '') + '<span>' + t(expImpactKeys[i]) + '</span>' + linkHtml;
+        });
+
+        // Update award links text
+        document.querySelectorAll('.award-text a').forEach(a => {
+            const icon = a.querySelector('i');
+            a.innerHTML = (icon ? icon.outerHTML + ' ' : '') + t('award.link');
+        });
+
+        // Update exp impact "Ver notícia" links
+        document.querySelectorAll('.exp-impact a').forEach(a => {
+            const txt = t('award.link');
+            a.textContent = txt;
+        });
+
+        // ── Education titles ──
+        const eduTitleKeys = ['edu1.title','edu2.title','edu3.title','edu4.title',null,'edu6.title'];
+        document.querySelectorAll('#education .education-title').forEach((el, i) => {
+            if (eduTitleKeys[i]) el.textContent = t(eduTitleKeys[i]);
+        });
+
+        // ── Education descriptions ──
+        const eduDescKeys = ['edu1.desc','edu2.desc','edu3.desc','edu4.desc','edu5.desc','edu6.desc'];
+        document.querySelectorAll('#education .education-description').forEach((el, i) => {
+            if (eduDescKeys[i]) el.textContent = t(eduDescKeys[i]);
+        });
+
+        // ── Testimonial content ──
+        const testKeys = ['test1.text','test2.text','test3.text'];
+        document.querySelectorAll('.testimonial-content').forEach((el, i) => {
+            if (testKeys[i]) el.textContent = t(testKeys[i]);
+        });
+
+        // ── Testimonial roles ──
+        const testRoleKeys = ['test1.role','test2.role','test3.role'];
+        document.querySelectorAll('.author-role').forEach((el, i) => {
+            if (testRoleKeys[i]) el.textContent = t(testRoleKeys[i]);
+        });
+
+        // ── Contact headings ──
+        const contactHdrs = document.querySelectorAll('.contact-text h3');
+        if (contactHdrs[0]) contactHdrs[0].textContent = t('contact.loc');
+        if (contactHdrs[1]) contactHdrs[1].textContent = t('contact.phone');
+
+        // ── Form labels ──
+        const formLbls = document.querySelectorAll('.form-group label');
+        const formKeys = ['form.name', null, 'form.message'];
+        formLbls.forEach((lbl, i) => { if (formKeys[i]) lbl.textContent = t(formKeys[i]); });
+
+        // ── Submit button ──
+        const submitBtn = document.querySelector('.contact-form button[type="submit"]');
+        if (submitBtn) {
+            const icon = submitBtn.querySelector('i');
+            submitBtn.innerHTML = (icon ? icon.outerHTML + ' ' : '') + t('form.send');
+        }
+
+        // ── Hero h1 sub ──
+        const heroSub = document.querySelector('.hero h1 em');
+        if (heroSub) heroSub.innerHTML = t('hero.h1.sub') || (lang === 'en' ? 'Financial Planning<br>&amp; Strategic Analysis' : lang === 'es' ? 'Planificación Financiera<br>&amp; Análisis Estratégico' : 'Planejamento Financeiro<br>&amp; Análise Estratégica');
+
+        // ── Hero eyebrow ──
+        const eyebrow = document.querySelector('.hero-eyebrow');
+        if (eyebrow) eyebrow.textContent = t('hero.eyebrow');
+
+        // ── Stats ──
+        const statLabels = document.querySelectorAll('.stat-label');
+        const statKeys = ['stats.exp','stats.assets','stats.companies','stats.projects'];
+        statLabels.forEach((el, i) => { if (statKeys[i]) el.textContent = t(statKeys[i]); });
+
+        // ── Awards label ──
+        const aLabel = document.querySelector('.label-mono');
+        if (aLabel) aLabel.textContent = t('about.awards_label');
+
+        // ── About paragraphs ──
+        const aboutPs = document.querySelectorAll('#about .about-text p');
+        const aboutKeys = ['about.p1','about.p2','about.p3','about.p4'];
+        aboutPs.forEach((el, i) => { if (aboutKeys[i]) el.textContent = t(aboutKeys[i]); });
+
+        // ── About highlight ──
+        const highlight = document.querySelector('.about-highlight');
+        if (highlight) highlight.innerHTML = t('about.highlight');
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+        const saved = localStorage.getItem('lang') || 'pt';
+        document.querySelectorAll('.lang-btn').forEach(b =>
+            b.classList.toggle('active', b.dataset.lang === saved));
+        // Wrap skill list item text in spans for targeting
+        document.querySelectorAll('.skill-list li').forEach(li => {
+            const badge = li.querySelector('.skill-level');
+            if (badge) {
+                const textNode = li.childNodes[0];
+                if (textNode && textNode.nodeType === 3) {
+                    const span = document.createElement('span');
+                    span.textContent = textNode.textContent;
+                    li.insertBefore(span, textNode);
+                    li.removeChild(textNode);
+                }
+            }
+        });
+        if (saved !== 'pt') setLang(saved);
+    });
+    </script>
+
+    <script>
         // Mobile Menu
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.querySelector('.nav-links');
@@ -1717,9 +2539,10 @@
         // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-       document.body.classList.add('dark-mode');
-       themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
@@ -1784,12 +2607,4 @@
             });
         }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-        document.querySelectorAll('.skill-card, .experience-item, .project-card, .stat-card, .education-card, .testimonial-card, .contact-item, .award-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(18px)';
-            el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
+        document.querySelectorAll('.skill-card, .experience-item, .project-card, .stat-card, .education-card, .
