@@ -2637,4 +2637,10 @@
             });
         }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-        document.querySelectorAll('.skill-card, .experience-item, .project-card, .stat-card, .education-card, .
+        document.querySelectorAll('.skill-card, .experience-item, .project-card, .stat-card, .education-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+
+    </script>
+</body>
+</html>
